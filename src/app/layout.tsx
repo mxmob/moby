@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Navbar, Footer } from "@/components/shared";
 import "./globals.css";
 
@@ -60,6 +61,18 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-[#050510] text-white min-h-screen">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W0F96M0XR3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-W0F96M0XR3');
+          `}
+        </Script>
         <Navbar />
         {children}
         <Footer />
