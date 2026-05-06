@@ -256,30 +256,6 @@ export const translations = {
       alternatives: { title: "O si prefieres...", whatsapp: "Escríbenos por WhatsApp", email: "Envíanos un email", call: "Agenda una llamada" },
       info: { location: "100% online · España y Europa", response: "Respondemos en menos de 24 horas", noCommitment: "Sin compromiso, sin presión" },
     },
-    {
-  "pillars": {
-    "digitalizacion": {
-      "title": "Digitalización",
-      "desc": "Llevamos tu negocio al mundo digital con presencia online y procesos sin papel."
-    },
-    "optimizacion": {
-      "title": "Optimización",
-      "desc": "Analizamos tus flujos y eliminamos cuellos de botella para que produzcas más con menos."
-    },
-    "automatizacion": {
-      "title": "Automatización",
-      "desc": "Tareas repetitivas en piloto automático: facturación, comunicaciones, integraciones."
-    },
-    "desarrollo": {
-      "title": "Desarrollo a medida",
-      "desc": "Software propio diseñado para tu operativa, no plantillas genéricas."
-    },
-    "impresion3d": {
-      "title": "Impresión 3D",
-      "desc": "Llaveros, prototipos y producto personalizado bajo demanda en 24-72h."
-    }
-  }
-}
   },
   en: {
     brand: "MobyApp",
@@ -508,30 +484,6 @@ export const translations = {
       alternatives: { title: "Or if you prefer...", whatsapp: "Write us on WhatsApp", email: "Send us an email", call: "Schedule a call" },
       info: { location: "100% online · Spain and Europe", response: "We respond within 24 hours", noCommitment: "No commitment, no pressure" },
     },
-    {
-  "pillars": {
-    "digitalizacion": {
-      "title": "Digitalization",
-      "desc": "We bring your business into the digital world with online presence and paperless workflows."
-    },
-    "optimizacion": {
-      "title": "Optimization",
-      "desc": "We analyze your processes and remove bottlenecks so you produce more with less."
-    },
-    "automatizacion": {
-      "title": "Automation",
-      "desc": "Repetitive tasks on autopilot: invoicing, communications, integrations."
-    },
-    "desarrollo": {
-      "title": "Custom development",
-      "desc": "Software built around your operations — not generic templates."
-    },
-    "impresion3d": {
-      "title": "3D Printing",
-      "desc": "Keychains, prototypes and custom-made products on demand in 24-72h."
-    }
-  }
-}
   },
 } as const;
 
