@@ -8,8 +8,8 @@ type PillarKey = "digitalizacion" | "optimizacion" | "automatizacion" | "desarro
 
 interface Pillar {
   key: PillarKey;
-  color: string;       // hex sólido
-  glow: string;        // rgba con alpha
+  color: string;   // hex sólido
+  glow: string;    // rgba con alpha
   icon: React.ReactNode;
 }
 
@@ -77,9 +77,9 @@ const PILLARS: Pillar[] = [
 const VIEW = 800;
 const CENTER = VIEW / 2;
 const NODE_RADIUS = 240;   // distancia centro → nodo
-const LABEL_RADIUS = 360;  // distancia centro → label (en %)
+const LABEL_RADIUS = 360;  // distancia centro → label
 
-// Pentágono con vértice arriba: ángulos -90, -18, 54, 126, 198 grados
+// Pentágono con vértice arriba
 const angleFor = (i: number) => (i * 72 - 90) * (Math.PI / 180);
 
 export function PentagonHero() {
@@ -98,7 +98,7 @@ export function PentagonHero() {
     return () => mq.removeEventListener("change", h);
   }, []);
 
-  // Activación secuencial (pausa cuando hay hover)
+  // Activación secuencial (pausa en hover)
   useEffect(() => {
     if (reduced || hoverIdx !== null) return;
     intervalRef.current = setInterval(() => {
@@ -117,7 +117,7 @@ export function PentagonHero() {
     y: CENTER + NODE_RADIUS * Math.sin(angleFor(i)),
   }));
 
-  // Líneas: pentagrama interior (cada nodo conecta con todos los demás)
+  // Aristas: cada nodo conecta con todos los demás
   const edges: { a: number; b: number }[] = [];
   for (let i = 0; i < 5; i++) {
     for (let j = i + 1; j < 5; j++) edges.push({ a: i, b: j });
@@ -143,7 +143,7 @@ export function PentagonHero() {
         aria-label="MobyApp: cinco áreas conectadas"
       >
         <defs>
-          {/* Gradiente animado para el flujo de energía */}
+          {/* Gradiente para flujo de energía nodo → centro */}
           {PILLARS.map((p, i) => (
             <linearGradient
               key={`flow-${i}`}
@@ -174,7 +174,7 @@ export function PentagonHero() {
           </filter>
         </defs>
 
-        {/* Aristas (todas tenues, las del nodo activo se realzan) */}
+        {/* Aristas del pentagrama */}
         {edges.map((e, idx) => {
           const isActive = e.a === focusedIdx || e.b === focusedIdx;
           return (
@@ -192,7 +192,7 @@ export function PentagonHero() {
           );
         })}
 
-        {/* Pentágono perimetral sutil */}
+        {/* Pentágono perimetral */}
         <polygon
           points={nodes.map((n) => `${n.x},${n.y}`).join(" ")}
           fill="none"
@@ -200,7 +200,7 @@ export function PentagonHero() {
           strokeWidth="1"
         />
 
-        {/* Líneas radiales nodo→centro con flujo de energía */}
+        {/* Líneas radiales nodo → centro con flujo */}
         {nodes.map((n, i) => (
           <line
             key={`spoke-${i}`}
@@ -215,7 +215,7 @@ export function PentagonHero() {
           />
         ))}
 
-        {/* Partículas viajando hacia el centro (solo el nodo activo, si motion ok) */}
+        {/* Partícula viajando del nodo activo al centro */}
         {!reduced &&
           nodes.map((n, i) =>
             i === focusedIdx ? (
@@ -288,7 +288,7 @@ export function PentagonHero() {
               <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite" />
             </circle>
           )}
-          {/* Sustituye este <text> por tu <image href="/logo-moby.svg" .../> cuando lo tengas */}
+          {/* Sustituye este <text> por <image href="/logo-moby.svg" .../> cuando lo tengas */}
           <text
             x={CENTER}
             y={CENTER + 14}
@@ -306,7 +306,6 @@ export function PentagonHero() {
       {/* Labels HTML posicionados sobre cada vértice */}
       {PILLARS.map((p, i) => {
         const a = angleFor(i);
-        // Convertimos coords del SVG a % del contenedor para posicionar HTML
         const xPct = 50 + (LABEL_RADIUS / VIEW) * 100 * Math.cos(a);
         const yPct = 50 + (LABEL_RADIUS / VIEW) * 100 * Math.sin(a);
         const isFocused = i === focusedIdx;
@@ -322,13 +321,11 @@ export function PentagonHero() {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 * i + 0.3, duration: 0.5, ease: "easeOut" }}
-            className={`
-              absolute -translate-x-1/2 -translate-y-1/2
+            className="absolute -translate-x-1/2 -translate-y-1/2
               w-[180px] sm:w-[200px] p-3 rounded-2xl text-left
               backdrop-blur-md border
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#050510]
-              transition-all duration-500
-            `}
+              transition-all duration-500"
             style={{
               left: `${xPct}%`,
               top: `${yPct}%`,
@@ -338,12 +335,12 @@ export function PentagonHero() {
               borderColor: isFocused ? p.color : "rgba(255,255,255,0.10)",
               boxShadow: isFocused ? `0 0 32px ${p.glow}` : "none",
             }}
-            aria-label={t(`pillars.${p.key}.title`) || p.key}
+            aria-label={t(`home.pentagon.areas.${p.key}.title`)}
           >
             <div className="flex items-center gap-2 mb-1" style={{ color: p.color }}>
               {p.icon}
               <span className="text-sm font-semibold text-white">
-                {t(`pillars.${p.key}.title`) || p.key}
+                {t(`home.pentagon.areas.${p.key}.title`)}
               </span>
             </div>
             <AnimatePresence>
@@ -355,7 +352,7 @@ export function PentagonHero() {
                   transition={{ duration: 0.3 }}
                   className="text-xs text-white/70 leading-snug overflow-hidden"
                 >
-                  {t(`pillars.${p.key}.desc`) || ""}
+                  {t(`home.pentagon.areas.${p.key}.desc`)}
                 </motion.p>
               )}
             </AnimatePresence>
