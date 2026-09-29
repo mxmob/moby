@@ -23,7 +23,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "3. Cuentas de usuario",
         paragraphs: [
-          "Si una Aplicación requiere registro, eres responsable de mantener la confidencialidad de tus credenciales y de toda la actividad realizada con tu cuenta. Avísanos de inmediato en hola@mobyapp.eu si detectas un uso no autorizado. Puedes eliminar tu cuenta en cualquier momento según lo indicado en nuestra Política de Privacidad.",
+          "Si una Aplicación requiere registro, eres responsable de mantener la confidencialidad de tus credenciales y de toda la actividad realizada con tu cuenta. Avísanos de inmediato en hello@mobyapp.us si detectas un uso no autorizado. Puedes eliminar tu cuenta en cualquier momento según lo indicado en nuestra Política de Privacidad.",
         ],
       },
       {
@@ -93,7 +93,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       },
       {
         heading: "14. Contacto",
-        paragraphs: ["Para cualquier consulta sobre estos términos: hola@mobyapp.eu"],
+        paragraphs: ["Para cualquier consulta sobre estos términos: hello@mobyapp.us"],
       },
     ],
   },
@@ -118,7 +118,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "3. User accounts",
         paragraphs: [
-          "If an App requires registration, you are responsible for keeping your credentials confidential and for all activity under your account. Let us know immediately at hola@mobyapp.eu if you detect unauthorised use. You can delete your account at any time as described in our Privacy Policy.",
+          "If an App requires registration, you are responsible for keeping your credentials confidential and for all activity under your account. Let us know immediately at hello@mobyapp.us if you detect unauthorised use. You can delete your account at any time as described in our Privacy Policy.",
         ],
       },
       {
@@ -188,7 +188,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       },
       {
         heading: "14. Contact",
-        paragraphs: ["For any question about these terms: hola@mobyapp.eu"],
+        paragraphs: ["For any question about these terms: hello@mobyapp.us"],
       },
     ],
   },
