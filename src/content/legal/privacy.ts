@@ -17,7 +17,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "2. Ámbito de aplicación",
         paragraphs: [
-          "Esta política se aplica al sitio web mobyapp.eu y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). Al usar la web o las Aplicaciones aceptas las prácticas descritas en esta política.",
+          "Esta política se aplica a los sitios web mobyapp.eu y mobyapp.us y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). Al usar los sitios web o las Aplicaciones aceptas las prácticas descritas en esta política.",
         ],
       },
       {
@@ -124,7 +124,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "2. Scope",
         paragraphs: [
-          "This policy applies to the mobyapp.eu website and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). By using the website or the Apps you accept the practices described in this policy.",
+          "This policy applies to the mobyapp.eu and mobyapp.us websites and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). By using the websites or the Apps you accept the practices described in this policy.",
         ],
       },
       {
