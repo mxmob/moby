@@ -11,13 +11,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Responsable del tratamiento",
         paragraphs: [
-          "El responsable del tratamiento de tus datos personales es MobyApp (en adelante, \"MobyApp\", \"nosotros\"), con actividad en España. Puedes contactarnos en cualquier momento en hola@mobyapp.eu.",
+          "El responsable del tratamiento de tus datos personales es MobyApp (en adelante, \"MobyApp\", \"nosotros\"), con actividad en España. Puedes contactarnos en cualquier momento en hello@mobyapp.us.",
         ],
       },
       {
         heading: "2. Ámbito de aplicación",
         paragraphs: [
-          "Esta política se aplica al sitio web mobyapp.eu y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). Al usar la web o las Aplicaciones aceptas las prácticas descritas en esta política.",
+          "Esta política se aplica a los sitios web mobyapp.eu y mobyapp.us y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). Al usar los sitios web o las Aplicaciones aceptas las prácticas descritas en esta política.",
         ],
       },
       {
@@ -75,14 +75,14 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "9. Eliminación de la cuenta y de los datos",
         paragraphs: [
-          "Puedes solicitar en cualquier momento la eliminación de tu cuenta y de todos los datos asociados enviando un correo a hola@mobyapp.eu con el asunto \"Eliminar mi cuenta\" desde la dirección registrada, indicando el nombre de la Aplicación. Si la Aplicación ofrece la opción, también puedes hacerlo desde sus ajustes.",
+          "Puedes solicitar en cualquier momento la eliminación de tu cuenta y de todos los datos asociados enviando un correo a hello@mobyapp.us con el asunto \"Eliminar mi cuenta\" desde la dirección registrada, indicando el nombre de la Aplicación. Si la Aplicación ofrece la opción, también puedes hacerlo desde sus ajustes.",
           "Eliminaremos tus datos en un plazo máximo de 30 días. Solo conservaremos, bloqueada, la información que estemos obligados a mantener por ley (por ejemplo, datos de facturación).",
         ],
       },
       {
         heading: "10. Tus derechos",
         paragraphs: [
-          "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar tu consentimiento, escribiendo a hola@mobyapp.eu. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+          "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar tu consentimiento, escribiendo a hello@mobyapp.us. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
         ],
       },
       {
@@ -105,7 +105,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       },
       {
         heading: "14. Contacto",
-        paragraphs: ["Para cualquier consulta sobre privacidad: hola@mobyapp.eu"],
+        paragraphs: ["Para cualquier consulta sobre privacidad: hello@mobyapp.us"],
       },
     ],
   },
@@ -118,13 +118,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Data controller",
         paragraphs: [
-          "The controller of your personal data is MobyApp (\"MobyApp\", \"we\", \"us\"), operating in Spain. You can contact us at any time at hola@mobyapp.eu.",
+          "The controller of your personal data is MobyApp (\"MobyApp\", \"we\", \"us\"), operating in Spain. You can contact us at any time at hello@mobyapp.us.",
         ],
       },
       {
         heading: "2. Scope",
         paragraphs: [
-          "This policy applies to the mobyapp.eu website and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). By using the website or the Apps you accept the practices described in this policy.",
+          "This policy applies to the mobyapp.eu and mobyapp.us websites and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). By using the websites or the Apps you accept the practices described in this policy.",
         ],
       },
       {
@@ -182,14 +182,14 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "9. Account and data deletion",
         paragraphs: [
-          "You can request deletion of your account and all associated data at any time by emailing hola@mobyapp.eu with the subject \"Delete my account\" from your registered address and stating the App name. If the App offers the option, you can also do it from its settings.",
+          "You can request deletion of your account and all associated data at any time by emailing hello@mobyapp.us with the subject \"Delete my account\" from your registered address and stating the App name. If the App offers the option, you can also do it from its settings.",
           "We will delete your data within 30 days at most. We only keep, in restricted form, information we are legally required to retain (for example, billing records).",
         ],
       },
       {
         heading: "10. Your rights",
         paragraphs: [
-          "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to hola@mobyapp.eu. If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+          "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to hello@mobyapp.us. If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
         ],
       },
       {
@@ -212,7 +212,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       },
       {
         heading: "14. Contact",
-        paragraphs: ["For any privacy question: hola@mobyapp.eu"],
+        paragraphs: ["For any privacy question: hello@mobyapp.us"],
       },
     ],
   },
