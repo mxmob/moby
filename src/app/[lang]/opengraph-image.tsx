@@ -1,15 +1,14 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { isLocale } from "@/i18n/config";
 import { translations } from "@/i18n/translations";
+import { absoluteUrl } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "MobyApp";
 
-// La ballena de la marca, leída al generar la imagen (estática en el build)
-const mark = `data:image/png;base64,${readFileSync(join(process.cwd(), "public/brand/moby-mark-512.png")).toString("base64")}`;
+// La ballena de la marca (fichero público; en Vercel la función no tiene acceso a public/ por disco)
+const mark = absoluteUrl("/brand/moby-mark-512.png");
 
 /** Imagen para compartir en redes (WhatsApp, LinkedIn, X…) en cada idioma. */
 export default function OgImage({ params }: { params: { lang: string } }) {
