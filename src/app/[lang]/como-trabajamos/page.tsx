@@ -4,14 +4,15 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata, webPageLd, breadcrumbLd } from "@/lib/seo";
 import ComoTrabajamosClient from "./ComoTrabajamosClient";
 
-type Props = { params: { lang: Language } };
+// Next 15: params es una Promise
+type Props = { params: Promise<{ lang: Language }> };
 
-export function generateMetadata({ params }: Props): Metadata {
-  return pageMetadata(params.lang, "comoTrabajamos");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return pageMetadata((await params).lang, "comoTrabajamos");
 }
 
-export default function Page({ params }: Props) {
-  const lang = params.lang;
+export default async function Page({ params }: Props) {
+  const { lang } = await params;
   return (
     <>
       <JsonLd nodes={[webPageLd(lang, "comoTrabajamos", "AboutPage"), breadcrumbLd(lang, ["comoTrabajamos"])]} />

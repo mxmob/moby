@@ -11,8 +11,10 @@ export const alt = "MobyApp";
 const mark = absoluteUrl("/brand/moby-mark-512.png");
 
 /** Imagen para compartir en redes (WhatsApp, LinkedIn, X…) en cada idioma. */
-export default function OgImage({ params }: { params: { lang: string } }) {
-  const t = translations[isLocale(params.lang) ? params.lang : "es"];
+// Next 15: params es una Promise
+export default async function OgImage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const t = translations[isLocale(lang) ? lang : "es"];
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: "#050510", color: "#ffffff" }}>

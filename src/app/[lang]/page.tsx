@@ -13,14 +13,15 @@ import {
   FinalCTASection,
 } from "@/components/home/HomeSections";
 
-type Props = { params: { lang: Language } };
+// Next 15: params es una Promise
+type Props = { params: Promise<{ lang: Language }> };
 
-export function generateMetadata({ params }: Props): Metadata {
-  return pageMetadata(params.lang, "home");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return pageMetadata((await params).lang, "home");
 }
 
-export default function HomePage({ params }: Props) {
-  const lang = params.lang;
+export default async function HomePage({ params }: Props) {
+  const { lang } = await params;
   const t = (k: string) => getNestedValue(translations[lang], k);
   return (
     <>

@@ -6,14 +6,15 @@ import { FaqSection } from "@/components/shared/FaqSection";
 import { breadcrumbLd, faqLd, pageMetadata, webPageLd } from "@/lib/seo";
 import ContactoClient from "./ContactoClient";
 
-type Props = { params: { lang: Language } };
+// Next 15: params es una Promise
+type Props = { params: Promise<{ lang: Language }> };
 
-export function generateMetadata({ params }: Props): Metadata {
-  return pageMetadata(params.lang, "contacto");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return pageMetadata((await params).lang, "contacto");
 }
 
-export default function Page({ params }: Props) {
-  const lang = params.lang;
+export default async function Page({ params }: Props) {
+  const { lang } = await params;
   const t = (k: string) => getNestedValue(translations[lang], k);
   return (
     <>

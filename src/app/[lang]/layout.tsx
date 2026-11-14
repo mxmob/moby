@@ -13,7 +13,8 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { fontVariables } from "@/lib/fonts";
 import "../globals.css";
 
-type Params = { params: { lang: string } };
+// Next 15: params es una Promise
+type Params = { params: Promise<{ lang: string }> };
 
 // Solo existen /es (servido sin prefijo por el middleware) y /en
 export const dynamicParams = false;
@@ -21,9 +22,9 @@ export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export function generateMetadata({ params }: Params): Metadata {
-  if (!isLocale(params.lang)) return {};
-  const lang = params.lang;
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
   const home = SEO.home[lang];
   return {
     metadataBase: new URL(SITE_URL),
@@ -64,9 +65,9 @@ export const viewport: Viewport = {
   themeColor: "#050510",
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode } & Params) {
-  if (!isLocale(params.lang)) notFound();
-  const lang = params.lang as Language;
+export default async function RootLayout({ children, params }: { children: React.ReactNode } & Params) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
 
   return (
     <html lang={lang} className={`dark ${fontVariables}`}>

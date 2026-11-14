@@ -4,14 +4,15 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata, webPageLd, breadcrumbLd, serviceLd, serviceItems } from "@/lib/seo";
 import OptimizacionClient from "./OptimizacionClient";
 
-type Props = { params: { lang: Language } };
+// Next 15: params es una Promise
+type Props = { params: Promise<{ lang: Language }> };
 
-export function generateMetadata({ params }: Props): Metadata {
-  return pageMetadata(params.lang, "optimizacion");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return pageMetadata((await params).lang, "optimizacion");
 }
 
-export default function Page({ params }: Props) {
-  const lang = params.lang;
+export default async function Page({ params }: Props) {
+  const { lang } = await params;
   return (
     <>
       <JsonLd nodes={[webPageLd(lang, "optimizacion"), breadcrumbLd(lang, ["optimizacion"]), serviceLd(lang, "optimizacion", serviceItems(lang, "optimizacion.services.items", "name"))]} />
