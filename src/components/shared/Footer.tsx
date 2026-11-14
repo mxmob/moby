@@ -113,7 +113,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-sm">
-            {t("footer.copyright")}
+            {t("footer.copyright").replace("{year}", String(new Date().getFullYear()))}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link href={href("/privacidad")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
