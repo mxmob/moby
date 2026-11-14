@@ -6,7 +6,7 @@ import { GalaxyBackground } from "./GalaxyBackground";
 import { PentagonHero } from "./PentagonHero";
 
 export function Hero() {
-  const { t, isHydrated } = useI18n();
+  const { t, href, isHydrated } = useI18n();
 
   return (
     <section
@@ -74,7 +74,7 @@ export function Hero() {
           `}
         >
           <Link
-            href="/soluciones"
+            href={href("/soluciones")}
             className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full
               bg-gradient-to-r from-cyan-500 to-violet-600
               text-white font-semibold text-base
@@ -89,7 +89,7 @@ export function Hero() {
           </Link>
 
           <Link
-            href="/optimizacion"
+            href={href("/optimizacion")}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full
               bg-white/5 border border-white/20 text-white/90 font-medium text-base
               transition-all duration-300 hover:bg-white/10 hover:border-white/30"

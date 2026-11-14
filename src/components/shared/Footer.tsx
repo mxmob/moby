@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { CookieSettingsLink } from "@/components/consent/CookieSettingsLink";
+import { EMAIL, PHONE_DISPLAY, whatsappHref } from "@/lib/site";
 import { useI18n } from "@/i18n/useI18n";
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const serviceLinks = [
     { href: "/digitalizacion", label: t("nav.digitalizacion") },
@@ -15,10 +18,10 @@ export function Footer() {
   ];
 
   const sectorLinks = [
-    { href: "/soluciones/restaurantes", label: "Restaurantes" },
-    { href: "/soluciones/inmobiliarias", label: "Inmobiliarias" },
-    { href: "/soluciones/negocios-locales", label: "Negocios locales" },
-    { href: "/soluciones/startups", label: "Startups" },
+    { href: "/soluciones/restaurantes", label: t("soluciones.sectors.restaurantes.name") },
+    { href: "/soluciones/inmobiliarias", label: t("soluciones.sectors.inmobiliarias.name") },
+    { href: "/soluciones/negocios-locales", label: t("soluciones.sectors.negociosLocales.name") },
+    { href: "/soluciones/startups", label: t("soluciones.sectors.startups.name") },
   ];
 
   const companyLinks = [
@@ -32,18 +35,27 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <span className="text-white font-semibold text-xl">{t("brand")}</span>
+            <Link href={href("/")} className="inline-block mb-4" aria-label="MobyApp">
+              <Image src="/brand/moby-logo.png" alt="MobyApp" width={396} height={371} sizes="80px" className="h-20 w-auto" />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               {t("footer.tagline")}
             </p>
-            <p className="text-white/30 text-sm">
+            <p className="text-white/30 text-sm mb-3">
               {t("footer.location")}
             </p>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <a href={`mailto:${EMAIL}`} className="text-white/50 hover:text-white transition-colors">{EMAIL}</a>
+              </li>
+              {whatsappHref() && (
+                <li>
+                  <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+                    WhatsApp {PHONE_DISPLAY}
+                  </a>
+                </li>
+              )}
+            </ul>
           </div>
 
           {/* Services */}
@@ -53,7 +65,7 @@ export function Footer() {
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={href(link.href)}
                     className="text-white/50 hover:text-white text-sm transition-colors"
                   >
                     {link.label}
@@ -70,7 +82,7 @@ export function Footer() {
               {sectorLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={href(link.href)}
                     className="text-white/50 hover:text-white text-sm transition-colors"
                   >
                     {link.label}
@@ -87,7 +99,7 @@ export function Footer() {
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={href(link.href)}
                     className="text-white/50 hover:text-white text-sm transition-colors"
                   >
                     {link.label}
@@ -103,13 +115,17 @@ export function Footer() {
           <p className="text-white/30 text-sm">
             {t("footer.copyright")}
           </p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacidad" className="text-white/30 hover:text-white/60 text-sm transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link href={href("/privacidad")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.privacy")}
             </Link>
-            <Link href="/terminos" className="text-white/30 hover:text-white/60 text-sm transition-colors">
+            <Link href={href("/terminos")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.terms")}
             </Link>
+            <Link href={href("/cookies")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              {t("footer.cookies")}
+            </Link>
+            <CookieSettingsLink className="text-white/30 hover:text-white/60 text-sm transition-colors" />
           </div>
         </div>
       </div>

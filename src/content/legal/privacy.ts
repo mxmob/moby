@@ -6,7 +6,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
     title: "Política de Privacidad",
     subtitle: "Cómo MobyApp recoge, usa y protege tus datos en nuestra web y en nuestras aplicaciones móviles.",
     updatedLabel: "Última actualización",
-    updated: "29 de septiembre de 2026",
+    updated: "14 de noviembre de 2026",
     sections: [
       {
         heading: "1. Responsable del tratamiento",
@@ -24,7 +24,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         heading: "3. Datos que recogemos",
         paragraphs: ["Solo recogemos los datos necesarios para que el servicio funcione:"],
         list: [
-          "Datos que nos facilitas: nombre, correo electrónico, empresa y el contenido de los mensajes que nos envías a través del formulario de contacto, correo electrónico o WhatsApp. Si una Aplicación permite crear una cuenta, también el correo electrónico, nombre de usuario y contraseña (almacenada cifrada).",
+          "Datos que nos facilitas: nombre, correo electrónico, teléfono (opcional), empresa y el contenido de los mensajes que nos envías a través del formulario de contacto, correo electrónico o WhatsApp. Si una Aplicación permite crear una cuenta, también el correo electrónico, nombre de usuario y contraseña (almacenada cifrada).",
           "Datos técnicos y de uso: modelo del dispositivo, versión del sistema operativo, idioma, dirección IP, identificadores de la aplicación, páginas o pantallas visitadas, fecha y hora de acceso e informes de errores y fallos.",
           "Datos obtenidos mediante permisos del dispositivo (cámara, ubicación, notificaciones, almacenamiento, etc.): solo cuando una función concreta lo requiere y siempre después de que lo autorices expresamente. Puedes retirar estos permisos en cualquier momento desde los ajustes del dispositivo.",
         ],
@@ -94,7 +94,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "12. Cookies",
         paragraphs: [
-          "La web utiliza cookies técnicas y de analítica (Google Analytics) para entender cómo se usa el sitio. Puedes bloquear o eliminar las cookies desde la configuración de tu navegador.",
+          "La web utiliza almacenamiento técnico necesario para recordar tu elección sobre cookies y, solo si lo aceptas, cookies de analítica de Google Analytics para entender cómo se usa el sitio. Puedes aceptar, rechazar o cambiar tu elección en cualquier momento desde el enlace \"Configurar cookies\" del pie de página. Tienes el detalle de cada cookie, su finalidad y duración en nuestra Política de cookies (www.mobyapp.eu/cookies).",
         ],
       },
       {
@@ -113,7 +113,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
     title: "Privacy Policy",
     subtitle: "How MobyApp collects, uses and protects your data on our website and in our mobile apps.",
     updatedLabel: "Last updated",
-    updated: "September 29, 2026",
+    updated: "November 14, 2026",
     sections: [
       {
         heading: "1. Data controller",
@@ -131,7 +131,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         heading: "3. Data we collect",
         paragraphs: ["We only collect the data needed for the service to work:"],
         list: [
-          "Data you provide: name, email address, company and the content of messages you send us through the contact form, email or WhatsApp. If an App lets you create an account, also your email, username and password (stored encrypted).",
+          "Data you provide: name, email address, phone number (optional), company and the content of messages you send us through the contact form, email or WhatsApp. If an App lets you create an account, also your email, username and password (stored encrypted).",
           "Technical and usage data: device model, operating system version, language, IP address, app identifiers, pages or screens visited, access date and time, and error and crash reports.",
           "Data obtained through device permissions (camera, location, notifications, storage, etc.): only when a specific feature requires it and always after you explicitly grant it. You can revoke these permissions at any time in your device settings.",
         ],
@@ -201,7 +201,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "12. Cookies",
         paragraphs: [
-          "The website uses technical and analytics cookies (Google Analytics) to understand how the site is used. You can block or delete cookies in your browser settings.",
+          "The website uses necessary technical storage to remember your cookie choice and, only if you accept them, Google Analytics cookies to understand how the site is used. You can accept, reject or change your choice at any time using the \"Cookie settings\" link in the footer. Details of each cookie, its purpose and duration are in our Cookie policy (www.mobyapp.eu/en/cookies).",
         ],
       },
       {

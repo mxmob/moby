@@ -32,6 +32,7 @@ export const translations = {
       privacy: "Privacidad",
       terms: "Términos",
       cookies: "Cookies",
+      cookieSettings: "Configurar cookies",
       copyright: "© 2024 MobyApp. Todos los derechos reservados.",
       location: "España y Europa · 100% online",
     },
@@ -187,6 +188,7 @@ export const translations = {
     soluciones: {
       meta: { title: "Soluciones por Sector | MobyApp", description: "Soluciones tecnológicas específicas para cada sector." },
       hero: { h1: "Soluciones para tu sector", subtitle: "Cada industria tiene sus problemas. Nosotros tenemos soluciones específicas." },
+      ui: { problem: "El problema", solution: "Nuestra solución", includes: "Qué incluye" },
       sectors: {
         restaurantes: {
           name: "Restaurantes", slug: "restaurantes",
@@ -195,6 +197,7 @@ export const translations = {
           problem: "Carta desactualizada, reservas por teléfono, reseñas sin gestionar, clientes que no vuelven.",
           solution: "Un sistema integrado que moderniza tu sala sin complicarte la vida.",
           services: ["Menú digital con QR", "Sistema de reservas online", "Gestión automática de reseñas", "Programa de fidelización", "Pedidos para llevar", "Dashboards de ocupación"],
+          ctaTitle: "¿Tienes un restaurante?",
           caseStudy: { title: "Caso real", text: "Restaurante en Barcelona: +40% reservas online, -60% tiempo en gestión de mesas." },
         },
         inmobiliarias: {
@@ -204,6 +207,7 @@ export const translations = {
           problem: "Leads que se pierden, seguimiento manual, fichas de propiedades que no venden.",
           solution: "Un sistema que centraliza todo: propiedades, clientes, seguimiento y conversión.",
           services: ["CRM inmobiliario a medida", "Automatización de leads", "Fichas de propiedades optimizadas", "Matching automático cliente-propiedad", "Seguimiento automatizado", "Reporting de ventas"],
+          ctaTitle: "¿Tienes una inmobiliaria?",
           caseStudy: { title: "Caso real", text: "Inmobiliaria en Madrid: +25% conversión de leads, 0 leads perdidos." },
         },
         negociosLocales: {
@@ -213,6 +217,7 @@ export const translations = {
           problem: "Nadie te encuentra en Google, dependes del boca a boca, no tienes forma de fidelizar clientes.",
           solution: "Te posicionamos localmente y creamos sistemas para que cada cliente vuelva.",
           services: ["Google Business optimizado", "SEO local", "Web orientada a conversión", "Sistema de reseñas", "Programa de fidelización", "WhatsApp Business automatizado"],
+          ctaTitle: "¿Tienes un negocio local?",
           caseStudy: { title: "Caso real", text: "Clínica dental en Valencia: +300% visitas desde Google Maps en 3 meses." },
         },
         startups: {
@@ -222,6 +227,7 @@ export const translations = {
           problem: "Tienes una idea pero no equipo técnico. O lo tienes pero necesitas refuerzo. El tiempo corre.",
           solution: "Construimos tu MVP en semanas, no meses. Escalable desde el día uno.",
           services: ["Desarrollo de MVP", "Product discovery", "Arquitectura escalable", "Integraciones rápidas", "Iteración ágil", "Soporte técnico continuo"],
+          ctaTitle: "¿Tienes una startup?",
           caseStudy: { title: "Caso real", text: "Startup fintech: de idea a MVP validado en 6 semanas." },
         },
       },
@@ -252,9 +258,36 @@ export const translations = {
     contacto: {
       meta: { title: "Contacto | MobyApp", description: "Cuéntanos tu proyecto. Sin compromiso." },
       hero: { h1: "Cuéntanos tu proyecto", subtitle: "Sin formularios eternos, sin esperas. Hablemos de lo que necesitas." },
-      form: { name: "Tu nombre", email: "Tu email", company: "Empresa (opcional)", message: "Cuéntanos brevemente qué necesitas", submit: "Enviar mensaje", sending: "Enviando...", success: "Mensaje enviado. Te respondemos en menos de 24h.", error: "Error al enviar. Prueba por WhatsApp o email directo." },
+      form: {
+        name: "Tu nombre", email: "Tu email", phone: "Teléfono (opcional)", company: "Empresa (opcional)", message: "Cuéntanos brevemente qué necesitas", submit: "Enviar mensaje", sending: "Enviando...",
+        success: "Mensaje enviado. Te respondemos en menos de 24h.",
+        error: "No hemos podido enviar el mensaje. Inténtalo de nuevo o escríbenos a hello@mobyapp.us.",
+        errorValidation: "Revisa los campos: nombre, un email válido y el mensaje son obligatorios.",
+        errorConsent: "Debes aceptar la política de privacidad para enviar el formulario.",
+        consent: "He leído y acepto la",
+        consentLink: "política de privacidad",
+        gdpr: "Responsable: MobyApp. Finalidad: responder a tu consulta y, en su caso, enviarte un presupuesto. Legitimación: tu consentimiento. Destinatarios: no se ceden datos a terceros salvo obligación legal; los guardamos en nuestro propio CRM. Derechos: acceso, rectificación, supresión y demás, escribiendo a hello@mobyapp.us.",
+        moreInfo: "Más información",
+      },
       alternatives: { title: "O si prefieres...", whatsapp: "Escríbenos por WhatsApp", email: "Envíanos un email", call: "Agenda una llamada" },
       info: { location: "100% online · España y Europa", response: "Respondemos en menos de 24 horas", noCommitment: "Sin compromiso, sin presión" },
+    },
+    faq: { title: "Preguntas frecuentes", subtitle: "Lo que más nos preguntan" },
+    cookies: {
+      title: "Usamos cookies",
+      text: "Usamos cookies técnicas necesarias para que la web funcione y, solo si lo aceptas, cookies de analítica (Google Analytics) para saber cómo se usa la web y mejorarla.",
+      policy: "Política de cookies",
+      accept: "Aceptar",
+      reject: "Rechazar",
+      configure: "Configurar",
+      settingsTitle: "Configuración de cookies",
+      necessaryTitle: "Necesarias",
+      necessaryText: "Imprescindibles para que la web funcione y para recordar tu elección sobre cookies. No se pueden desactivar.",
+      alwaysOn: "Siempre activas",
+      analyticsTitle: "Analítica (Google Analytics)",
+      analyticsText: "Nos permiten medir de forma agregada las visitas y cómo se navega por la web. Las instala Google y solo se activan si las aceptas.",
+      save: "Guardar selección",
+      close: "Cerrar",
     },
   },
   en: {
@@ -262,7 +295,7 @@ export const translations = {
     language: "Language",
     nav: { home: "Home", digitalizacion: "Digitalization", optimizacion: "Optimization", automatizacion: "Automation", desarrollo: "Development", impresion3d: "3D Printing", soluciones: "Solutions", comoTrabajamos: "How we work", contacto: "Contact" },
     cta: { primary: "Explore solutions", secondary: "Optimize my business", tertiary: "See how we work", contact: "Let's talk", startProject: "Start project", learnMore: "Learn more", viewCases: "View cases", requestQuote: "Request quote" },
-    footer: { tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", copyright: "© 2024 MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
+    footer: { tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", cookieSettings: "Cookie settings", copyright: "© 2024 MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
     home: {
       hero_h1: "We build technology systems that help real businesses grow.",
       hero_sub: "Digitalization, optimization, automation, development and 3D manufacturing integrated into a single ecosystem.",
@@ -415,6 +448,7 @@ export const translations = {
     soluciones: {
       meta: { title: "Solutions by Sector | MobyApp", description: "Specific technology solutions for each sector." },
       hero: { h1: "Solutions for your sector", subtitle: "Every industry has its problems. We have specific solutions." },
+      ui: { problem: "The problem", solution: "Our solution", includes: "What's included" },
       sectors: {
         restaurantes: {
           name: "Restaurants", slug: "restaurantes",
@@ -423,6 +457,7 @@ export const translations = {
           problem: "Outdated menu, phone reservations, unmanaged reviews, customers who don't return.",
           solution: "An integrated system that modernizes your venue without complicating your life.",
           services: ["Digital QR menu", "Online reservation system", "Automatic review management", "Loyalty program", "Takeaway orders", "Occupancy dashboards"],
+          ctaTitle: "Do you run a restaurant?",
           caseStudy: { title: "Real case", text: "Restaurant in Barcelona: +40% online reservations, -60% time on table management." },
         },
         inmobiliarias: {
@@ -432,6 +467,7 @@ export const translations = {
           problem: "Leads that get lost, manual tracking, listings that don't sell.",
           solution: "A system that centralizes everything: properties, clients, follow-up, and conversion.",
           services: ["Custom real estate CRM", "Lead automation", "Optimized property listings", "Automatic client-property matching", "Automated follow-up", "Sales reporting"],
+          ctaTitle: "Do you run a real estate agency?",
           caseStudy: { title: "Real case", text: "Real estate agency in Madrid: +25% lead conversion, 0 lost leads." },
         },
         negociosLocales: {
@@ -441,6 +477,7 @@ export const translations = {
           problem: "Nobody finds you on Google, you depend on word of mouth, you have no way to build customer loyalty.",
           solution: "We position you locally and create systems so every customer returns.",
           services: ["Optimized Google Business", "Local SEO", "Conversion-focused website", "Review system", "Loyalty program", "Automated WhatsApp Business"],
+          ctaTitle: "Do you run a local business?",
           caseStudy: { title: "Real case", text: "Dental clinic in Valencia: +300% visits from Google Maps in 3 months." },
         },
         startups: {
@@ -450,6 +487,7 @@ export const translations = {
           problem: "You have an idea but no tech team. Or you have one but need reinforcement.",
           solution: "We build your MVP in weeks, not months. Scalable from day one.",
           services: ["MVP development", "Product discovery", "Scalable architecture", "Rapid integrations", "Agile iteration", "Continuous technical support"],
+          ctaTitle: "Do you have a startup?",
           caseStudy: { title: "Real case", text: "Fintech startup: from idea to validated MVP in 6 weeks." },
         },
       },
@@ -480,9 +518,36 @@ export const translations = {
     contacto: {
       meta: { title: "Contact | MobyApp", description: "Tell us about your project. No commitment." },
       hero: { h1: "Tell us about your project", subtitle: "No endless forms, no waiting. Let's talk about what you need." },
-      form: { name: "Your name", email: "Your email", company: "Company (optional)", message: "Briefly tell us what you need", submit: "Send message", sending: "Sending...", success: "Message sent. We'll respond within 24h.", error: "Error sending. Try WhatsApp or direct email." },
+      form: {
+        name: "Your name", email: "Your email", phone: "Phone (optional)", company: "Company (optional)", message: "Briefly tell us what you need", submit: "Send message", sending: "Sending...",
+        success: "Message sent. We'll respond within 24h.",
+        error: "We couldn't send your message. Please try again or email us at hello@mobyapp.us.",
+        errorValidation: "Please check the fields: name, a valid email and a message are required.",
+        errorConsent: "You must accept the privacy policy to send the form.",
+        consent: "I have read and accept the",
+        consentLink: "privacy policy",
+        gdpr: "Controller: MobyApp. Purpose: to answer your enquiry and, where applicable, send you a quote. Legal basis: your consent. Recipients: no data is shared with third parties unless required by law; we store it in our own CRM. Rights: access, rectification, erasure and others, by writing to hello@mobyapp.us.",
+        moreInfo: "More information",
+      },
       alternatives: { title: "Or if you prefer...", whatsapp: "Write us on WhatsApp", email: "Send us an email", call: "Schedule a call" },
       info: { location: "100% online · Spain and Europe", response: "We respond within 24 hours", noCommitment: "No commitment, no pressure" },
+    },
+    faq: { title: "Frequently asked questions", subtitle: "What people ask us most" },
+    cookies: {
+      title: "We use cookies",
+      text: "We use technical cookies that the website needs to work and, only if you accept them, analytics cookies (Google Analytics) to understand how the site is used and improve it.",
+      policy: "Cookie policy",
+      accept: "Accept",
+      reject: "Reject",
+      configure: "Settings",
+      settingsTitle: "Cookie settings",
+      necessaryTitle: "Necessary",
+      necessaryText: "Essential for the website to work and to remember your cookie choice. They cannot be disabled.",
+      alwaysOn: "Always on",
+      analyticsTitle: "Analytics (Google Analytics)",
+      analyticsText: "They let us measure visits and how people browse the site in aggregate. They are set by Google and only enabled if you accept them.",
+      save: "Save selection",
+      close: "Close",
     },
   },
 } as const;

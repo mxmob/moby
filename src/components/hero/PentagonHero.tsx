@@ -288,19 +288,17 @@ export function PentagonHero() {
               <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite" />
             </circle>
           )}
-          {/* Sustituye este <text> por <image href="/logo-moby.svg" .../> cuando lo tengas */}
-          <text
-            x={CENTER}
-            y={CENTER + 14}
-            textAnchor="middle"
-            fontSize="46"
-            fontWeight="700"
-            fill="#ffffff"
-            style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
-          >
-            M
-          </text>
         </g>
+        {/* Logo de Moby (ballena) centrado, ~72% del diámetro del núcleo; fuera del filtro para que no se desenfoque */}
+        <image
+          href="/brand/moby-mark.webp"
+          x={CENTER - 45}
+          y={CENTER - 35}
+          width="90"
+          height="70"
+          preserveAspectRatio="xMidYMid meet"
+          aria-label="MobyApp"
+        />
       </svg>
 
       {/* Labels HTML posicionados sobre cada vértice */}

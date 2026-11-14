@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useI18n } from "@/i18n/useI18n";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
 
 export function Navbar() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -24,10 +25,16 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-white font-bold text-base">M</span>
-            </div>
+          <Link href={href("/")} className="flex items-center gap-2 group" aria-label="MobyApp">
+            <Image
+              src="/brand/moby-mark.png"
+              alt="MobyApp"
+              width={356}
+              height={276}
+              priority
+              sizes="52px"
+              className="h-10 w-auto transition-transform group-hover:scale-105"
+            />
             <span className="text-white font-semibold text-lg tracking-tight">
               {t("brand")}
             </span>
@@ -38,7 +45,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={href(link.href)}
                 className="px-3 py-2 text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5"
               >
                 {link.label}
@@ -52,7 +59,7 @@ export function Navbar() {
               <LanguageSwitch />
             </div>
             <Link
-              href="/contacto"
+              href={href("/contacto")}
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full
                 bg-gradient-to-r from-cyan-500/20 to-violet-500/20
                 border border-cyan-400/30 hover:border-cyan-400/60
@@ -89,7 +96,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={href(link.href)}
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 >
@@ -101,7 +108,7 @@ export function Navbar() {
                 <LanguageSwitch />
               </div>
               <Link
-                href="/contacto"
+                href={href("/contacto")}
                 onClick={() => setMobileMenuOpen(false)}
                 className="mx-4 mt-2 px-5 py-3 rounded-full text-center
                   bg-gradient-to-r from-cyan-500 to-violet-600

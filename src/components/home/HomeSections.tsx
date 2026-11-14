@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
 
 export function NotWebsSection() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   return (
     <section className="py-20 lg:py-28 bg-[#050510]">
@@ -54,7 +54,7 @@ export function NotWebsSection() {
 }
 
 export function PentagonExplainedSection() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const areas = [
     { key: "digitalizacion", icon: "🎯", href: "/digitalizacion" },
     { key: "optimizacion", icon: "📈", href: "/optimizacion" },
@@ -73,7 +73,7 @@ export function PentagonExplainedSection() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {areas.map((area) => (
-            <Link key={area.key} href={area.href} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 text-center">
+            <Link key={area.key} href={href(area.href)} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 text-center">
               <div className="text-3xl mb-4">{area.icon}</div>
               <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">{t(`home.pentagon.areas.${area.key}.title`)}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{t(`home.pentagon.areas.${area.key}.desc`)}</p>
@@ -86,7 +86,7 @@ export function PentagonExplainedSection() {
 }
 
 export function HowWeWorkSection() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   return (
     <section className="py-20 lg:py-28 bg-[#050510]">
@@ -107,7 +107,7 @@ export function HowWeWorkSection() {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link href="/como-trabajamos" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+          <Link href={href("/como-trabajamos")} className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
             {t("cta.learnMore")}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </Link>
@@ -118,7 +118,7 @@ export function HowWeWorkSection() {
 }
 
 export function SectorsSection() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const sectors = [{ key: 0, icon: "🍽️" }, { key: 1, icon: "🏠" }, { key: 2, icon: "🏪" }, { key: 3, icon: "🚀" }];
 
   return (
@@ -130,7 +130,7 @@ export function SectorsSection() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {sectors.map((sector) => (
-            <Link key={sector.key} href={t(`home.sectors.items.${sector.key}.href`)} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
+            <Link key={sector.key} href={href(t(`home.sectors.items.${sector.key}.href`))} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
               <div className="text-3xl mb-4">{sector.icon}</div>
               <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-cyan-400 transition-colors">{t(`home.sectors.items.${sector.key}.name`)}</h3>
               <p className="text-white/50 text-sm">{t(`home.sectors.items.${sector.key}.desc`)}</p>
@@ -138,7 +138,7 @@ export function SectorsSection() {
           ))}
         </div>
         <div className="text-center">
-          <Link href="/soluciones" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:bg-white/5 hover:border-white/30 transition-all">
+          <Link href={href("/soluciones")} className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 hover:bg-white/5 hover:border-white/30 transition-all">
             {t("home.sectors.viewAll")}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </Link>
@@ -149,7 +149,7 @@ export function SectorsSection() {
 }
 
 export function FinalCTASection() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   return (
     <section className="py-20 lg:py-28 bg-[#050510]">
@@ -157,7 +157,7 @@ export function FinalCTASection() {
         <div className="p-12 lg:p-16 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{t("home.finalCta.title")}</h2>
           <p className="text-white/50 text-lg mb-8 max-w-xl mx-auto">{t("home.finalCta.subtitle")}</p>
-          <Link href="/contacto" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105 active:scale-100">
+          <Link href={href("/contacto")} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105 active:scale-100">
             {t("home.finalCta.button")}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>

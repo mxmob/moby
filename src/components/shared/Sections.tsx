@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ReactNode } from "react";
+import { useI18n } from "@/i18n/useI18n";
 
 // Page Hero para páginas internas
 interface PageHeroProps {
@@ -153,6 +154,7 @@ interface CTASectionProps {
 }
 
 export function CTASection({ title, buttonText, buttonHref = "/contacto", subtitle }: CTASectionProps) {
+  const { href } = useI18n();
   return (
     <section className="py-20 lg:py-28">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -166,7 +168,7 @@ export function CTASection({ title, buttonText, buttonHref = "/contacto", subtit
             </p>
           )}
           <Link
-            href={buttonHref}
+            href={href(buttonHref)}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full
               bg-gradient-to-r from-cyan-500 to-violet-600
               text-white font-semibold text-base
@@ -225,9 +227,10 @@ interface SectorCardProps {
 }
 
 export function SectorCard({ name, desc, href }: SectorCardProps) {
+  const { href: localeHref } = useI18n();
   return (
     <Link
-      href={href}
+      href={localeHref(href)}
       className="group block p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300"
     >
       <div className="flex items-start justify-between gap-4">

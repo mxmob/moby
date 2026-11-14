@@ -1,49 +1,39 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useI18n } from "@/i18n/useI18n";
 import { Language } from "@/i18n/translations";
+import { localePath, stripLocale } from "@/i18n/config";
 
 const languageLabels: Record<Language, string> = {
   es: "ES",
   en: "EN",
 };
 
+/** ES / EN: enlaces a la misma página en el otro idioma (rastreables por buscadores). */
 export function LanguageSwitch() {
-  const { language, setLanguage, supportedLanguages, isHydrated } = useI18n();
-
-  if (!isHydrated) {
-    return (
-      <div className="flex items-center gap-1 text-sm">
-        <span className="text-white/40">--</span>
-      </div>
-    );
-  }
+  const { language, supportedLanguages } = useI18n();
+  const path = stripLocale(usePathname() || "/");
 
   return (
-    <div 
-      className="flex items-center gap-1 text-sm"
-      role="group"
-      aria-label="Language selection"
-    >
+    <div className="flex items-center gap-1 text-sm" role="group" aria-label="Language selection">
       {supportedLanguages.map((lang, index) => (
         <span key={lang} className="flex items-center">
-          <button
-            onClick={() => setLanguage(lang)}
+          <Link
+            href={localePath(lang, path)}
+            hrefLang={lang}
+            lang={lang}
             className={`
               px-2 py-1 rounded-md transition-all duration-300
-              ${language === lang 
-                ? "text-cyan-400 bg-cyan-400/10" 
-                : "text-white/50 hover:text-white/80 hover:bg-white/5"
-              }
+              ${language === lang ? "text-cyan-400 bg-cyan-400/10" : "text-white/50 hover:text-white/80 hover:bg-white/5"}
             `}
-            aria-pressed={language === lang}
-            aria-label={`Switch to ${lang === "es" ? "Spanish" : "English"}`}
+            aria-current={language === lang ? "true" : undefined}
+            aria-label={lang === "es" ? "Español" : "English"}
           >
             {languageLabels[lang]}
-          </button>
-          {index < supportedLanguages.length - 1 && (
-            <span className="text-white/20 mx-0.5">/</span>
-          )}
+          </Link>
+          {index < supportedLanguages.length - 1 && <span className="text-white/20 mx-0.5">/</span>}
         </span>
       ))}
     </div>

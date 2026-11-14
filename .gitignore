@@ -17,3 +17,6 @@ next-env.d.ts.bak
 .DS_Store
 *.log
 .vercel
+.env*
+
+!.env.example
