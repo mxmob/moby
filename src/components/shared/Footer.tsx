@@ -125,6 +125,9 @@ export function Footer() {
             <Link href={href("/cookies")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.cookies")}
             </Link>
+            <Link href={href("/eliminacion-de-datos")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              {t("footer.dataDeletion")}
+            </Link>
             <CookieSettingsLink className="text-white/30 hover:text-white/60 text-sm transition-colors" />
           </div>
         </div>

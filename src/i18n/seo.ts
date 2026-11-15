@@ -21,7 +21,8 @@ export type PageKey =
   | "contacto"
   | "privacidad"
   | "terminos"
-  | "cookies";
+  | "cookies"
+  | "eliminacionDatos";
 
 export interface PageSeo {
   title: string;
@@ -50,6 +51,7 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   privacidad: "/privacidad",
   terminos: "/terminos",
   cookies: "/cookies",
+  eliminacionDatos: "/eliminacion-de-datos",
 };
 
 export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
@@ -293,6 +295,20 @@ export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
       description:
         "Which cookies the MobyApp website uses, what they are for, how long they last and how to accept, reject or withdraw your consent to analytics at any time.",
       name: "Cookies",
+    },
+  },
+  eliminacionDatos: {
+    es: {
+      title: "Eliminación de datos de redes sociales | MobyApp",
+      description:
+        "Cómo eliminar los datos de Facebook, Instagram y TikTok que Moby Social guarda al conectar tus cuentas en Bridge: desde Bridge, desde la plataforma o por correo.",
+      name: "Eliminación de datos",
+    },
+    en: {
+      title: "Social media data deletion | MobyApp",
+      description:
+        "How to delete the Facebook, Instagram and TikTok data Moby Social stores when you connect your accounts in Bridge: from Bridge, from the platform or by email.",
+      name: "Data deletion",
     },
   },
 };
