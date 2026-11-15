@@ -135,9 +135,15 @@ const REF_KEY = "mobyapp-ref";
 const REF_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const REF_RE = /^[A-Za-z0-9_-]{1,64}$/;
 
-/** Guarda el ref durante 30 días (almacenamiento local, ver política de cookies). */
-export function storeRef(ref: string) {
-  if (!REF_RE.test(ref)) return;
+/**
+ * El ref se guarda siempre en memoria (vale durante la navegación en la web) y solo se
+ * persiste 30 días en almacenamiento local si el usuario acepta la analítica
+ * (LSSI art. 22.2: no es estrictamente necesario para el servicio solicitado).
+ */
+let memoryRef = "";
+let refStorageAllowed = false;
+
+function persist(ref: string) {
   try {
     localStorage.setItem(REF_KEY, JSON.stringify({ ref, at: Date.now() }));
   } catch {
@@ -145,7 +151,28 @@ export function storeRef(ref: string) {
   }
 }
 
-export function readRef(): string {
+export function storeRef(ref: string) {
+  if (!REF_RE.test(ref)) return;
+  memoryRef = ref;
+  if (refStorageAllowed) persist(ref);
+}
+
+/** Llamar al cambiar el consentimiento de analítica: guarda el ref en memoria o lo borra. */
+export function setRefStorage(allowed: boolean) {
+  refStorageAllowed = allowed;
+  if (allowed) {
+    if (memoryRef) persist(memoryRef);
+  } else {
+    try {
+      localStorage.removeItem(REF_KEY);
+    } catch {
+      /* navegador sin almacenamiento */
+    }
+  }
+}
+
+function readStoredRef(): string {
+  if (!refStorageAllowed) return "";
   try {
     const raw = localStorage.getItem(REF_KEY);
     if (!raw) return "";
@@ -158,6 +185,10 @@ export function readRef(): string {
   } catch {
     return "";
   }
+}
+
+export function readRef(): string {
+  return memoryRef || readStoredRef();
 }
 
 export const cleanCode = (v: string | null | undefined) => (v || "").trim().toUpperCase().replace(/[^A-Z0-9_-]/g, "").slice(0, 64);

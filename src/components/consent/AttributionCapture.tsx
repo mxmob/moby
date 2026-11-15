@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { captureAttribution, setAttributionStorage } from "@/lib/attribution";
 import { useConsent } from "@/lib/consent";
+import { setRefStorage } from "@/lib/signup";
 
 /**
  * Origen de la visita (utm/referente/página de entrada) para los formularios.
@@ -17,6 +18,7 @@ export function AttributionCapture() {
   useEffect(() => {
     if (consent === undefined) return; // aún no se sabe (servidor / primer render)
     setAttributionStorage(!!consent?.analytics);
+    setRefStorage(!!consent?.analytics);
   }, [consent]);
   return null;
 }
