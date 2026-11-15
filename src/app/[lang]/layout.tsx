@@ -4,6 +4,7 @@ import { Navbar, Footer } from "@/components/shared";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 import { Analytics } from "@/components/consent/Analytics";
 import MobyAnalytics from "@/components/consent/MobyAnalytics";
+import { RefCapture } from "@/components/pricing/RefCapture";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { isLocale, languageAlternates, LOCALES, OG_LOCALE } from "@/i18n/config";
@@ -80,6 +81,7 @@ export default async function RootLayout({ children, params }: { children: React
           <Footer />
           <CookieBanner />
           <MobyAnalytics />
+          <RefCapture />
           <Analytics />
         </I18nProvider>
       </body>

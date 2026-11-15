@@ -18,6 +18,7 @@ export function Navbar() {
     { href: "/impresion-3d", label: t("nav.impresion3d") },
     { href: "/soluciones", label: t("nav.soluciones") },
     { href: "/como-trabajamos", label: t("nav.comoTrabajamos") },
+    { href: "/precios", label: t("nav.precios") },
   ];
 
   return (
@@ -25,7 +26,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href={href("/")} className="flex items-center gap-2 group" aria-label="MobyApp">
+          <Link href={href("/")} className="flex items-center gap-2 group shrink-0" aria-label="MobyApp">
             <Image
               src="/brand/moby-mark.png"
               alt="MobyApp"
@@ -41,12 +42,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={href(link.href)}
-                className="px-3 py-2 text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="px-2 2xl:px-3 py-2 text-[13px] 2xl:text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -73,7 +74,7 @@ export function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white/70 hover:text-white"
+              className="xl:hidden p-2 text-white/70 hover:text-white"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -91,7 +92,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/5">
+          <div className="xl:hidden py-4 border-t border-white/5">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link

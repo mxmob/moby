@@ -3,8 +3,8 @@ import type { Language } from "@/i18n/translations";
 
 // TODO(MobyApp): añadir el domicilio social registrado de MobyApp LLC cuando esté confirmado.
 // Mientras esté vacío no se muestra.
-const LLC_ADDRESS_ES = "";
-const LLC_ADDRESS_EN = "";
+export const LLC_ADDRESS_ES = "";
+export const LLC_ADDRESS_EN = "";
 
 export const privacyPolicy: Record<Language, LegalContent> = {
   es: {
@@ -30,6 +30,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         paragraphs: ["Solo recogemos los datos necesarios para que el servicio funcione:"],
         list: [
           "Datos que nos facilitas: nombre, correo electrónico, teléfono (opcional), empresa y el contenido de los mensajes que nos envías a través del formulario de contacto, correo electrónico o WhatsApp. Si una Aplicación permite crear una cuenta, también el correo electrónico, nombre de usuario y contraseña (almacenada cifrada).",
+          "Datos de contratación y facturación, si contratas un servicio: nombre, NIF/CIF, dirección y teléfono de la empresa, nombre, correo electrónico y teléfono de la persona responsable, plan contratado, código promocional o de recomendación utilizado e historial de pagos y facturas. Los datos de la tarjeta los recoge directamente Stripe.",
           "Datos técnicos y de uso: modelo del dispositivo, versión del sistema operativo, idioma, dirección IP, identificadores de la aplicación, páginas o pantallas visitadas, fecha y hora de acceso e informes de errores y fallos.",
           "Datos obtenidos mediante permisos del dispositivo (cámara, ubicación, notificaciones, almacenamiento, etc.): solo cuando una función concreta lo requiere y siempre después de que lo autorices expresamente. Puedes retirar estos permisos en cualquier momento desde los ajustes del dispositivo.",
         ],
@@ -38,6 +39,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         heading: "4. Para qué usamos tus datos y base legal",
         list: [
           "Prestar el servicio y las funciones de las Aplicaciones que solicitas (ejecución de un contrato).",
+          "Gestionar la contratación, los cobros, la facturación y, en su caso, la atribución a un partner o el programa de recomendación (ejecución de un contrato y cumplimiento de obligaciones legales fiscales y contables).",
           "Responder a tus consultas y solicitudes de presupuesto (consentimiento y medidas precontractuales).",
           "Mantener la seguridad, prevenir el fraude y corregir errores técnicos (interés legítimo).",
           "Elaborar estadísticas agregadas de uso para mejorar la web y las Aplicaciones (consentimiento o interés legítimo, según corresponda).",
@@ -57,7 +59,9 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Servicios de analítica y diagnóstico de errores (por ejemplo, Google Analytics o Google Firebase).",
           "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), para las funciones de inteligencia artificial de Bridge (asistente, redacción y traducción de textos). Solo recibe el contenido necesario para cada petición, que según su contrato de encargado del tratamiento no se usa para entrenar sus modelos.",
           "Servicios de notificaciones push del navegador o del sistema operativo (Google, Apple, Mozilla, Microsoft), que reciben el aviso cifrado para entregarlo en tu dispositivo.",
+          "Stripe (Stripe Payments Europe, Ltd. y sus afiliadas), como procesador de pagos para la contratación online de los servicios: recibe los datos de pago y de facturación necesarios para cobrar las suscripciones y gestionar el portal de cliente. MobyApp no recibe ni almacena los datos completos de tu tarjeta.",
           "Google Play y otras tiendas de aplicaciones, para la distribución de las Aplicaciones y, en su caso, la gestión de pagos. MobyApp no recibe ni almacena los datos de tu tarjeta.",
+          "El partner o distribuidor autorizado con cuyo código o enlace hayas contratado, y el cliente que te haya recomendado: solo el nombre de tu empresa, los servicios contratados y su estado, para el cálculo de comisiones o créditos.",
           "Meta Platforms (Facebook e Instagram) y TikTok, solo cuando nos pides publicar contenido en tus cuentas: les enviamos el texto y los archivos de esa publicación.",
           "Autoridades públicas, cuando lo exija la ley.",
         ],
@@ -154,6 +158,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         paragraphs: ["We only collect the data needed for the service to work:"],
         list: [
           "Data you provide: name, email address, phone number (optional), company and the content of messages you send us through the contact form, email or WhatsApp. If an App lets you create an account, also your email, username and password (stored encrypted).",
+          "Purchase and billing data, if you purchase a service: the business name, tax ID, address and phone number, the account owner's name, email and phone number, the plan purchased, any promo or referral code used and the payment and invoice history. Card details are collected directly by Stripe.",
           "Technical and usage data: device model, operating system version, language, IP address, app identifiers, pages or screens visited, access date and time, and error and crash reports.",
           "Data obtained through device permissions (camera, location, notifications, storage, etc.): only when a specific feature requires it and always after you explicitly grant it. You can revoke these permissions at any time in your device settings.",
         ],
@@ -162,6 +167,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         heading: "4. How we use your data and legal basis",
         list: [
           "To provide the service and the App features you request (performance of a contract).",
+          "To manage purchases, payments, invoicing and, where applicable, partner attribution or the referral programme (performance of a contract and compliance with tax and accounting obligations).",
           "To answer your enquiries and quote requests (consent and pre-contractual steps).",
           "To keep the service secure, prevent fraud and fix technical errors (legitimate interest).",
           "To produce aggregated usage statistics to improve the website and the Apps (consent or legitimate interest, as applicable).",
@@ -181,7 +187,9 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Analytics and crash reporting services (for example, Google Analytics or Google Firebase).",
           "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), for the artificial intelligence features in Bridge (assistant, text drafting and translation). It only receives the content needed for each request, which under its data processing agreement is not used to train its models.",
           "Browser and operating system push notification services (Google, Apple, Mozilla, Microsoft), which receive the encrypted notification to deliver it to your device.",
+          "Stripe (Stripe Payments Europe, Ltd. and its affiliates), as payment processor for online purchases of the services: it receives the payment and billing data needed to charge subscriptions and run the customer portal. MobyApp never receives or stores your full card details.",
           "Google Play and other app stores, for distributing the Apps and, where applicable, handling payments. MobyApp never receives or stores your card details.",
+          "The authorised partner or reseller whose code or link you used to sign up, and the customer who referred you: only your business name, the services purchased and their status, to calculate commissions or credits.",
           "Meta Platforms (Facebook and Instagram) and TikTok, only when you ask us to publish content to your accounts: we send them the text and files of that post.",
           "Public authorities, when required by law.",
         ],

@@ -12,6 +12,7 @@ export const translations = {
       soluciones: "Soluciones",
       comoTrabajamos: "Cómo trabajamos",
       contacto: "Contacto",
+      precios: "Precios",
     },
     cta: {
       primary: "Explorar soluciones",
@@ -294,7 +295,7 @@ export const translations = {
   en: {
     brand: "MobyApp",
     language: "Language",
-    nav: { home: "Home", digitalizacion: "Digitalization", optimizacion: "Optimization", automatizacion: "Automation", desarrollo: "Development", impresion3d: "3D Printing", soluciones: "Solutions", comoTrabajamos: "How we work", contacto: "Contact" },
+    nav: { home: "Home", digitalizacion: "Digitalization", optimizacion: "Optimization", automatizacion: "Automation", desarrollo: "Development", impresion3d: "3D Printing", soluciones: "Solutions", comoTrabajamos: "How we work", contacto: "Contact", precios: "Pricing" },
     cta: { primary: "Explore solutions", secondary: "Optimize my business", tertiary: "See how we work", contact: "Let's talk", startProject: "Start project", learnMore: "Learn more", viewCases: "View cases", requestQuote: "Request quote" },
     footer: { tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", dataDeletion: "Data deletion", cookieSettings: "Cookie settings", copyright: "© {year} MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
     home: {

@@ -10,7 +10,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
     title: "Política de Cookies",
     subtitle: "Qué cookies y tecnologías similares usa la web de MobyApp, para qué y cómo gestionarlas.",
     updatedLabel: "Última actualización",
-    updated: "14 de noviembre de 2026",
+    updated: "15 de noviembre de 2026",
     sections: [
       {
         heading: "1. Qué son las cookies",
@@ -23,6 +23,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
         paragraphs: ["Estas son todas las cookies y tecnologías de almacenamiento que puede usar la web:"],
         list: [
           "mobyapp-consent (almacenamiento local, propia, necesaria): guarda tu elección sobre cookies, con su fecha y versión, para no volver a preguntarte en cada visita. Duración: 12 meses; después te volvemos a preguntar. No requiere consentimiento.",
+          "mobyapp-ref (almacenamiento local, propia, necesaria): si llegas a la web con un enlace de recomendación o de un partner (?ref=), guarda ese código para aplicarlo si contratas un servicio. Duración: 30 días. No se envía a terceros.",
           "_ga (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): distingue a los usuarios de forma anónima para elaborar estadísticas de uso. Duración: 2 años. Solo se instala si aceptas la analítica.",
           "_ga_<ID> (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): mantiene el estado de la sesión para medir las visitas. Duración: 2 años. Solo se instala si aceptas la analítica.",
           "Medición de audiencia anónima sin cookies, propia: contamos las visitas de forma agregada sin instalar cookies, sin guardar tu dirección IP y sin identificarte. Si tu navegador envía la señal «Do Not Track» o «Global Privacy Control», no se mide tu visita.",
@@ -54,7 +55,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
     title: "Cookie Policy",
     subtitle: "Which cookies and similar technologies the MobyApp website uses, why, and how to manage them.",
     updatedLabel: "Last updated",
-    updated: "November 14, 2026",
+    updated: "November 15, 2026",
     sections: [
       {
         heading: "1. What cookies are",
@@ -67,6 +68,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
         paragraphs: ["These are all the cookies and storage technologies the website may use:"],
         list: [
           "mobyapp-consent (local storage, first-party, necessary): stores your cookie choice, with its date and version, so we don't ask you again on every visit. Duration: 12 months; after that we ask again. Does not require consent.",
+          "mobyapp-ref (local storage, first-party, necessary): if you arrive at the website through a referral or partner link (?ref=), stores that code so it can be applied if you purchase a service. Duration: 30 days. Not shared with third parties.",
           "_ga (Google Analytics cookie, third party: Google Ireland Ltd., analytics): distinguishes users anonymously to produce usage statistics. Duration: 2 years. Only set if you accept analytics.",
           "_ga_<ID> (Google Analytics cookie, third party: Google Ireland Ltd., analytics): keeps the session state to measure visits. Duration: 2 years. Only set if you accept analytics.",
           "Anonymous, cookieless first-party audience measurement: we count visits in aggregate without setting cookies, storing your IP address or identifying you. If your browser sends a Do Not Track or Global Privacy Control signal, your visit is not measured.",

@@ -19,6 +19,7 @@ export type PageKey =
   | "startups"
   | "comoTrabajamos"
   | "contacto"
+  | "precios"
   | "privacidad"
   | "terminos"
   | "cookies"
@@ -48,6 +49,7 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   startups: "/soluciones/startups",
   comoTrabajamos: "/como-trabajamos",
   contacto: "/contacto",
+  precios: "/precios",
   privacidad: "/privacidad",
   terminos: "/terminos",
   cookies: "/cookies",
@@ -255,6 +257,20 @@ export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
       name: "Contact",
     },
   },
+  precios: {
+    es: {
+      title: "Precios y planes para negocios | MobyApp",
+      description:
+        "Planes para restaurantes, inmobiliarias, estética, servicios y eventos: carta QR, reservas, citas, CRM y redes. Sin permanencia y con alta online segura.",
+      name: "Precios",
+    },
+    en: {
+      title: "Pricing and plans for businesses | MobyApp",
+      description:
+        "Plans for restaurants, real estate, beauty, services and events: QR menu, bookings, appointments, CRM and social media. No lock-in, secure online sign-up.",
+      name: "Pricing",
+    },
+  },
   privacidad: {
     es: {
       title: "Política de privacidad | MobyApp",
@@ -273,13 +289,13 @@ export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
     es: {
       title: "Términos y condiciones | MobyApp",
       description:
-        "Términos y condiciones de uso del sitio web y de las aplicaciones de MobyApp: requisitos, uso permitido, propiedad intelectual, responsabilidad y ley aplicable.",
+        "Términos de uso de la web y las aplicaciones de MobyApp y condiciones de contratación: suscripciones, pruebas, cancelación, impagos y responsabilidad.",
       name: "Términos",
     },
     en: {
       title: "Terms and conditions | MobyApp",
       description:
-        "Terms and conditions for using the MobyApp website and apps: eligibility, acceptable use, intellectual property, limitation of liability and governing law.",
+        "Terms of use for the MobyApp website and apps and terms of purchase: subscriptions, free trials, cancellation, failed payments, liability and governing law.",
       name: "Terms",
     },
   },

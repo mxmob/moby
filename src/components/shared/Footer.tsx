@@ -26,6 +26,7 @@ export function Footer() {
 
   const companyLinks = [
     { href: "/como-trabajamos", label: t("nav.comoTrabajamos") },
+    { href: "/precios", label: t("nav.precios") },
     { href: "/contacto", label: t("nav.contacto") },
   ];
 
