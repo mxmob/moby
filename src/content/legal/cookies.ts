@@ -25,6 +25,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
           "mobyapp-consent (almacenamiento local, propia, necesaria): guarda tu elección sobre cookies, con su fecha y versión, para no volver a preguntarte en cada visita. Duración: 12 meses; después te volvemos a preguntar. No requiere consentimiento.",
           "_ga (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): distingue a los usuarios de forma anónima para elaborar estadísticas de uso. Duración: 2 años. Solo se instala si aceptas la analítica.",
           "_ga_<ID> (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): mantiene el estado de la sesión para medir las visitas. Duración: 2 años. Solo se instala si aceptas la analítica.",
+          "Medición de audiencia anónima sin cookies, propia: contamos las visitas de forma agregada sin instalar cookies, sin guardar tu dirección IP y sin identificarte. Si tu navegador envía la señal «Do Not Track» o «Global Privacy Control», no se mide tu visita.",
         ],
       },
       {
@@ -68,6 +69,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
           "mobyapp-consent (local storage, first-party, necessary): stores your cookie choice, with its date and version, so we don't ask you again on every visit. Duration: 12 months; after that we ask again. Does not require consent.",
           "_ga (Google Analytics cookie, third party: Google Ireland Ltd., analytics): distinguishes users anonymously to produce usage statistics. Duration: 2 years. Only set if you accept analytics.",
           "_ga_<ID> (Google Analytics cookie, third party: Google Ireland Ltd., analytics): keeps the session state to measure visits. Duration: 2 years. Only set if you accept analytics.",
+          "Anonymous, cookieless first-party audience measurement: we count visits in aggregate without setting cookies, storing your IP address or identifying you. If your browser sends a Do Not Track or Global Privacy Control signal, your visit is not measured.",
         ],
       },
       {
