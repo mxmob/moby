@@ -3,6 +3,8 @@ import { localePath } from "@/i18n/config";
 import { PAGE_PATHS, SEO, type PageKey } from "@/i18n/seo";
 import { HOME_FAQ } from "@/i18n/faq";
 import { serviceItems } from "@/lib/seo";
+import { GIVEAWAY } from "@/components/giveaways/content";
+import { GIVEAWAY_PATHS } from "@/components/giveaways/meta";
 import { SECTORS, SECTOR_KEYS, SECTOR_SLUGS, SECTORS_INDEX_PATH } from "@/content/sectors";
 import { absoluteUrl, EMAIL, PHONE_DISPLAY, STORE_3D_URL, WHATSAPP } from "@/lib/site";
 
@@ -60,6 +62,11 @@ ${SECTOR_KEYS.map((k) => {
 }).join("\n\n")}
 
 Disponible hoy: recordatorios y campañas por email, tarjeta en Google Wallet y tarjeta web. Aún no: WhatsApp automático, Apple Wallet y app móvil nativa (próximamente).
+
+## Herramientas gratuitas
+
+- [Auditoría gratuita de tu ficha de Google](${absoluteUrl("/auditoria-google")}): 5 mejoras priorizadas para tu ficha de Google Maps en 48 h.
+- [${GIVEAWAY.es.name} verificables](${absoluteUrl(GIVEAWAY_PATHS.es)}) (Moby Social): ${GIVEAWAY.es.meta.description} Límites: la API de Meta no permite comprobar si un participante sigue la cuenta o dio «me gusta» (se revisa a mano sobre el ganador) ni la antigüedad de la cuenta; solo funciona con cuentas profesionales de Instagram y páginas de Facebook propias conectadas.
 
 ## Soluciones por sector
 

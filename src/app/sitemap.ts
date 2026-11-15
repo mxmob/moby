@@ -3,6 +3,7 @@ import { LOCALES, localePath } from "@/i18n/config";
 import { PAGE_PATHS, type PageKey } from "@/i18n/seo";
 import { SITE_URL } from "@/lib/site";
 import { AUDIT_PATHS } from "@/components/audit/meta";
+import { GIVEAWAY_PATHS } from "@/components/giveaways/meta";
 import { SECTOR_SLUGS, SECTORS_INDEX_PATH, SLANGS, sPath } from "@/content/sectors";
 
 /** Prioridad orientativa por página */
@@ -35,6 +36,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}${AUDIT_PATHS[l]}`, lastModified, changeFrequency: "monthly" as const, priority: 0.8,
     alternates: { languages: auditLanguages },
   }));
+  // Sorteos de Instagram y Facebook verificables (herramienta de Moby Social) en es/ca/en
+  const giveawayLanguages = {
+    es: `${SITE_URL}${GIVEAWAY_PATHS.es}`, ca: `${SITE_URL}${GIVEAWAY_PATHS.ca}`, en: `${SITE_URL}${GIVEAWAY_PATHS.en}`,
+    "x-default": `${SITE_URL}${GIVEAWAY_PATHS.es}`,
+  };
+  const giveaway: MetadataRoute.Sitemap = (Object.keys(GIVEAWAY_PATHS) as (keyof typeof GIVEAWAY_PATHS)[]).map((l) => ({
+    url: `${SITE_URL}${GIVEAWAY_PATHS[l]}`, lastModified, changeFrequency: "monthly" as const, priority: 0.8,
+    alternates: { languages: giveawayLanguages },
+  }));
   // Landings de sector (es/ca/en): barberías primero y con más prioridad
   const sectorPaths = [SECTOR_SLUGS.barberias, SECTORS_INDEX_PATH, SECTOR_SLUGS.estetica, SECTOR_SLUGS.restaurantes, SECTOR_SLUGS.inmobiliarias];
   const sectors: MetadataRoute.Sitemap = sectorPaths.flatMap((path) => {
@@ -44,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: path === SECTOR_SLUGS.barberias ? 0.9 : 0.8, alternates: { languages },
     }));
   });
-  return audit.concat(sectors, (Object.keys(PAGE_PATHS) as PageKey[]).flatMap((key) => {
+  return audit.concat(giveaway, sectors, (Object.keys(PAGE_PATHS) as PageKey[]).flatMap((key) => {
     const path = PAGE_PATHS[key];
     const languages = {
       ...Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}${localePath(l, path)}`])),

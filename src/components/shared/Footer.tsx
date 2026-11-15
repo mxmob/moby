@@ -26,6 +26,11 @@ export function Footer() {
     { href: "/soluciones/startups", label: t("soluciones.sectors.startups.name") },
   ];
 
+  const toolLinks = [
+    { href: "/auditoria-google", label: t("nav.auditoria") },
+    { href: "/herramientas/sorteo-instagram", label: t("nav.sorteoInstagram") },
+  ];
+
   const companyLinks = [
     { href: "/como-trabajamos", label: t("nav.comoTrabajamos") },
     { href: "/precios", label: t("nav.precios") },
@@ -35,7 +40,7 @@ export function Footer() {
   return (
     <footer className="bg-[#030308] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href={href("/")} className="inline-block mb-4" aria-label="MobyApp">
@@ -83,6 +88,23 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">{t("footer.sectors")}</h4>
             <ul className="space-y-3">
               {sectorLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={href(link.href)}
+                    className="text-white/50 hover:text-white text-sm transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Herramientas gratuitas */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">{t("footer.tools")}</h4>
+            <ul className="space-y-3">
+              {toolLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={href(link.href)}
