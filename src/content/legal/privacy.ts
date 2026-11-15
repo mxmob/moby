@@ -55,6 +55,8 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         list: [
           "Proveedores de alojamiento, bases de datos y almacenamiento en la nube.",
           "Servicios de analítica y diagnóstico de errores (por ejemplo, Google Analytics o Google Firebase).",
+          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), para las funciones de inteligencia artificial de Bridge (asistente, redacción y traducción de textos). Solo recibe el contenido necesario para cada petición, que según su contrato de encargado del tratamiento no se usa para entrenar sus modelos.",
+          "Servicios de notificaciones push del navegador o del sistema operativo (Google, Apple, Mozilla, Microsoft), que reciben el aviso cifrado para entregarlo en tu dispositivo.",
           "Google Play y otras tiendas de aplicaciones, para la distribución de las Aplicaciones y, en su caso, la gestión de pagos. MobyApp no recibe ni almacena los datos de tu tarjeta.",
           "Meta Platforms (Facebook e Instagram) y TikTok, solo cuando nos pides publicar contenido en tus cuentas: les enviamos el texto y los archivos de esa publicación.",
           "Autoridades públicas, cuando lo exija la ley.",
@@ -177,6 +179,8 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         list: [
           "Hosting, database and cloud storage providers.",
           "Analytics and crash reporting services (for example, Google Analytics or Google Firebase).",
+          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), for the artificial intelligence features in Bridge (assistant, text drafting and translation). It only receives the content needed for each request, which under its data processing agreement is not used to train its models.",
+          "Browser and operating system push notification services (Google, Apple, Mozilla, Microsoft), which receive the encrypted notification to deliver it to your device.",
           "Google Play and other app stores, for distributing the Apps and, where applicable, handling payments. MobyApp never receives or stores your card details.",
           "Meta Platforms (Facebook and Instagram) and TikTok, only when you ask us to publish content to your accounts: we send them the text and files of that post.",
           "Public authorities, when required by law.",
