@@ -18,6 +18,8 @@ export function Footer() {
   ];
 
   const sectorLinks = [
+    { href: "/barberias-y-peluquerias", label: t("nav.barberias") },
+    { href: "/sectores", label: t("nav.sectores") },
     { href: "/soluciones/restaurantes", label: t("soluciones.sectors.restaurantes.name") },
     { href: "/soluciones/inmobiliarias", label: t("soluciones.sectors.inmobiliarias.name") },
     { href: "/soluciones/negocios-locales", label: t("soluciones.sectors.negociosLocales.name") },

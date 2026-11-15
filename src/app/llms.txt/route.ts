@@ -3,6 +3,7 @@ import { localePath } from "@/i18n/config";
 import { PAGE_PATHS, SEO, type PageKey } from "@/i18n/seo";
 import { HOME_FAQ } from "@/i18n/faq";
 import { serviceItems } from "@/lib/seo";
+import { SECTORS, SECTOR_KEYS, SECTOR_SLUGS, SECTORS_INDEX_PATH } from "@/content/sectors";
 import { absoluteUrl, EMAIL, PHONE_DISPLAY, STORE_3D_URL, WHATSAPP } from "@/lib/site";
 
 /**
@@ -48,6 +49,17 @@ ${services
         .join("\n")}`
   )
   .join("\n\n")}
+
+## Software MobyApp por sector
+
+Índice: ${absoluteUrl(SECTORS_INDEX_PATH)} (también en catalán: ${absoluteUrl("/ca" + SECTORS_INDEX_PATH)} e inglés: ${absoluteUrl("/en" + SECTORS_INDEX_PATH)}). Sin comisión por reserva ni por pedido; demo gratuita por WhatsApp o formulario. Soporte en persona en Granollers, el Vallès y Barcelona.
+
+${SECTOR_KEYS.map((k) => {
+  const c = SECTORS[k].es;
+  return `### [${c.name}](${absoluteUrl(SECTOR_SLUGS[k])})\n\n${c.meta.description}\n\n${c.features.items.map((f) => `- ${f.module} — ${f.title}: ${f.bullets.join("; ")}`).join("\n")}${c.pack ? `\n\nPack ${c.pack.name}: ${c.pack.items.join("; ")}.` : ""}`;
+}).join("\n\n")}
+
+Disponible hoy: recordatorios y campañas por email, tarjeta en Google Wallet y tarjeta web. Aún no: WhatsApp automático, Apple Wallet y app móvil nativa (próximamente).
 
 ## Soluciones por sector
 

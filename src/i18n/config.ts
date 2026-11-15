@@ -21,6 +21,8 @@ export function localePath(lang: Language, path = "/") {
 /** Quita el prefijo de idioma de una ruta visible: /en/contacto → /contacto */
 export function stripLocale(pathname: string): string {
   const seg = pathname.split("/")[1];
+  // Páginas en catalán (/ca/…, p. ej. landings de sector): al cambiar a es/en se quita el /ca
+  if (seg === "ca") return pathname.slice(3) || "/";
   if (isLocale(seg)) {
     const rest = pathname.slice(seg.length + 1);
     return rest || "/";

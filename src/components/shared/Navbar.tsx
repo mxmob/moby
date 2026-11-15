@@ -17,6 +17,7 @@ export function Navbar() {
     { href: "/desarrollo", label: t("nav.desarrollo") },
     { href: "/impresion-3d", label: t("nav.impresion3d") },
     { href: "/soluciones", label: t("nav.soluciones") },
+    { href: "/sectores", label: t("nav.sectores") },
     { href: "/como-trabajamos", label: t("nav.comoTrabajamos") },
     { href: "/precios", label: t("nav.precios") },
   ];
