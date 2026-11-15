@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
 import { PageHero, Section } from "@/components/shared";
 import { EMAIL, whatsappHref } from "@/lib/site";
+import { getAttribution } from "@/lib/attribution";
 
 type Status = "idle" | "sending" | "success" | "error" | "invalid" | "consent";
 
@@ -35,6 +36,7 @@ export default function ContactoPage() {
           message: data.get("message"),
           consent: true,
           website: data.get("website"), // honeypot
+          attribution: getAttribution(),
         }),
       });
       if (res.ok) {

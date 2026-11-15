@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { isLocale } from "@/i18n/config";
+import { cleanAttribution } from "@/lib/attribution";
 
 /**
  * Formulario de contacto de la web → lead en el CRM de Moby (Bridge).
@@ -48,6 +49,8 @@ export async function POST(req: Request) {
     message,
     source: "mobyapp-web",
     page_url: /^https?:\/\//.test(referer) ? referer.slice(0, 500) : "",
+    // Origen de la visita (utm/referente/página de entrada) → «Origen de clientes» en Bridge
+    attribution: cleanAttribution(body.attribution),
   };
 
   try {
