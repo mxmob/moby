@@ -11,14 +11,14 @@ import { useSyncExternalStore } from "react";
  */
 
 export const CONSENT_KEY = "mobyapp-consent";
-export const CONSENT_VERSION = 1;
+export const CONSENT_VERSION = 2; // v2: la analítica incluye también el origen de las visitas (moby_attr_*)
 const MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
 const OPEN_EVENT = "mobyapp:cookie-settings";
 
 export interface Consent {
   version: number;
   date: string; // ISO
-  /** Analítica: Google Analytics 4 */
+  /** Analítica: Google Analytics 4 y origen de las visitas (moby_attr_first/last, 30 días) */
   analytics: boolean;
 }
 

@@ -24,6 +24,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
         list: [
           "mobyapp-consent (almacenamiento local, propia, necesaria): guarda tu elección sobre cookies, con su fecha y versión, para no volver a preguntarte en cada visita. Duración: 12 meses; después te volvemos a preguntar. No requiere consentimiento.",
           "mobyapp-ref (almacenamiento local, propia, necesaria): si llegas a la web con un enlace de recomendación o de un partner (?ref=), guarda ese código para aplicarlo si contratas un servicio. Duración: 30 días. No se envía a terceros.",
+          "moby_attr_first y moby_attr_last (almacenamiento local, propia, analítica): atribución de origen de las visitas para medir campañas (parámetros utm, dominio de la web de origen y página de entrada; sin datos personales). Duración: 30 días. Solo se guardan si aceptas la analítica; si la rechazas o retiras, se borran al momento. Sin consentimiento, el origen solo se calcula en memoria durante la página actual y se envía con los formularios, sin guardarse en tu dispositivo.",
           "_ga (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): distingue a los usuarios de forma anónima para elaborar estadísticas de uso. Duración: 2 años. Solo se instala si aceptas la analítica.",
           "_ga_<ID> (cookie de Google Analytics, tercero: Google Ireland Ltd., analítica): mantiene el estado de la sesión para medir las visitas. Duración: 2 años. Solo se instala si aceptas la analítica.",
           "Medición de audiencia anónima sin cookies, propia: contamos las visitas de forma agregada sin instalar cookies, sin guardar tu dirección IP y sin identificarte. Si tu navegador envía la señal «Do Not Track» o «Global Privacy Control», no se mide tu visita.",
@@ -39,7 +40,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
       {
         heading: "4. Cómo aceptar, rechazar o retirar el consentimiento",
         paragraphs: [
-          "Puedes cambiar tu elección en cualquier momento desde el enlace \"Configurar cookies\" del pie de página. Si retiras el consentimiento, dejamos de cargar Google Analytics y borramos sus cookies (_ga y _ga_<ID>) de tu navegador.",
+          "Puedes cambiar tu elección en cualquier momento desde el enlace \"Configurar cookies\" del pie de página. Si retiras el consentimiento, dejamos de cargar Google Analytics y borramos sus cookies (_ga y _ga_<ID>) y el origen guardado (moby_attr_first y moby_attr_last) de tu navegador.",
           "También puedes bloquear o eliminar las cookies desde la configuración de tu navegador (Chrome, Firefox, Safari, Edge…), aunque la elección guardada en la web se perderá y te volveremos a preguntar.",
         ],
       },
@@ -69,6 +70,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
         list: [
           "mobyapp-consent (local storage, first-party, necessary): stores your cookie choice, with its date and version, so we don't ask you again on every visit. Duration: 12 months; after that we ask again. Does not require consent.",
           "mobyapp-ref (local storage, first-party, necessary): if you arrive at the website through a referral or partner link (?ref=), stores that code so it can be applied if you purchase a service. Duration: 30 days. Not shared with third parties.",
+          "moby_attr_first and moby_attr_last (local storage, first-party, analytics): attribution of visit origin to measure campaigns (utm parameters, referring site domain and landing page; no personal data). Duration: 30 days. Only stored if you accept analytics; if you reject or withdraw it, they are deleted immediately. Without consent, the origin is only computed in memory for the current page and sent with forms, without being stored on your device.",
           "_ga (Google Analytics cookie, third party: Google Ireland Ltd., analytics): distinguishes users anonymously to produce usage statistics. Duration: 2 years. Only set if you accept analytics.",
           "_ga_<ID> (Google Analytics cookie, third party: Google Ireland Ltd., analytics): keeps the session state to measure visits. Duration: 2 years. Only set if you accept analytics.",
           "Anonymous, cookieless first-party audience measurement: we count visits in aggregate without setting cookies, storing your IP address or identifying you. If your browser sends a Do Not Track or Global Privacy Control signal, your visit is not measured.",
@@ -84,7 +86,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
       {
         heading: "4. How to accept, reject or withdraw consent",
         paragraphs: [
-          "You can change your choice at any time using the \"Cookie settings\" link in the footer. If you withdraw consent, we stop loading Google Analytics and delete its cookies (_ga and _ga_<ID>) from your browser.",
+          "You can change your choice at any time using the \"Cookie settings\" link in the footer. If you withdraw consent, we stop loading Google Analytics and delete its cookies (_ga and _ga_<ID>) and the stored origin (moby_attr_first and moby_attr_last) from your browser.",
           "You can also block or delete cookies in your browser settings (Chrome, Firefox, Safari, Edge…), although the choice saved on the website will be lost and we will ask you again.",
         ],
       },
