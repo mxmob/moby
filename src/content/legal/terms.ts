@@ -1,13 +1,13 @@
 import type { LegalContent } from "@/components/legal/LegalDocument";
 import type { Language } from "@/i18n/translations";
-import { LLC_ADDRESS_EN, LLC_ADDRESS_ES } from "./privacy";
+import { LLC, LLC_IDENTITY_EN, LLC_IDENTITY_ES } from "./privacy";
 
 export const termsOfService: Record<Language, LegalContent> = {
   es: {
     title: "Términos y Condiciones",
     subtitle: "Condiciones de uso del sitio web y de las aplicaciones de MobyApp, y condiciones de contratación de sus servicios.",
     updatedLabel: "Última actualización",
-    updated: "15 de noviembre de 2026",
+    updated: "23 de noviembre de 2026",
     sections: [
       {
         heading: "1. Objeto y aceptación",
@@ -19,7 +19,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "2. Prestador",
         paragraphs: [
-          `La web, las Aplicaciones y los Servicios los presta MobyApp LLC, sociedad de responsabilidad limitada constituida en Estados Unidos${LLC_ADDRESS_ES ? `, con domicilio en ${LLC_ADDRESS_ES}` : ""} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Contacto: hello@mobyapp.us.`,
+          `La web, las Aplicaciones y los Servicios los presta ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Contacto: hello@mobyapp.us, teléfono ${LLC.phone}.`,
         ],
       },
       {
@@ -158,7 +158,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "23. Privacidad",
         paragraphs: [
-          "El tratamiento de tus datos personales, incluidos los datos de contratación y facturación, se rige por nuestra Política de Privacidad, disponible en mobyapp.eu/privacidad. MobyApp LLC es el responsable del tratamiento.",
+          "El tratamiento de tus datos personales, incluidos los datos de contratación y facturación, se rige por nuestra Política de Privacidad, disponible en mobyapp.eu/privacidad. Moby App, LLC es el responsable del tratamiento.",
         ],
       },
       {
@@ -183,7 +183,7 @@ export const termsOfService: Record<Language, LegalContent> = {
     title: "Terms and Conditions",
     subtitle: "Terms of use for the MobyApp website and apps, and terms of purchase for its services.",
     updatedLabel: "Last updated",
-    updated: "November 15, 2026",
+    updated: "November 23, 2026",
     sections: [
       {
         heading: "1. Purpose and acceptance",
@@ -195,7 +195,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "2. Provider",
         paragraphs: [
-          `The website, the Apps and the Services are provided by MobyApp LLC, a limited liability company organised in the United States${LLC_ADDRESS_EN ? `, with its registered address at ${LLC_ADDRESS_EN}` : ""} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. Contact: hello@mobyapp.us.`,
+          `The website, the Apps and the Services are provided by ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. Contact: hello@mobyapp.us, phone ${LLC.phone}.`,
         ],
       },
       {
@@ -334,7 +334,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "23. Privacy",
         paragraphs: [
-          "The processing of your personal data, including purchase and billing data, is governed by our Privacy Policy, available at mobyapp.eu/privacidad. MobyApp LLC is the data controller.",
+          "The processing of your personal data, including purchase and billing data, is governed by our Privacy Policy, available at mobyapp.eu/privacidad. Moby App, LLC is the data controller.",
         ],
       },
       {

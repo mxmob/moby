@@ -1,22 +1,30 @@
 import type { LegalContent } from "@/components/legal/LegalDocument";
 import type { Language } from "@/i18n/translations";
 
-// TODO(MobyApp): añadir el domicilio social registrado de MobyApp LLC cuando esté confirmado.
-// Mientras esté vacío no se muestra.
-export const LLC_ADDRESS_ES = "";
-export const LLC_ADDRESS_EN = "";
+// Datos de la entidad que presta la plataforma y los servicios (ADR-025 en el vault moby-docs; datos del dueño, 2026-11-23).
+// Pendiente (no inventar): número de registro (Delaware File Number) y representante en la UE (art. 27 RGPD).
+export const LLC = {
+  legalName: "Moby App, LLC",
+  tradeName: "Moby App",
+  state: "Delaware",
+  ein: "61-2182565",
+  address: "131 Continental Dr, Suite 305, Newark, DE 19713, United States",
+  phone: "+1 (754) 273-6237",
+} as const;
+export const LLC_IDENTITY_ES = `${LLC.legalName} (nombre comercial: ${LLC.tradeName}), sociedad de responsabilidad limitada constituida en el Estado de ${LLC.state} (EE. UU.), con domicilio en ${LLC.address} y número de identificación fiscal (EIN) ${LLC.ein}`;
+export const LLC_IDENTITY_EN = `${LLC.legalName} (doing business as ${LLC.tradeName}), a limited liability company organised under the laws of the State of ${LLC.state} (USA), with its registered address at ${LLC.address} and Employer Identification Number (EIN) ${LLC.ein}`;
 
 export const privacyPolicy: Record<Language, LegalContent> = {
   es: {
     title: "Política de Privacidad",
     subtitle: "Cómo MobyApp recoge, usa y protege tus datos en nuestra web y en nuestras aplicaciones móviles.",
     updatedLabel: "Última actualización",
-    updated: "15 de noviembre de 2026",
+    updated: "23 de noviembre de 2026",
     sections: [
       {
         heading: "1. Responsable del tratamiento",
         paragraphs: [
-          `El responsable del tratamiento de tus datos personales es MobyApp LLC, sociedad de responsabilidad limitada constituida en Estados Unidos${LLC_ADDRESS_ES ? `, con domicilio en ${LLC_ADDRESS_ES}` : ""} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.us.`,
+          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.us o en el teléfono ${LLC.phone}.`,
         ],
       },
       {
@@ -140,12 +148,12 @@ export const privacyPolicy: Record<Language, LegalContent> = {
     title: "Privacy Policy",
     subtitle: "How MobyApp collects, uses and protects your data on our website and in our mobile apps.",
     updatedLabel: "Last updated",
-    updated: "November 15, 2026",
+    updated: "November 23, 2026",
     sections: [
       {
         heading: "1. Data controller",
         paragraphs: [
-          `The controller of your personal data is MobyApp LLC, a limited liability company organised in the United States${LLC_ADDRESS_EN ? `, with its registered address at ${LLC_ADDRESS_EN}` : ""} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.us.`,
+          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.us or by phone on ${LLC.phone}.`,
         ],
       },
       {
