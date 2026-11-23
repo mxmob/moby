@@ -47,7 +47,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
       {
         heading: "5. Más información",
         paragraphs: [
-          "Para saber cómo tratamos tus datos personales consulta nuestra Política de privacidad (www.mobyapp.eu/privacidad). Para cualquier duda: hello@mobyapp.us.",
+          "Para saber cómo tratamos tus datos personales consulta nuestra Política de privacidad (www.mobyapp.eu/privacidad). Para cualquier duda: privacy@mobyapp.eu.",
         ],
       },
     ],
@@ -93,7 +93,7 @@ export const cookiePolicy: Record<Language, LegalContent> = {
       {
         heading: "5. More information",
         paragraphs: [
-          "To learn how we process your personal data, see our Privacy policy (www.mobyapp.eu/en/privacidad). For any questions: hello@mobyapp.us.",
+          "To learn how we process your personal data, see our Privacy policy (www.mobyapp.eu/en/privacidad). For any questions: privacy@mobyapp.eu.",
         ],
       },
     ],

@@ -24,7 +24,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Responsable del tratamiento",
         paragraphs: [
-          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.us o en el teléfono ${LLC.phone}.`,
+          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.us o en el teléfono ${LLC.phone}; para cualquier asunto de privacidad o protección de datos, escribe a privacy@mobyapp.eu.`,
         ],
       },
       {
@@ -96,7 +96,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "9. Eliminación de la cuenta y de los datos",
         paragraphs: [
-          "Puedes solicitar en cualquier momento la eliminación de tu cuenta y de todos los datos asociados enviando un correo a hello@mobyapp.us con el asunto \"Eliminar mi cuenta\" desde la dirección registrada, indicando el nombre de la Aplicación. Si la Aplicación ofrece la opción, también puedes hacerlo desde sus ajustes. Para los datos de Facebook, Instagram o TikTok, consulta la sección 10.",
+          "Puedes solicitar en cualquier momento la eliminación de tu cuenta y de todos los datos asociados enviando un correo a privacy@mobyapp.eu con el asunto \"Eliminar mi cuenta\" desde la dirección registrada, indicando el nombre de la Aplicación. Si la Aplicación ofrece la opción, también puedes hacerlo desde sus ajustes. Para los datos de Facebook, Instagram o TikTok, consulta la sección 10.",
           "Eliminaremos tus datos en un plazo máximo de 30 días. Solo conservaremos, bloqueada, la información que estemos obligados a mantener por ley (por ejemplo, datos de facturación).",
         ],
       },
@@ -112,13 +112,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Mensajes automáticos (solo si el negocio activa esta función en Bridge y concede a Moby los permisos de mensajería de Meta): recibimos los mensajes directos que las personas envían a esa Página o cuenta de Instagram (texto, botones pulsados, tipo de adjunto, respuestas y menciones en historias), los comentarios publicados en sus publicaciones y, de quien escribe o comenta, su identificador con ámbito de la Página o de Instagram, su nombre y su nombre de usuario. Los usamos únicamente para ejecutar las automatizaciones que configura el negocio (respuesta pública o privada a un comentario, respuesta a palabras clave, bienvenida, respuesta a menciones), mostrar las conversaciones en la bandeja de Bridge para que el equipo responda y, si la persona lo acepta expresamente en la conversación, guardar el email o teléfono que facilita como contacto en el CRM del negocio. Respetamos la ventana de 24 horas de Meta (no enviamos mensajes promocionales fuera de ella) y quien escribe puede dejar de recibir mensajes automáticos respondiendo STOP o BAJA. Para estos datos el negocio es el responsable del tratamiento y MobyApp actúa como encargado. Los mensajes se conservan 180 días como máximo y se eliminan antes si el negocio desconecta la cuenta, borra la conversación o se recibe una solicitud de eliminación. Si el negocio pide una «respuesta sugerida con IA», el texto reciente de esa conversación se envía a nuestro proveedor de IA (OpenAI) solo para generar la sugerencia, sin que se use para entrenar modelos; una respuesta generada con IA solo se envía sin revisión si el negocio lo activa expresamente, y entonces se indica en el propio mensaje.",
           "Fuera de los mensajes y comentarios descritos para las automatizaciones, no leemos mensajes privados ni datos de los seguidores; no vendemos ni alquilamos estos datos; no los usamos para publicidad, elaboración de perfiles ni para entrenar modelos de inteligencia artificial, y no los compartimos con terceros salvo con los proveedores de alojamiento y almacenamiento que actúan como encargados del tratamiento. Cumplimos las Condiciones de la Plataforma de Meta y las Condiciones para desarrolladores de TikTok.",
           "Conservación: los tokens de acceso se eliminan en el momento en que desconectas la cuenta en Bridge o retiras el acceso a Moby desde Facebook, Instagram o TikTok. Los mensajes y comentarios de las automatizaciones se borran también en ese momento. El resto de datos de esa cuenta (perfil, publicaciones en caché y estadísticas) se conserva mientras uses Moby Social para que tengas tu histórico, y se elimina por completo cuando eliges «Eliminar datos» en Bridge, cuando envías la solicitud de eliminación desde Facebook o cuando nos lo pides por correo (en un plazo máximo de 30 días), y en todo caso 30 días después de que cierres tu cuenta de Bridge.",
-          "Eliminación: instrucciones paso a paso en www.mobyapp.eu/eliminacion-de-datos (desde Bridge, desde la configuración de Facebook, Instagram o TikTok, o escribiendo a hello@mobyapp.us).",
+          "Eliminación: instrucciones paso a paso en www.mobyapp.eu/eliminacion-de-datos (desde Bridge, desde la configuración de Facebook, Instagram o TikTok, o escribiendo a privacy@mobyapp.eu).",
         ],
       },
       {
         heading: "11. Tus derechos",
         paragraphs: [
-          "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar tu consentimiento, escribiendo a hello@mobyapp.us. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+          "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar tu consentimiento, escribiendo a privacy@mobyapp.eu. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
         ],
       },
       {
@@ -141,7 +141,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       },
       {
         heading: "15. Contacto",
-        paragraphs: ["Para cualquier consulta sobre privacidad: hello@mobyapp.us"],
+        paragraphs: ["Para cualquier consulta sobre privacidad: privacy@mobyapp.eu"],
       },
     ],
   },
@@ -154,7 +154,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Data controller",
         paragraphs: [
-          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.us or by phone on ${LLC.phone}.`,
+          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.us or by phone on ${LLC.phone}; for any privacy or data protection matter, write to privacy@mobyapp.eu.`,
         ],
       },
       {
@@ -226,7 +226,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "9. Account and data deletion",
         paragraphs: [
-          "You can request deletion of your account and all associated data at any time by emailing hello@mobyapp.us with the subject \"Delete my account\" from your registered address and stating the App name. If the App offers the option, you can also do it from its settings. For Facebook, Instagram or TikTok data, see section 10.",
+          "You can request deletion of your account and all associated data at any time by emailing privacy@mobyapp.eu with the subject \"Delete my account\" from your registered address and stating the App name. If the App offers the option, you can also do it from its settings. For Facebook, Instagram or TikTok data, see section 10.",
           "We will delete your data within 30 days at most. We only keep, in restricted form, information we are legally required to retain (for example, billing records).",
         ],
       },
@@ -242,13 +242,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Automated messages (only if the business turns this feature on in Bridge and grants Moby Meta's messaging permissions): we receive the direct messages people send to that Page or Instagram account (text, buttons tapped, attachment type, story replies and mentions), the comments posted on its posts and, for whoever messages or comments, their Page- or Instagram-scoped ID, name and username. We use them only to run the automations the business sets up (public or private reply to a comment, keyword replies, welcome message, replies to mentions), to show the conversations in the Bridge inbox so the team can reply and, only if the person expressly agrees in the conversation, to save the email or phone number they provide as a contact in the business's CRM. We respect Meta's 24-hour messaging window (no promotional messages outside it) and people can stop receiving automated messages by replying STOP or BAJA. For this data the business is the controller and MobyApp acts as its processor. Messages are kept for 180 days at most and deleted earlier if the business disconnects the account, deletes the conversation or a deletion request is received. If the business asks for an \"AI suggested reply\", the recent text of that conversation is sent to our AI provider (OpenAI) only to generate the suggestion and is not used to train models; an AI-generated reply is only sent without review if the business expressly enables it, and the message then says so.",
           "Apart from the messages and comments described for automations, we do not read private messages or followers' data; we do not sell or rent this data; we do not use it for advertising, profiling or to train artificial intelligence models; and we do not share it with third parties other than the hosting and storage providers acting as our data processors. We comply with the Meta Platform Terms and the TikTok Developer Terms of Service.",
           "Retention: access tokens are deleted as soon as you disconnect the account in Bridge or remove Moby's access from Facebook, Instagram or TikTok. Messages and comments from automations are deleted at that moment too. The rest of that account's data (profile, cached posts and insights) is kept while you use Moby Social so you keep your history, and is fully deleted when you choose \"Delete data\" in Bridge, when you send a deletion request from Facebook or when you ask us by email (within 30 days at most), and in any case 30 days after you close your Bridge account.",
-          "Deletion: step-by-step instructions at www.mobyapp.eu/en/eliminacion-de-datos (from Bridge, from your Facebook, Instagram or TikTok settings, or by emailing hello@mobyapp.us).",
+          "Deletion: step-by-step instructions at www.mobyapp.eu/en/eliminacion-de-datos (from Bridge, from your Facebook, Instagram or TikTok settings, or by emailing privacy@mobyapp.eu).",
         ],
       },
       {
         heading: "11. Your rights",
         paragraphs: [
-          "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to hello@mobyapp.us. If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+          "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to privacy@mobyapp.eu. If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
         ],
       },
       {
@@ -271,7 +271,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       },
       {
         heading: "15. Contact",
-        paragraphs: ["For any privacy question: hello@mobyapp.us"],
+        paragraphs: ["For any privacy question: privacy@mobyapp.eu"],
       },
     ],
   },

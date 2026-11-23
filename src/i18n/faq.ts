@@ -102,7 +102,7 @@ export const CONTACT_FAQ: Record<Language, readonly FaqItem[]> = {
     ],
     [
       "¿Qué hacéis con mis datos?",
-      "Los usamos solo para responder a tu consulta y, si lo pides, enviarte un presupuesto. No los cedemos a terceros salvo obligación legal y puedes pedir su supresión en cualquier momento en hello@mobyapp.us. Los detalles están en la política de privacidad.",
+      "Los usamos solo para responder a tu consulta y, si lo pides, enviarte un presupuesto. No los cedemos a terceros salvo obligación legal y puedes pedir su supresión en cualquier momento en privacy@mobyapp.eu. Los detalles están en la política de privacidad.",
     ],
   ],
   en: [
@@ -128,7 +128,7 @@ export const CONTACT_FAQ: Record<Language, readonly FaqItem[]> = {
     ],
     [
       "What do you do with my data?",
-      "We only use it to answer your enquiry and, if you ask, send you a quote. We don't share it with third parties unless required by law, and you can request its deletion at any time at hello@mobyapp.us. Details are in the privacy policy.",
+      "We only use it to answer your enquiry and, if you ask, send you a quote. We don't share it with third parties unless required by law, and you can request its deletion at any time at privacy@mobyapp.eu. Details are in the privacy policy.",
     ],
   ],
 };
