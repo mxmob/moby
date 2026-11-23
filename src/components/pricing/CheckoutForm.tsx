@@ -1,12 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
 import { PRICING_TEXT, type SectorTemplate } from "@/i18n/pricing";
 import { MOBY_API_URL, type SectorValue } from "@/lib/signup";
 
 type Status = "idle" | "sending" | "error";
+
+/** Países de la UE (para el NIF-IVA y la inversión del sujeto pasivo; GR usa el prefijo EL). */
+const EU = ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"];
+/** Otros países habituales; el backend acepta cualquier código ISO 3166-1 de 2 letras. */
+const OTHER = ["AD", "AR", "BR", "CA", "CH", "CL", "CO", "GB", "MX", "NO", "PE", "US", "UY"];
+
+function countryOptions(lang: string) {
+  let names: Intl.DisplayNames | null = null;
+  try {
+    names = new Intl.DisplayNames([lang === "en" ? "en" : "es"], { type: "region" });
+  } catch {
+    names = null;
+  }
+  const label = (c: string) => names?.of(c) || c;
+  const sort = (list: string[]) => [...list].sort((a, b) => label(a).localeCompare(label(b), lang));
+  return {
+    eu: sort(EU).map((c) => ({ code: c, name: label(c) })),
+    other: sort(OTHER).map((c) => ({ code: c, name: label(c) })),
+  };
+}
 
 const inputClass =
   "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 focus:outline-none transition-all";
@@ -66,6 +86,11 @@ export function CheckoutForm({
   const tx = PRICING_TEXT[language].checkout;
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [country, setCountry] = useState("ES");
+  const countries = useMemo(() => countryOptions(language), [language]);
+  const isEuAbroad = country !== "ES" && EU.includes(country);
+  const prefix = country === "GR" ? "EL" : country;
+  const taxLabel = country === "ES" ? tx.taxId : isEuAbroad ? tx.taxIdEu : tx.taxIdOther;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -100,7 +125,7 @@ export function CheckoutForm({
             city: s("city"),
             postal_code: s("postal_code"),
             province: s("province"),
-            country: "ES",
+            country: s("country") || "ES",
           },
           owner: {
             first_name: s("first_name"),
@@ -131,7 +156,49 @@ export function CheckoutForm({
         <h3 className="text-white font-semibold text-lg mb-4">{tx.company}</h3>
         <div className="grid sm:grid-cols-2 gap-4">
           <Field id="company_name" label={tx.companyName} required maxLength={200} autoComplete="organization" className="sm:col-span-2" />
-          <Field id="tax_id" label={tx.taxId} maxLength={32} />
+          <div>
+            <label htmlFor="country" className="block text-white/70 text-sm mb-2">
+              {tx.country}
+            </label>
+            <select
+              id="country"
+              name="country"
+              required
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              autoComplete="country"
+              className={`${inputClass} appearance-none`}
+            >
+              <optgroup label="UE / EU" className="bg-[#0a0a1a]">
+                {countries.eu.map((c) => (
+                  <option key={c.code} value={c.code} className="bg-[#0a0a1a]">
+                    {c.name}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="—" className="bg-[#0a0a1a]">
+                {countries.other.map((c) => (
+                  <option key={c.code} value={c.code} className="bg-[#0a0a1a]">
+                    {c.name}
+                  </option>
+                ))}
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <Field
+              id="tax_id"
+              label={taxLabel}
+              maxLength={32}
+              placeholder={isEuAbroad ? `${prefix}123456789` : undefined}
+              aria-describedby={isEuAbroad ? "tax_id_hint" : undefined}
+            />
+            {isEuAbroad && (
+              <p id="tax_id_hint" className="mt-1 text-xs text-white/40">
+                {tx.vatHint}
+              </p>
+            )}
+          </div>
           <Field id="company_phone" label={tx.phone} type="tel" maxLength={50} autoComplete="tel" />
           <Field id="address" label={tx.address} maxLength={255} autoComplete="street-address" className="sm:col-span-2" />
           <Field id="city" label={tx.city} maxLength={100} autoComplete="address-level2" />
