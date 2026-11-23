@@ -51,6 +51,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Responder a tus consultas y solicitudes de presupuesto (consentimiento y medidas precontractuales).",
           "Mantener la seguridad, prevenir el fraude y corregir errores técnicos (interés legítimo).",
           "Elaborar estadísticas agregadas de uso para mejorar la web y las Aplicaciones (consentimiento o interés legítimo, según corresponda).",
+          "Contar las visitas de la web con nuestra medición de audiencia propia y sin cookies: no instala cookies ni guarda nada en tu dispositivo, no guarda tu dirección IP ni otros datos personales y solo produce cifras agregadas; si tu navegador envía «Do Not Track» o «Global Privacy Control», no se mide tu visita (interés legítimo en entender y mejorar la web). Más detalles en la política de cookies.",
           "Cumplir con nuestras obligaciones legales.",
         ],
         paragraphs: [
@@ -180,6 +181,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "To answer your enquiries and quote requests (consent and pre-contractual steps).",
           "To keep the service secure, prevent fraud and fix technical errors (legitimate interest).",
           "To produce aggregated usage statistics to improve the website and the Apps (consent or legitimate interest, as applicable).",
+          "To count website visits with our own cookieless, first-party audience measurement: it sets no cookies and stores nothing on your device, keeps neither your IP address nor any other personal data and only produces aggregated figures; if your browser sends a Do Not Track or Global Privacy Control signal, your visit is not measured (legitimate interest in understanding and improving the website). See the cookie policy for details.",
           "To comply with our legal obligations.",
         ],
         paragraphs: [
