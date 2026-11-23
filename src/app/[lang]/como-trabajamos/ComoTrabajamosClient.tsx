@@ -8,7 +8,7 @@ export default function ComoTrabajamosPage() {
 
   return (
     <main>
-      <PageHero h1={t("comoTrabajamos.hero.h1")} subtitle={t("comoTrabajamos.hero.subtitle")} />
+      <PageHero h1={t("comoTrabajamos.hero.h1")} subtitle={t("comoTrabajamos.hero.subtitle")} scene="comoTrabajamos" />
 
       <Section>
         <SectionHeader title={t("comoTrabajamos.process.title")} centered={true} />

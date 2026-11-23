@@ -11,7 +11,7 @@ export default function Impresion3DPage() {
 
   return (
     <main>
-      <PageHero h1={t("impresion3d.hero.h1")} subtitle={t("impresion3d.hero.subtitle")} badge={t("nav.impresion3d")} />
+      <PageHero h1={t("impresion3d.hero.h1")} subtitle={t("impresion3d.hero.subtitle")} badge={t("nav.impresion3d")} scene="impresion3d" />
 
       <Section>
         <ProblemSolution

@@ -4,6 +4,8 @@ import { UI } from "@/content/sectors/ui";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { whatsappHref } from "@/lib/site";
 import { homePath, sectorsIndexJsonLd } from "./meta";
+import { Scene } from "@/components/shared/Scene";
+import { SECTOR_LANDING_SCENE } from "./scenes";
 
 const LANG_LABEL: Record<SLang, string> = { es: "ES", ca: "CA", en: "EN" };
 
@@ -40,11 +42,21 @@ export function SectorsIndex({ lang }: { lang: SLang }) {
           {SECTOR_KEYS.map((k, i) => {
             const s = SECTORS[k][lang];
             return (
-              <Link key={k} href={sPath(lang, SECTOR_SLUGS[k])} className={`group block p-7 rounded-2xl border transition-colors ${i === 0 ? "sm:col-span-2 bg-gradient-to-br from-cyan-500/10 to-violet-500/10 border-cyan-500/25 hover:border-cyan-400/50" : "bg-white/[0.02] border-white/5 hover:border-cyan-500/30"}`}>
-                <span className="text-3xl" aria-hidden="true">{SECTOR_ICON[k]}</span>
-                <h2 className="text-xl sm:text-2xl font-bold text-white mt-3 mb-2 group-hover:text-cyan-300 transition-colors">{s.name}</h2>
-                <p className="text-white/60 mb-4">{s.cardText}</p>
-                <span className="text-cyan-400 text-sm font-medium">{ui.seeSector} →</span>
+              <Link key={k} href={sPath(lang, SECTOR_SLUGS[k])} className={`group block overflow-hidden rounded-2xl border transition-colors ${i === 0 ? "sm:col-span-2 sm:grid sm:grid-cols-2 bg-gradient-to-br from-cyan-500/10 to-violet-500/10 border-cyan-500/25 hover:border-cyan-400/50" : "bg-white/[0.02] border-white/5 hover:border-cyan-500/30"}`}>
+                <Scene
+                  scene={SECTOR_LANDING_SCENE[k]}
+                  lang={lang}
+                  priority={i === 0}
+                  sizes="(min-width: 640px) 512px, 100vw"
+                  className={i === 0 ? "aspect-[16/9] sm:aspect-auto sm:h-full sm:min-h-[260px]" : "aspect-[16/9]"}
+                  imgClassName="transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="p-7">
+                  <span className="text-3xl" aria-hidden="true">{SECTOR_ICON[k]}</span>
+                  <h2 className="text-xl sm:text-2xl font-bold text-white mt-3 mb-2 group-hover:text-cyan-300 transition-colors">{s.name}</h2>
+                  <p className="text-white/60 mb-4">{s.cardText}</p>
+                  <span className="text-cyan-400 text-sm font-medium">{ui.seeSector} →</span>
+                </div>
               </Link>
             );
           })}

@@ -3,15 +3,20 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { useI18n } from "@/i18n/useI18n";
+import type { SceneKey } from "@/lib/scenes";
+import { Scene } from "./Scene";
 
 // Page Hero para páginas internas
 interface PageHeroProps {
   h1: string;
   subtitle: string;
   badge?: string;
+  /** Imagen de ambiente bajo el titular (opcional) */
+  scene?: SceneKey;
 }
 
-export function PageHero({ h1, subtitle, badge }: PageHeroProps) {
+export function PageHero({ h1, subtitle, badge, scene }: PageHeroProps) {
+  const { language } = useI18n();
   return (
     <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
       {/* Background gradient */}
@@ -35,6 +40,21 @@ export function PageHero({ h1, subtitle, badge }: PageHeroProps) {
           {subtitle}
         </p>
       </div>
+      {scene && (
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 lg:mt-16">
+          <div
+            className="absolute inset-x-10 inset-y-6 rounded-[3rem] bg-gradient-to-r from-cyan-500/25 via-violet-500/20 to-cyan-500/25 blur-3xl pointer-events-none"
+            aria-hidden="true"
+          />
+          <Scene
+            scene={scene}
+            lang={language}
+            priority
+            sizes="(min-width: 1024px) 960px, 100vw"
+            className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[2/1] rounded-3xl border border-white/10 shadow-2xl shadow-black/60"
+          />
+        </div>
+      )}
     </section>
   );
 }

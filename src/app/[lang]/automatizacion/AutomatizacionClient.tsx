@@ -10,7 +10,7 @@ export default function AutomatizacionPage() {
 
   return (
     <main>
-      <PageHero h1={t("automatizacion.hero.h1")} subtitle={t("automatizacion.hero.subtitle")} badge={t("nav.automatizacion")} />
+      <PageHero h1={t("automatizacion.hero.h1")} subtitle={t("automatizacion.hero.subtitle")} badge={t("nav.automatizacion")} scene="automatizacion" />
 
       <Section>
         <ProblemSolution

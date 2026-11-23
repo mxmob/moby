@@ -10,7 +10,7 @@ export default function DesarrolloPage() {
 
   return (
     <main>
-      <PageHero h1={t("desarrollo.hero.h1")} subtitle={t("desarrollo.hero.subtitle")} badge={t("nav.desarrollo")} />
+      <PageHero h1={t("desarrollo.hero.h1")} subtitle={t("desarrollo.hero.subtitle")} badge={t("nav.desarrollo")} scene="desarrollo" />
 
       <Section>
         <ProblemSolution

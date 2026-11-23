@@ -29,6 +29,7 @@ export default function DigitalizacionPage() {
         h1={t("digitalizacion.hero.h1")}
         subtitle={t("digitalizacion.hero.subtitle")}
         badge={t("nav.digitalizacion")}
+        scene="digitalizacion"
       />
 
       <Section>

@@ -1,5 +1,6 @@
 export { Navbar } from "./Navbar";
 export { Footer } from "./Footer";
+export { Scene } from "./Scene";
 export {
   PageHero,
   Section,
