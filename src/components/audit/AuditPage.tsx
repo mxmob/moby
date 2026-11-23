@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { getAttribution } from "@/lib/attribution";
 import { whatsappHref } from "@/lib/site";
+import { Scene } from "@/components/shared/Scene";
 
 import type { AuditLang } from "./meta";
 
@@ -183,6 +184,12 @@ export function AuditPage({ lang }: { lang: AuditLang }) {
                 </li>
               ))}
             </ul>
+            <Scene
+              scene="auditoriaGoogle"
+              lang={lang}
+              sizes="(min-width: 1024px) 560px, 100vw"
+              className="aspect-[16/9] rounded-2xl border border-white/10 mb-10"
+            />
             <h2 className="text-white font-semibold text-lg mb-4">{c.howTitle}</h2>
             <ol className="grid sm:grid-cols-3 gap-3">
               {c.how.map((h, i) => (

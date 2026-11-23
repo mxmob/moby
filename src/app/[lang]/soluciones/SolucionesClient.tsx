@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
-import { PageHero, Section } from "@/components/shared";
+import { PageHero, Section, Scene } from "@/components/shared";
+import { SECTOR_SCENE } from "@/components/sectors/SectorPage";
 
 export default function SolucionesPage() {
-  const { t, href } = useI18n();
+  const { t, href, language } = useI18n();
 
   const sectors = [
     { key: "restaurantes", icon: "🍽️", color: "from-orange-500/20 to-red-500/10", border: "border-orange-500/20 hover:border-orange-500/40" },
@@ -24,9 +25,16 @@ export default function SolucionesPage() {
             <Link
               key={sector.key}
               href={href(`/soluciones/${t(`soluciones.sectors.${sector.key}.slug`)}`)}
-              className={`group block p-8 rounded-2xl bg-gradient-to-br ${sector.color} border ${sector.border} transition-all duration-300`}
+              className={`group block overflow-hidden rounded-2xl bg-gradient-to-br ${sector.color} border ${sector.border} transition-all duration-300`}
             >
-              <div className="flex items-start gap-6">
+              <Scene
+                scene={SECTOR_SCENE[sector.key as keyof typeof SECTOR_SCENE]}
+                lang={language}
+                sizes="(min-width: 768px) 600px, 100vw"
+                className="aspect-[16/9]"
+                imgClassName="transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="flex items-start gap-6 p-8">
                 <div className="text-5xl">{sector.icon}</div>
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">

@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
 import { GalaxyBackground } from "./GalaxyBackground";
 import { PentagonHero } from "./PentagonHero";
+import { Scene } from "@/components/shared/Scene";
 
 export function Hero() {
-  const { t, href, isHydrated } = useI18n();
+  const { t, href, isHydrated, language } = useI18n();
 
   return (
     <section
@@ -96,6 +97,20 @@ export function Hero() {
           >
             {t("cta.secondary")}
           </Link>
+        </div>
+
+        {/* Escena de ambiente: el negocio real detrás del sistema */}
+        <div className="relative w-full max-w-5xl mx-auto mt-16 md:mt-24">
+          <div
+            className="absolute inset-x-8 inset-y-4 rounded-[3rem] bg-gradient-to-r from-cyan-500/30 via-violet-500/25 to-cyan-500/30 blur-3xl pointer-events-none"
+            aria-hidden="true"
+          />
+          <Scene
+            scene="homeHero"
+            lang={language}
+            sizes="(min-width: 1024px) 1024px, 100vw"
+            className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[2/1] rounded-3xl border border-white/10 shadow-2xl shadow-black/60"
+          />
         </div>
       </main>
 

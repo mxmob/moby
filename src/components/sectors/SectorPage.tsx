@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/i18n/useI18n";
 import { PageHero, Section, SectionHeader, ProblemSolution, CTASection } from "@/components/shared";
+import type { SceneKey } from "@/lib/scenes";
 
 export type SectorKey = "restaurantes" | "inmobiliarias" | "negociosLocales" | "startups";
 
@@ -12,6 +13,14 @@ const ICONS: Record<SectorKey, string> = {
   startups: "🚀",
 };
 
+/** Imagen de ambiente del hero por sector */
+export const SECTOR_SCENE: Record<SectorKey, SceneKey> = {
+  restaurantes: "sectorRestaurantes",
+  inmobiliarias: "sectorInmobiliarias",
+  negociosLocales: "digitalizacion",
+  startups: "desarrollo",
+};
+
 /** Página de solución por sector (restaurantes, inmobiliarias, negocios locales, startups). */
 export function SectorPage({ sectorKey }: { sectorKey: SectorKey }) {
   const { t } = useI18n();
@@ -19,7 +28,7 @@ export function SectorPage({ sectorKey }: { sectorKey: SectorKey }) {
 
   return (
     <main>
-      <PageHero h1={t(`${base}.hero.h1`)} subtitle={t(`${base}.hero.subtitle`)} badge={`${ICONS[sectorKey]} ${t(`${base}.name`)}`} />
+      <PageHero h1={t(`${base}.hero.h1`)} subtitle={t(`${base}.hero.subtitle`)} badge={`${ICONS[sectorKey]} ${t(`${base}.name`)}`} scene={SECTOR_SCENE[sectorKey]} />
 
       <Section>
         <ProblemSolution

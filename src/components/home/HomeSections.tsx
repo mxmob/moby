@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useI18n } from "@/i18n/useI18n";
+import { Scene } from "@/components/shared/Scene";
+import type { SceneKey } from "@/lib/scenes";
 
 export function NotWebsSection() {
   const { t, href } = useI18n();
@@ -54,13 +56,13 @@ export function NotWebsSection() {
 }
 
 export function PentagonExplainedSection() {
-  const { t, href } = useI18n();
-  const areas = [
-    { key: "digitalizacion", icon: "🎯", href: "/digitalizacion" },
-    { key: "optimizacion", icon: "📈", href: "/optimizacion" },
-    { key: "automatizacion", icon: "⚡", href: "/automatizacion" },
-    { key: "desarrollo", icon: "💻", href: "/desarrollo" },
-    { key: "impresion3d", icon: "🔧", href: "/impresion-3d" },
+  const { t, href, language } = useI18n();
+  const areas: { key: string; icon: string; href: string; scene: SceneKey }[] = [
+    { key: "digitalizacion", icon: "🎯", href: "/digitalizacion", scene: "digitalizacion" },
+    { key: "optimizacion", icon: "📈", href: "/optimizacion", scene: "optimizacion" },
+    { key: "automatizacion", icon: "⚡", href: "/automatizacion", scene: "automatizacion" },
+    { key: "desarrollo", icon: "💻", href: "/desarrollo", scene: "desarrollo" },
+    { key: "impresion3d", icon: "🔧", href: "/impresion-3d", scene: "impresion3d" },
   ];
 
   return (
@@ -73,10 +75,19 @@ export function PentagonExplainedSection() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {areas.map((area) => (
-            <Link key={area.key} href={href(area.href)} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 text-center">
-              <div className="text-3xl mb-4">{area.icon}</div>
+            <Link key={area.key} href={href(area.href)} className="group overflow-hidden rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 text-center">
+              <Scene
+                scene={area.scene}
+                lang={language}
+                sizes="(min-width: 1024px) 240px, (min-width: 640px) 50vw, 100vw"
+                className="aspect-[16/10]"
+                imgClassName="transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="relative px-6 pb-6">
+              <div className="-mt-6 mb-3 mx-auto w-12 h-12 rounded-full bg-[#0b0b1d] border border-white/10 flex items-center justify-center text-2xl relative">{area.icon}</div>
               <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">{t(`home.pentagon.areas.${area.key}.title`)}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{t(`home.pentagon.areas.${area.key}.desc`)}</p>
+              </div>
             </Link>
           ))}
         </div>
@@ -86,7 +97,7 @@ export function PentagonExplainedSection() {
 }
 
 export function HowWeWorkSection() {
-  const { t, href } = useI18n();
+  const { t, href, language } = useI18n();
 
   return (
     <section className="py-20 lg:py-28 bg-[#050510]">
@@ -95,6 +106,13 @@ export function HowWeWorkSection() {
           <p className="text-cyan-400 text-sm font-medium tracking-wide uppercase mb-3">{t("home.howWeWork.subtitle")}</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{t("home.howWeWork.title")}</h2>
         </div>
+        <Scene
+          scene="comoTrabajamos"
+          lang={language}
+          sizes="(min-width: 1280px) 1216px, 100vw"
+          className="aspect-[16/9] md:aspect-[3/1] rounded-3xl border border-white/10 mb-12"
+          imgClassName="object-[center_40%]"
+        />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[0, 1, 2, 3].map((i) => (
             <div key={i} className="relative">
@@ -118,8 +136,13 @@ export function HowWeWorkSection() {
 }
 
 export function SectorsSection() {
-  const { t, href } = useI18n();
-  const sectors = [{ key: 0, icon: "🍽️" }, { key: 1, icon: "🏠" }, { key: 2, icon: "🏪" }, { key: 3, icon: "🚀" }];
+  const { t, href, language } = useI18n();
+  const sectors: { key: number; icon: string; scene: SceneKey }[] = [
+    { key: 0, icon: "🍽️", scene: "sectorRestaurantes" },
+    { key: 1, icon: "🏠", scene: "sectorInmobiliarias" },
+    { key: 2, icon: "🏪", scene: "digitalizacion" },
+    { key: 3, icon: "🚀", scene: "desarrollo" },
+  ];
 
   return (
     <section className="py-20 lg:py-28 bg-[#030308]">
@@ -130,10 +153,19 @@ export function SectorsSection() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {sectors.map((sector) => (
-            <Link key={sector.key} href={href(t(`home.sectors.items.${sector.key}.href`))} className="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
-              <div className="text-3xl mb-4">{sector.icon}</div>
-              <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-cyan-400 transition-colors">{t(`home.sectors.items.${sector.key}.name`)}</h3>
-              <p className="text-white/50 text-sm">{t(`home.sectors.items.${sector.key}.desc`)}</p>
+            <Link key={sector.key} href={href(t(`home.sectors.items.${sector.key}.href`))} className="group overflow-hidden rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300">
+              <Scene
+                scene={sector.scene}
+                lang={language}
+                sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
+                className="aspect-[4/3]"
+                imgClassName="transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="p-6">
+                <div className="text-3xl mb-4">{sector.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-cyan-400 transition-colors">{t(`home.sectors.items.${sector.key}.name`)}</h3>
+                <p className="text-white/50 text-sm">{t(`home.sectors.items.${sector.key}.desc`)}</p>
+              </div>
             </Link>
           ))}
         </div>

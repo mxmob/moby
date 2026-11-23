@@ -5,6 +5,8 @@ import { FaqSection } from "@/components/shared/FaqSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { whatsappHref } from "@/lib/site";
 import { Mockup } from "./Mockups";
+import { Scene } from "@/components/shared/Scene";
+import { SECTOR_LANDING_SCENE } from "./scenes";
 import { RoiCalculator } from "./RoiCalculator";
 import { DemoForm } from "./DemoForm";
 import { homePath, sectorJsonLd } from "./meta";
@@ -83,9 +85,19 @@ export function SectorLanding({ sector, lang, price }: { sector: SectorKey; lang
                 )}
               </p>
             </div>
-            <div className="hidden sm:block">
-              <Mockup kind={c.features.items[0].mockup} lang={lang} />
-              <p className="text-center text-xs text-white/30 mt-3">{ui.mockNote}</p>
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-cyan-500/20 via-violet-500/15 to-transparent blur-3xl pointer-events-none" aria-hidden="true" />
+              <Scene
+                scene={SECTOR_LANDING_SCENE[sector]}
+                lang={lang}
+                priority
+                sizes="(min-width: 1024px) 600px, 100vw"
+                className="aspect-[4/3] rounded-3xl border border-white/10 shadow-2xl shadow-black/60"
+              />
+              <div className="hidden sm:block relative -mt-28 lg:-mt-36 px-6 lg:px-0 lg:-ml-12 lg:mr-16">
+                <Mockup kind={c.features.items[0].mockup} lang={lang} />
+                <p className="text-center text-xs text-white/30 mt-3">{ui.mockNote}</p>
+              </div>
             </div>
           </div>
         </div>

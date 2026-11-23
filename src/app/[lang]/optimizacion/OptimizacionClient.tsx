@@ -10,7 +10,7 @@ export default function OptimizacionPage() {
 
   return (
     <main>
-      <PageHero h1={t("optimizacion.hero.h1")} subtitle={t("optimizacion.hero.subtitle")} badge={t("nav.optimizacion")} />
+      <PageHero h1={t("optimizacion.hero.h1")} subtitle={t("optimizacion.hero.subtitle")} badge={t("nav.optimizacion")} scene="optimizacion" />
 
       <Section>
         <ProblemSolution
