@@ -43,7 +43,7 @@ export const dataDeletion: Record<Language, LegalContent> = {
       {
         heading: "Opción 4 · Por correo electrónico",
         paragraphs: [
-          "Escribe a hello@mobyapp.us con el asunto «Eliminar datos de redes sociales» desde el correo de tu usuario de Bridge, indicando el nombre de tu empresa y las cuentas (por ejemplo, @tuempresa en Instagram). Eliminaremos los datos en un plazo máximo de 30 días y te lo confirmaremos por correo.",
+          "Escribe a privacy@mobyapp.eu con el asunto «Eliminar datos de redes sociales» desde el correo de tu usuario de Bridge, indicando el nombre de tu empresa y las cuentas (por ejemplo, @tuempresa en Instagram). Eliminaremos los datos en un plazo máximo de 30 días y te lo confirmaremos por correo.",
         ],
       },
       {
@@ -54,7 +54,7 @@ export const dataDeletion: Record<Language, LegalContent> = {
       },
       {
         heading: "Contacto",
-        paragraphs: ["Para cualquier duda sobre la eliminación de tus datos: hello@mobyapp.us"],
+        paragraphs: ["Para cualquier duda sobre la eliminación de tus datos: privacy@mobyapp.eu"],
       },
     ],
   },
@@ -97,7 +97,7 @@ export const dataDeletion: Record<Language, LegalContent> = {
       {
         heading: "Option 4 · By email",
         paragraphs: [
-          "Email hello@mobyapp.us with the subject \"Delete social media data\" from your Bridge user's email address, stating your company name and the accounts (for example, @yourcompany on Instagram). We will delete the data within 30 days at most and confirm by email.",
+          "Email privacy@mobyapp.eu with the subject \"Delete social media data\" from your Bridge user's email address, stating your company name and the accounts (for example, @yourcompany on Instagram). We will delete the data within 30 days at most and confirm by email.",
         ],
       },
       {
@@ -108,7 +108,7 @@ export const dataDeletion: Record<Language, LegalContent> = {
       },
       {
         heading: "Contact",
-        paragraphs: ["For any question about deleting your data: hello@mobyapp.us"],
+        paragraphs: ["For any question about deleting your data: privacy@mobyapp.eu"],
       },
     ],
   },
