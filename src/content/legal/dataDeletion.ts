@@ -8,12 +8,12 @@ export const dataDeletion: Record<Language, LegalContent> = {
     title: "Eliminación de datos",
     subtitle: "Cómo eliminar los datos de Facebook, Instagram y TikTok que Moby Social guarda cuando conectas tus cuentas en Bridge.",
     updatedLabel: "Última actualización",
-    updated: "15 de noviembre de 2026",
+    updated: "23 de noviembre de 2026",
     sections: [
       {
         heading: "Qué datos guardamos",
         paragraphs: [
-          "Cuando conectas una Página de Facebook, una cuenta profesional de Instagram o una cuenta de TikTok en Bridge (Moby Social), guardamos los tokens de acceso (cifrados), el perfil de la cuenta (nombre, usuario, foto, seguidores), tus publicaciones y sus estadísticas. El detalle completo está en la sección 10 de nuestra política de privacidad (www.mobyapp.eu/privacidad). El responsable del tratamiento es MobyApp LLC.",
+          "Cuando conectas una Página de Facebook, una cuenta profesional de Instagram o una cuenta de TikTok en Bridge (Moby Social), guardamos los tokens de acceso (cifrados), el perfil de la cuenta (nombre, usuario, foto, seguidores), tus publicaciones y sus estadísticas. El detalle completo está en la sección 10 de nuestra política de privacidad (www.mobyapp.eu/privacidad). El responsable del tratamiento es Moby App, LLC.",
         ],
       },
       {
@@ -62,12 +62,12 @@ export const dataDeletion: Record<Language, LegalContent> = {
     title: "Data deletion",
     subtitle: "How to delete the Facebook, Instagram and TikTok data that Moby Social stores when you connect your accounts in Bridge.",
     updatedLabel: "Last updated",
-    updated: "November 15, 2026",
+    updated: "November 23, 2026",
     sections: [
       {
         heading: "What data we store",
         paragraphs: [
-          "When you connect a Facebook Page, an Instagram professional account or a TikTok account in Bridge (Moby Social), we store the access tokens (encrypted), the account profile (name, username, picture, followers), your posts and their insights. Full details are in section 10 of our privacy policy (www.mobyapp.eu/en/privacidad). The data controller is MobyApp LLC.",
+          "When you connect a Facebook Page, an Instagram professional account or a TikTok account in Bridge (Moby Social), we store the access tokens (encrypted), the account profile (name, username, picture, followers), your posts and their insights. Full details are in section 10 of our privacy policy (www.mobyapp.eu/en/privacidad). The data controller is Moby App, LLC.",
         ],
       },
       {
