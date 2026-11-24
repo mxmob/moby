@@ -17,5 +17,5 @@ export const WHATSAPP = "34673885283";
 export const whatsappHref = (text?: string) =>
   WHATSAPP ? `https://wa.me/${WHATSAPP}${text ? `?text=${encodeURIComponent(text)}` : ""}` : "";
 
-export const GA_ID = "G-W0F96M0XR3";
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-QDQC5G6GMP";
 export const STORE_3D_URL = "https://3d.mobyapp.eu";
