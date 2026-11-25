@@ -1,0 +1,129 @@
+{
+  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking o Reviews cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
+  "version": 1,
+  "updated": "2026-11-26",
+  "utm": { "medium": "footer", "campaign": "cross_sell" },
+  "categories": {
+    "marketing": { "es": "Marketing y redes", "en": "Marketing & social" },
+    "events": { "es": "Eventos", "en": "Events" },
+    "business": { "es": "Gestión del negocio", "en": "Business management" },
+    "merch": { "es": "Merchandising 3D", "en": "3D merchandise" },
+    "productivity": { "es": "Productividad", "en": "Productivity" }
+  },
+  "products": [
+    {
+      "id": "moby-feed",
+      "name": "Moby Feed",
+      "status": "active",
+      "category": "marketing",
+      "url": "https://feeds.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-feed.svg",
+      "color": "#2563eb",
+      "description": {
+        "es": "Feeds de Instagram y TikTok para tu web, con plugin de WordPress.",
+        "en": "Instagram and TikTok feeds for your website, with a WordPress plugin."
+      },
+      "cta": { "es": "Crear mi feed gratis", "en": "Create my free feed" }
+    },
+    {
+      "id": "moby-moments",
+      "name": "Moby Moments",
+      "status": "active",
+      "category": "events",
+      "url": "https://moments.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-moments.svg",
+      "color": "#f59e0b",
+      "description": {
+        "es": "Muro de fotos en directo para bodas y eventos: un QR y las fotos salen en pantalla.",
+        "en": "Live photo wall for weddings and events: guests scan a QR and their photos hit the screen."
+      },
+      "cta": { "es": "Ver Moby Moments", "en": "See Moby Moments" }
+    },
+    {
+      "id": "moby-events",
+      "name": "Moby Eventos",
+      "status": "active",
+      "category": "events",
+      "url": "https://events.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-events.png",
+      "color": "#4f46e5",
+      "description": {
+        "es": "Entradas y app del evento: agenda, ponentes, networking y avisos.",
+        "en": "Tickets and event app: agenda, speakers, networking and announcements."
+      },
+      "cta": { "es": "Ver Moby Eventos", "en": "See Moby Events" }
+    },
+    {
+      "id": "moby-3d",
+      "name": "Moby 3D",
+      "status": "active",
+      "category": "merch",
+      "url": "https://3d.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-3d.svg",
+      "color": "#14b8a6",
+      "description": {
+        "es": "Llaveros y merchandising con tu logo, impresos en 3D desde 1 unidad.",
+        "en": "Keychains and merchandise with your logo, 3D printed from a single unit."
+      },
+      "cta": { "es": "Diseñar mi llavero", "en": "Design my keychain" }
+    },
+    {
+      "id": "method168",
+      "name": "Method168",
+      "status": "active",
+      "category": "productivity",
+      "url": "https://method168.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/method168.svg",
+      "color": "#45969f",
+      "description": {
+        "es": "Planifica tu semana hora a hora, registra lo que pasa de verdad y aprende de la diferencia.",
+        "en": "Plan your week hour by hour, track what really happens and learn from the gap."
+      },
+      "cta": { "es": "Probar Method168", "en": "Try Method168" }
+    },
+    {
+      "id": "moby-bridge",
+      "name": "Moby Bridge",
+      "status": "active",
+      "category": "business",
+      "url": "https://bridge.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-bridge.svg",
+      "color": "#6366f1",
+      "description": {
+        "es": "El centro de control de tu negocio: CRM, citas, TPV, facturas y más en un panel.",
+        "en": "Your business control centre: CRM, appointments, POS, invoices and more in one panel."
+      },
+      "cta": { "es": "Entrar en Bridge", "en": "Open Bridge" }
+    },
+    {
+      "id": "moby-booking",
+      "name": "Moby Booking",
+      "status": "soon",
+      "category": "business",
+      "url": "https://booking.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-booking.svg",
+      "logoPlaceholder": true,
+      "color": "#0ea5e9",
+      "description": {
+        "es": "Reservas y citas online para tu negocio, en tu web y sin comisiones.",
+        "en": "Online bookings and appointments for your business, on your website, no commissions."
+      },
+      "cta": { "es": "Ver Moby Booking", "en": "See Moby Booking" }
+    },
+    {
+      "id": "moby-reviews",
+      "name": "Moby Reviews",
+      "status": "soon",
+      "category": "marketing",
+      "url": "https://reviews.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-reviews.svg",
+      "logoPlaceholder": true,
+      "color": "#eab308",
+      "description": {
+        "es": "Consigue más reseñas de Google y muéstralas en tu web.",
+        "en": "Get more Google reviews and show them on your website."
+      },
+      "cta": { "es": "Ver Moby Reviews", "en": "See Moby Reviews" }
+    }
+  ]
+}

@@ -20,6 +20,7 @@ export type PageKey =
   | "comoTrabajamos"
   | "contacto"
   | "precios"
+  | "productos"
   | "privacidad"
   | "terminos"
   | "cookies"
@@ -50,6 +51,7 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   comoTrabajamos: "/como-trabajamos",
   contacto: "/contacto",
   precios: "/precios",
+  productos: "/productos",
   privacidad: "/privacidad",
   terminos: "/terminos",
   cookies: "/cookies",
@@ -269,6 +271,20 @@ export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
       description:
         "Plans for restaurants, real estate, beauty, services and events: QR menu, bookings, appointments, CRM and social media. No lock-in, secure online sign-up.",
       name: "Pricing",
+    },
+  },
+  productos: {
+    es: {
+      title: "Productos de Moby: Feed, Moments, 3D, Method168 y más",
+      description:
+        "Productos de Moby listos para usar: feeds de Instagram y TikTok, muro de fotos para eventos, merchandising 3D, Method168, Bridge y más. Empieza hoy.",
+      name: "Productos",
+    },
+    en: {
+      title: "Moby products: Feed, Moments, 3D, Method168 and more",
+      description:
+        "Ready-to-use Moby products: Instagram and TikTok feeds, a live photo wall for events, 3D merchandise, Method168, Bridge and more. Start today.",
+      name: "Products",
     },
   },
   privacidad: {

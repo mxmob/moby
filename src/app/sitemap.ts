@@ -22,6 +22,7 @@ const PRIORITY: Partial<Record<PageKey, number>> = {
   comoTrabajamos: 0.7,
   contacto: 0.7,
   precios: 0.8,
+  productos: 0.8,
 };
 
 /** Cada página en español e inglés, enlazadas entre sí con hreflang. */

@@ -15,7 +15,17 @@ const nextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "mobyapp.eu" }, { protocol: "https", hostname: "www.mobyapp.eu" }],
   },
   async headers() {
-    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+    return [
+      { source: "/:path*", headers: SECURITY_HEADERS },
+      // Catálogo de productos (fuente única): lo leen las webs de cada producto y Bridge desde otros dominios
+      {
+        source: "/products.json",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          { key: "Cache-Control", value: "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400" },
+        ],
+      },
+    ];
   },
 };
 

@@ -17,6 +17,7 @@ export const translations = {
       barberias: "Barberías y peluquerías",
       auditoria: "Auditoría gratuita de Google",
       sorteoInstagram: "Sorteos de Instagram",
+      productos: "Productos",
     },
     cta: {
       primary: "Explorar soluciones",
@@ -28,7 +29,22 @@ export const translations = {
       viewCases: "Ver casos",
       requestQuote: "Solicitar presupuesto",
     },
+    productos: {
+      hero: {
+        badge: "Productos de Moby",
+        h1: "Herramientas listas para usar",
+        subtitle: "Además de proyectos a medida, en Moby creamos productos que puedes empezar a usar hoy mismo. Elige el que necesitas.",
+      },
+      soon: "Próximamente",
+      soonCta: "Disponible muy pronto",
+      provisionalLogo: "Logo provisional",
+      ctaTitle: "¿Necesitas algo que no está aquí?",
+      ctaButton: "Cuéntanos tu proyecto",
+    },
     footer: {
+      products: "Productos",
+      soon: "Pronto",
+      allProducts: "Ver todos los productos",
       tagline: "Sistemas tecnológicos que hacen crecer negocios reales.",
       services: "Servicios",
       sectors: "Sectores",
@@ -300,9 +316,21 @@ export const translations = {
   en: {
     brand: "MobyApp",
     language: "Language",
-    nav: { home: "Home", digitalizacion: "Digitalization", optimizacion: "Optimization", automatizacion: "Automation", desarrollo: "Development", impresion3d: "3D Printing", soluciones: "Solutions", comoTrabajamos: "How we work", contacto: "Contact", precios: "Pricing", sectores: "Industries", barberias: "Barbershops & salons", auditoria: "Free Google profile audit", sorteoInstagram: "Instagram giveaways" },
+    nav: { home: "Home", digitalizacion: "Digitalization", optimizacion: "Optimization", automatizacion: "Automation", desarrollo: "Development", impresion3d: "3D Printing", soluciones: "Solutions", comoTrabajamos: "How we work", contacto: "Contact", precios: "Pricing", sectores: "Industries", barberias: "Barbershops & salons", auditoria: "Free Google profile audit", sorteoInstagram: "Instagram giveaways", productos: "Products" },
     cta: { primary: "Explore solutions", secondary: "Optimize my business", tertiary: "See how we work", contact: "Let's talk", startProject: "Start project", learnMore: "Learn more", viewCases: "View cases", requestQuote: "Request quote" },
-    footer: { tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", tools: "Free tools", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", dataDeletion: "Data deletion", cookieSettings: "Cookie settings", copyright: "© {year} MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
+    productos: {
+      hero: {
+        badge: "Moby products",
+        h1: "Ready-to-use tools",
+        subtitle: "Besides custom projects, at Moby we build products you can start using today. Pick the one you need.",
+      },
+      soon: "Coming soon",
+      soonCta: "Available very soon",
+      provisionalLogo: "Provisional logo",
+      ctaTitle: "Need something that isn't here?",
+      ctaButton: "Tell us about your project",
+    },
+    footer: { products: "Products", soon: "Soon", allProducts: "See all products", tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", tools: "Free tools", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", dataDeletion: "Data deletion", cookieSettings: "Cookie settings", copyright: "© {year} MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
     home: {
       hero_h1: "We build technology systems that help real businesses grow.",
       hero_sub: "Digitalization, optimization, automation, development and 3D manufacturing integrated into a single ecosystem.",
