@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { MobyMark, MobyWordmark } from "./MobyLogo";
 import { CookieSettingsLink } from "@/components/consent/CookieSettingsLink";
 import { EMAIL, PHONE_DISPLAY, whatsappHref } from "@/lib/site";
 import { useI18n } from "@/i18n/useI18n";
@@ -43,8 +43,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href={href("/")} className="inline-block mb-4" aria-label="MobyApp">
-              <Image src="/brand/moby-logo.png" alt="MobyApp" width={396} height={371} sizes="80px" className="h-20 w-auto" />
+            <Link href={href("/")} className="inline-flex items-center gap-3 mb-5" aria-label="MobyApp">
+              <MobyMark className="h-10 w-auto overflow-visible" />
+              <MobyWordmark className="text-2xl" />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               {t("footer.tagline")}

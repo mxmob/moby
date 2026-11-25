@@ -1,13 +1,14 @@
 import { ImageResponse } from "next/og";
 import { SECTORS, SECTORS_INDEX, SECTOR_KEYS, type SectorKey, type SLang } from "@/content/sectors";
-import { absoluteUrl } from "@/lib/site";
+import { whaleDataUri } from "@/lib/brand";
 
 /**
  * Imagen para compartir (1200×630) de las landings de sector: /api/og/sector?k=barberias&l=es
  * (k = barberias | estetica | restaurantes | inmobiliarias | index; l = es | ca | en).
  */
 
-const mark = absoluteUrl("/brand/moby-mark-512.png");
+// La ballena de la marca, en línea (SVG): no depende de que public/ ya esté desplegado
+const mark = whaleDataUri({ stroke: 6 });
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -24,7 +25,7 @@ export async function GET(req: Request) {
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 85% 25%, rgba(6,182,212,.25), transparent 55%), radial-gradient(circle at 10% 95%, rgba(139,92,246,.28), transparent 50%)" }} />
         <div style={{ position: "absolute", left: 72, right: 72, top: 64, height: 3, background: "linear-gradient(90deg, #06b6d4, #8b5cf6, transparent)" }} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={mark} width={300} height={300} style={{ position: "absolute", right: 60, top: 120, opacity: 0.9 }} alt="" />
+        <img src={mark} width={360} height={237} style={{ position: "absolute", right: 50, top: 110, opacity: 0.95 }} alt="" />
         <div style={{ position: "relative", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "64px 72px", width: "100%" }}>
           <div style={{ display: "flex", fontSize: 30, fontWeight: 700, color: "#22d3ee" }}>MobyApp · {kicker}</div>
           <div style={{ display: "flex", fontSize: 66, lineHeight: 1.05, fontWeight: 800, marginTop: 18, maxWidth: 820 }}>{title}</div>
