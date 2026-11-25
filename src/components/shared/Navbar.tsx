@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useI18n } from "@/i18n/useI18n";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
+import { MobyMark, MobyWordmark } from "./MobyLogo";
 
 export function Navbar() {
   const { t, href } = useI18n();
@@ -27,19 +27,12 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href={href("/")} className="flex items-center gap-2 group shrink-0" aria-label="MobyApp">
-            <Image
-              src="/brand/moby-mark.png"
-              alt="MobyApp"
-              width={356}
-              height={276}
-              priority
-              sizes="52px"
-              className="h-10 w-auto transition-transform group-hover:scale-105"
+          <Link href={href("/")} className="flex items-center gap-2.5 group shrink-0 xl:mr-4" aria-label={t("brand")}>
+            <MobyMark
+              animated
+              className="h-7 lg:h-8 w-auto overflow-visible transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="text-white font-semibold text-lg tracking-tight">
-              {t("brand")}
-            </span>
+            <MobyWordmark className="text-[19px] lg:text-[21px] xl:text-[20px]" />
           </Link>
 
           {/* Desktop Navigation */}

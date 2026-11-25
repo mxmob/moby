@@ -1,0 +1,6 @@
+svg/
+raster/
+venv/
+prof/
+sg*.woff2
+sg_*.ttf
