@@ -1,5 +1,5 @@
 {
-  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking, Reviews o Catalog cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
+  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking, Reviews, Catalog o Boost cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
   "version": 1,
   "updated": "2026-11-26",
   "utm": { "medium": "footer", "campaign": "cross_sell" },
@@ -139,6 +139,21 @@
         "en": "Your products on Google Shopping, Instagram and Facebook, kept in sync automatically."
       },
       "cta": { "es": "Ver Moby Catalog", "en": "See Moby Catalog" }
+    },
+    {
+      "id": "moby-boost",
+      "name": "Moby Boost",
+      "status": "soon",
+      "category": "marketing",
+      "url": "https://boost.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-boost.svg",
+      "logoPlaceholder": true,
+      "color": "#06b6d4",
+      "description": {
+        "es": "Avisos de «ya está disponible» y bajadas de precio, y venta cruzada que sube el ticket medio de tu tienda online.",
+        "en": "Back-in-stock and price-drop alerts, plus cross-selling that raises your online store's average order value."
+      },
+      "cta": { "es": "Ver Moby Boost", "en": "See Moby Boost" }
     }
   ]
 }
