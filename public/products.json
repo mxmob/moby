@@ -1,5 +1,5 @@
 {
-  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking, Reviews, Catalog o Boost cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
+  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking, Reviews, Catalog, Boost o Cart cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
   "version": 1,
   "updated": "2026-11-26",
   "utm": { "medium": "footer", "campaign": "cross_sell" },
@@ -154,6 +154,21 @@
         "en": "Back-in-stock and price-drop alerts, plus cross-selling that raises your online store's average order value."
       },
       "cta": { "es": "Ver Moby Boost", "en": "See Moby Boost" }
+    },
+    {
+      "id": "moby-cart",
+      "name": "Moby Cart",
+      "status": "soon",
+      "category": "marketing",
+      "url": "https://cart.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-cart.svg",
+      "logoPlaceholder": true,
+      "color": "#22c55e",
+      "description": {
+        "es": "Recupera los carritos abandonados de tu tienda WooCommerce con recordatorios que respetan el consentimiento.",
+        "en": "Win back abandoned carts in your WooCommerce store with consent-friendly reminders."
+      },
+      "cta": { "es": "Ver Moby Cart", "en": "See Moby Cart" }
     }
   ]
 }
