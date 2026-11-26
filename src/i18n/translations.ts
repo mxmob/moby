@@ -284,7 +284,7 @@ export const translations = {
       form: {
         name: "Tu nombre", email: "Tu email", phone: "Teléfono (opcional)", company: "Empresa (opcional)", message: "Cuéntanos brevemente qué necesitas", submit: "Enviar mensaje", sending: "Enviando...",
         success: "Mensaje enviado. Te respondemos en menos de 24h.",
-        error: "No hemos podido enviar el mensaje. Inténtalo de nuevo o escríbenos a hello@mobyapp.us.",
+        error: "No hemos podido enviar el mensaje. Inténtalo de nuevo o escríbenos a hello@mobyapp.eu.",
         errorValidation: "Revisa los campos: nombre, un email válido y el mensaje son obligatorios.",
         errorConsent: "Debes aceptar la política de privacidad para enviar el formulario.",
         consent: "He leído y acepto la",
@@ -556,7 +556,7 @@ export const translations = {
       form: {
         name: "Your name", email: "Your email", phone: "Phone (optional)", company: "Company (optional)", message: "Briefly tell us what you need", submit: "Send message", sending: "Sending...",
         success: "Message sent. We'll respond within 24h.",
-        error: "We couldn't send your message. Please try again or email us at hello@mobyapp.us.",
+        error: "We couldn't send your message. Please try again or email us at hello@mobyapp.eu.",
         errorValidation: "Please check the fields: name, a valid email and a message are required.",
         errorConsent: "You must accept the privacy policy to send the form.",
         consent: "I have read and accept the",
