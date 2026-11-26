@@ -98,7 +98,7 @@
     {
       "id": "moby-booking",
       "name": "Moby Booking",
-      "status": "soon",
+      "status": "active",
       "category": "business",
       "url": "https://booking.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-booking.svg",
@@ -113,7 +113,7 @@
     {
       "id": "moby-reviews",
       "name": "Moby Reviews",
-      "status": "soon",
+      "status": "active",
       "category": "marketing",
       "url": "https://reviews.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-reviews.svg",
@@ -128,7 +128,7 @@
     {
       "id": "moby-catalog",
       "name": "Moby Catalog",
-      "status": "soon",
+      "status": "active",
       "category": "marketing",
       "url": "https://catalog.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-catalog.svg",
@@ -143,7 +143,7 @@
     {
       "id": "moby-boost",
       "name": "Moby Boost",
-      "status": "soon",
+      "status": "active",
       "category": "marketing",
       "url": "https://boost.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-boost.svg",
@@ -158,7 +158,7 @@
     {
       "id": "moby-cart",
       "name": "Moby Cart",
-      "status": "soon",
+      "status": "active",
       "category": "marketing",
       "url": "https://cart.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-cart.svg",
@@ -173,7 +173,7 @@
     {
       "id": "moby-rewards",
       "name": "Moby Rewards",
-      "status": "soon",
+      "status": "active",
       "category": "business",
       "url": "https://rewards.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-rewards.svg",
