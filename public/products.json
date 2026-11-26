@@ -102,7 +102,6 @@
       "category": "business",
       "url": "https://booking.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-booking.svg",
-      "logoPlaceholder": true,
       "color": "#0ea5e9",
       "description": {
         "es": "Reservas y citas online para tu negocio, en tu web y sin comisiones.",
@@ -117,7 +116,6 @@
       "category": "marketing",
       "url": "https://reviews.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-reviews.svg",
-      "logoPlaceholder": true,
       "color": "#eab308",
       "description": {
         "es": "Consigue más reseñas de Google y muéstralas en tu web.",
@@ -132,7 +130,6 @@
       "category": "marketing",
       "url": "https://catalog.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-catalog.svg",
-      "logoPlaceholder": true,
       "color": "#06b6d4",
       "description": {
         "es": "Tus productos en Google Shopping, Instagram y Facebook, sincronizados solos.",
@@ -147,7 +144,6 @@
       "category": "marketing",
       "url": "https://boost.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-boost.svg",
-      "logoPlaceholder": true,
       "color": "#06b6d4",
       "description": {
         "es": "Avisos de «ya está disponible» y bajadas de precio, y venta cruzada que sube el ticket medio de tu tienda online.",
@@ -162,7 +158,6 @@
       "category": "marketing",
       "url": "https://cart.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-cart.svg",
-      "logoPlaceholder": true,
       "color": "#22c55e",
       "description": {
         "es": "Recupera los carritos abandonados de tu tienda WooCommerce con recordatorios que respetan el consentimiento.",
