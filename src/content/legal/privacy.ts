@@ -67,7 +67,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         ],
         list: [
           "Alojamiento y almacenamiento: Salesforce, Inc. (Heroku), aplicación y base de datos en la región de la UE (Irlanda); Microsoft Ireland Operations Ltd. (Azure Blob Storage), archivos, en la UE; Vercel Inc., servidor de las webs, paneles y scripts de los widgets (trata direcciones IP y registros técnicos).",
-          "Envío de emails transaccionales (altas, contraseñas, confirmaciones, recordatorios y avisos): [PENDIENTE: nombre y ubicación del proveedor de email].",
+          "Envío de emails transaccionales (altas, contraseñas, confirmaciones, recordatorios y avisos): Hostinger (servicio de correo de Hostinger; ubicación de los servidores: [PENDIENTE: confirmar región]).",
           "Diagnóstico de errores del servidor: Functional Software, Inc. (Sentry), que recibe los datos técnicos del error y, en su caso, el identificador de la cuenta afectada.",
           "Higgsfield AI, para la generación de imágenes y vídeos con IA en Bridge (estudio de creatividades), solo cuando el negocio lo usa: recibe las instrucciones y las imágenes que el negocio aporta para esa generación.",
           "Telegram, solo si el negocio activa los avisos por Telegram en un producto: recibe el texto del aviso que el propio negocio pide.",
@@ -217,7 +217,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         ],
         list: [
           "Hosting and storage: Salesforce, Inc. (Heroku), application and database in the EU region (Ireland); Microsoft Ireland Operations Ltd. (Azure Blob Storage), files, in the EU; Vercel Inc., hosting of the websites, dashboards and widget scripts (processes IP addresses and technical logs).",
-          "Transactional email delivery (sign-ups, passwords, confirmations, reminders and notifications): [PENDING: name and location of the email provider].",
+          "Transactional email delivery (sign-ups, passwords, confirmations, reminders and notifications): Hostinger (Hostinger email service; server location: [PENDING: confirm region]).",
           "Server error diagnostics: Functional Software, Inc. (Sentry), which receives the technical data of the error and, where relevant, the ID of the affected account.",
           "Higgsfield AI, for AI image and video generation in Bridge (creative studio), only when the business uses it: it receives the instructions and images the business provides for that generation.",
           "Telegram, only if the business turns on Telegram notifications in a product: it receives the text of the notification the business asks for.",
