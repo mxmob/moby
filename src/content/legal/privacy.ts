@@ -24,7 +24,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Responsable del tratamiento",
         paragraphs: [
-          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.us o en el teléfono ${LLC.phone}; para cualquier asunto de privacidad o protección de datos, escribe a privacy@mobyapp.eu.`,
+          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.eu o en el teléfono ${LLC.phone}; para cualquier asunto de privacidad o protección de datos, escribe a privacy@mobyapp.eu.`,
         ],
       },
       {
@@ -154,7 +154,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "1. Data controller",
         paragraphs: [
-          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.us or by phone on ${LLC.phone}; for any privacy or data protection matter, write to privacy@mobyapp.eu.`,
+          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.eu or by phone on ${LLC.phone}; for any privacy or data protection matter, write to privacy@mobyapp.eu.`,
         ],
       },
       {

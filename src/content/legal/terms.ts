@@ -19,7 +19,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "2. Prestador",
         paragraphs: [
-          `La web, las Aplicaciones y los Servicios los presta ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Contacto: hello@mobyapp.us, teléfono ${LLC.phone}.`,
+          `La web, las Aplicaciones y los Servicios los presta ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Contacto: hello@mobyapp.eu, teléfono ${LLC.phone}.`,
         ],
       },
       {
@@ -31,7 +31,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "4. Cuentas de usuario",
         paragraphs: [
-          "Si una Aplicación o un Servicio requiere registro, eres responsable de mantener la confidencialidad de tus credenciales y de toda la actividad realizada con tu cuenta. Avísanos de inmediato en hello@mobyapp.us si detectas un uso no autorizado. Puedes eliminar tu cuenta en cualquier momento según lo indicado en nuestra Política de Privacidad.",
+          "Si una Aplicación o un Servicio requiere registro, eres responsable de mantener la confidencialidad de tus credenciales y de toda la actividad realizada con tu cuenta. Avísanos de inmediato en hello@mobyapp.eu si detectas un uso no autorizado. Puedes eliminar tu cuenta en cualquier momento según lo indicado en nuestra Política de Privacidad.",
         ],
       },
       {
@@ -108,7 +108,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "15. Cancelación y reembolsos",
         paragraphs: [
-          "Puedes cancelar tu suscripción en cualquier momento desde «Mi plan» en Bridge o desde el portal de cliente de Stripe, o escribiéndonos a hello@mobyapp.us. La cancelación surte efecto al final del periodo de facturación en curso: hasta entonces mantienes el acceso y no se realizan más cargos.",
+          "Puedes cancelar tu suscripción en cualquier momento desde «Mi plan» en Bridge o desde el portal de cliente de Stripe, o escribiéndonos a hello@mobyapp.eu. La cancelación surte efecto al final del periodo de facturación en curso: hasta entonces mantienes el acceso y no se realizan más cargos.",
           "No se realizan reembolsos por periodos parciales ni por meses no utilizados, salvo cuando lo exija la ley aplicable o en caso de error en el cobro atribuible a MobyApp. Tras la cancelación conservaremos tus datos durante un plazo razonable para que puedas exportarlos y después los eliminaremos según la Política de Privacidad.",
         ],
       },
@@ -175,7 +175,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       },
       {
         heading: "26. Contacto",
-        paragraphs: ["Para cualquier consulta sobre estos términos o sobre tu suscripción: hello@mobyapp.us"],
+        paragraphs: ["Para cualquier consulta sobre estos términos o sobre tu suscripción: hello@mobyapp.eu"],
       },
     ],
   },
@@ -195,7 +195,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "2. Provider",
         paragraphs: [
-          `The website, the Apps and the Services are provided by ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. Contact: hello@mobyapp.us, phone ${LLC.phone}.`,
+          `The website, the Apps and the Services are provided by ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. Contact: hello@mobyapp.eu, phone ${LLC.phone}.`,
         ],
       },
       {
@@ -207,7 +207,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "4. User accounts",
         paragraphs: [
-          "If an App or Service requires registration, you are responsible for keeping your credentials confidential and for all activity under your account. Let us know immediately at hello@mobyapp.us if you detect unauthorised use. You can delete your account at any time as described in our Privacy Policy.",
+          "If an App or Service requires registration, you are responsible for keeping your credentials confidential and for all activity under your account. Let us know immediately at hello@mobyapp.eu if you detect unauthorised use. You can delete your account at any time as described in our Privacy Policy.",
         ],
       },
       {
@@ -284,7 +284,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "15. Cancellation and refunds",
         paragraphs: [
-          "You can cancel your subscription at any time from «Mi plan» in Bridge, from the Stripe customer portal or by writing to hello@mobyapp.us. Cancellation takes effect at the end of the current billing period: until then you keep access and no further charges are made.",
+          "You can cancel your subscription at any time from «Mi plan» in Bridge, from the Stripe customer portal or by writing to hello@mobyapp.eu. Cancellation takes effect at the end of the current billing period: until then you keep access and no further charges are made.",
           "No refunds are given for partial periods or unused months, except where required by applicable law or in the event of a billing error attributable to MobyApp. After cancellation we keep your data for a reasonable period so you can export it, and then delete it in accordance with the Privacy Policy.",
         ],
       },
@@ -351,7 +351,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       },
       {
         heading: "26. Contact",
-        paragraphs: ["For any question about these terms or your subscription: hello@mobyapp.us"],
+        paragraphs: ["For any question about these terms or your subscription: hello@mobyapp.eu"],
       },
     ],
   },

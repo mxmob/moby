@@ -8,7 +8,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mobyap
 export const absoluteUrl = (path = "/") => `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 
 export const SITE_NAME = "MobyApp";
-export const EMAIL = "hello@mobyapp.us";
+export const EMAIL = "hello@mobyapp.eu";
 /** Teléfono en formato internacional (E.164) */
 export const PHONE = "+34673885283";
 export const PHONE_DISPLAY = "+34 673 88 52 83";

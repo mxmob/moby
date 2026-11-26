@@ -39,7 +39,7 @@ export const HOME_FAQ: Record<Language, readonly FaqItem[]> = {
     ],
     [
       "¿Cómo empiezo?",
-      "Cuéntanos qué necesitas en el formulario de contacto o escribiéndonos a hello@mobyapp.us. Respondemos en menos de 24 horas, sin compromiso.",
+      "Cuéntanos qué necesitas en el formulario de contacto o escribiéndonos a hello@mobyapp.eu. Respondemos en menos de 24 horas, sin compromiso.",
     ],
   ],
   en: [
@@ -73,7 +73,7 @@ export const HOME_FAQ: Record<Language, readonly FaqItem[]> = {
     ],
     [
       "How do I get started?",
-      "Tell us what you need through the contact form or by emailing hello@mobyapp.us. We respond within 24 hours, with no commitment.",
+      "Tell us what you need through the contact form or by emailing hello@mobyapp.eu. We respond within 24 hours, with no commitment.",
     ],
   ],
 };
