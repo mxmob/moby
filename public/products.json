@@ -1,5 +1,5 @@
 {
-  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking o Reviews cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
+  "$comment": "Catálogo de productos de Moby: FUENTE ÚNICA. Lo leen mobyapp.eu (footer y /productos), las webs de cada producto (bloque «Más de Moby») y Bridge (Mapa de plataforma). status: active = enlazado · soon = visible con «Próximamente» y SIN enlace · hidden = no se muestra. Para activar Booking, Reviews o Catalog cuando su dominio responda: cambia su status a \"active\" y despliega mobyapp.eu.",
   "version": 1,
   "updated": "2026-11-26",
   "utm": { "medium": "footer", "campaign": "cross_sell" },
@@ -124,6 +124,21 @@
         "en": "Get more Google reviews and show them on your website."
       },
       "cta": { "es": "Ver Moby Reviews", "en": "See Moby Reviews" }
+    },
+    {
+      "id": "moby-catalog",
+      "name": "Moby Catalog",
+      "status": "soon",
+      "category": "marketing",
+      "url": "https://catalog.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-catalog.svg",
+      "logoPlaceholder": true,
+      "color": "#06b6d4",
+      "description": {
+        "es": "Tus productos en Google Shopping, Instagram y Facebook, sincronizados solos.",
+        "en": "Your products on Google Shopping, Instagram and Facebook, kept in sync automatically."
+      },
+      "cta": { "es": "Ver Moby Catalog", "en": "See Moby Catalog" }
     }
   ]
 }
