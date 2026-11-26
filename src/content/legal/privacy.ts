@@ -3,6 +3,8 @@ import type { Language } from "@/i18n/translations";
 
 // Datos de la entidad que presta la plataforma y los servicios (ADR-025 en el vault moby-docs; datos del dueño, 2026-11-23).
 // Pendiente (no inventar): número de registro (Delaware File Number) y representante en la UE (art. 27 RGPD).
+// REVISIÓN LEGAL: texto preparado sin abogado; pendiente de revisión jurídica (roles responsable/encargado por producto,
+// transferencias a EE. UU. y representante del art. 27 RGPD).
 export const LLC = {
   legalName: "Moby App, LLC",
   tradeName: "Moby App",
@@ -19,18 +21,18 @@ export const privacyPolicy: Record<Language, LegalContent> = {
     title: "Política de Privacidad",
     subtitle: "Cómo MobyApp recoge, usa y protege tus datos en nuestra web y en nuestras aplicaciones móviles.",
     updatedLabel: "Última actualización",
-    updated: "23 de noviembre de 2026",
+    updated: "26 de noviembre de 2026",
     sections: [
       {
         heading: "1. Responsable del tratamiento",
         paragraphs: [
-          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.eu o en el teléfono ${LLC.phone}; para cualquier asunto de privacidad o protección de datos, escribe a privacy@mobyapp.eu.`,
+          `El responsable del tratamiento de tus datos personales es ${LLC_IDENTITY_ES} (en adelante, "MobyApp", "nosotros"), que opera la marca MobyApp en España y Europa. Puedes contactarnos en cualquier momento en hello@mobyapp.eu o en el teléfono ${LLC.phone}; para cualquier asunto de privacidad o protección de datos, escribe a privacy@mobyapp.eu. Representante en la Unión Europea (art. 27 RGPD): [PENDIENTE: nombre y dirección del representante en la UE].`,
         ],
       },
       {
         heading: "2. Ámbito de aplicación",
         paragraphs: [
-          "Esta política se aplica a los sitios web mobyapp.eu y mobyapp.us a la plataforma de gestión para negocios Bridge (bridge.mobyapp.eu), incluida su función de redes sociales Moby Social, y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). Al usar los sitios web o las Aplicaciones aceptas las prácticas descritas en esta política.",
+          "Esta política se aplica a los sitios web mobyapp.eu y mobyapp.us a la plataforma de gestión para negocios Bridge (bridge.mobyapp.eu), incluida su función de redes sociales Moby Social, a las webs, paneles, widgets y plugins de WordPress de los productos Moby Feed (feeds.mobyapp.eu), Moby Booking (booking.mobyapp.eu), Moby Reviews (reviews.mobyapp.eu), Moby Catalog (catalog.mobyapp.eu), Moby Boost (boost.mobyapp.eu), Moby Cart (cart.mobyapp.eu) y Moby Rewards (rewards.mobyapp.eu), y a todas las aplicaciones móviles publicadas por MobyApp como desarrollador en Google Play y en otras tiendas de aplicaciones (en adelante, las \"Aplicaciones\"). La sección 11 explica qué datos trata cada producto y quién es el responsable. Al usar los sitios web o las Aplicaciones aceptas las prácticas descritas en esta política.",
         ],
       },
       {
@@ -64,9 +66,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "Solo compartimos datos con proveedores que nos ayudan a prestar el servicio y que actúan como encargados del tratamiento bajo contrato, por ejemplo:",
         ],
         list: [
-          "Proveedores de alojamiento, bases de datos y almacenamiento en la nube.",
+          "Alojamiento y almacenamiento: Salesforce, Inc. (Heroku), aplicación y base de datos en la región de la UE (Irlanda); Microsoft Ireland Operations Ltd. (Azure Blob Storage), archivos, en la UE; Vercel Inc., servidor de las webs, paneles y scripts de los widgets (trata direcciones IP y registros técnicos).",
+          "Envío de emails transaccionales (altas, contraseñas, confirmaciones, recordatorios y avisos): [PENDIENTE: nombre y ubicación del proveedor de email].",
+          "Diagnóstico de errores del servidor: Functional Software, Inc. (Sentry), que recibe los datos técnicos del error y, en su caso, el identificador de la cuenta afectada.",
+          "Higgsfield AI, para la generación de imágenes y vídeos con IA en Bridge (estudio de creatividades), solo cuando el negocio lo usa: recibe las instrucciones y las imágenes que el negocio aporta para esa generación.",
+          "Telegram, solo si el negocio activa los avisos por Telegram en un producto: recibe el texto del aviso que el propio negocio pide.",
           "Servicios de analítica y diagnóstico de errores (por ejemplo, Google Analytics o Google Firebase).",
-          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), para las funciones de inteligencia artificial de Bridge (asistente, redacción y traducción de textos). Solo recibe el contenido necesario para cada petición, que según su contrato de encargado del tratamiento no se usa para entrenar sus modelos.",
+          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), para las funciones de inteligencia artificial de Bridge (asistente, redacción y traducción de textos) y de los productos Moby (respuestas sugeridas a reseñas, textos de emails de Moby Cart, explicación de errores de catálogo en Moby Catalog). Solo recibe el contenido necesario para cada petición, que según su contrato de encargado del tratamiento no se usa para entrenar sus modelos.",
           "Servicios de notificaciones push del navegador o del sistema operativo (Google, Apple, Mozilla, Microsoft), que reciben el aviso cifrado para entregarlo en tu dispositivo.",
           "Stripe (Stripe Payments Europe, Ltd. y sus afiliadas), como procesador de pagos para la contratación online de los servicios: recibe los datos de pago y de facturación necesarios para cobrar las suscripciones y gestionar el portal de cliente. MobyApp no recibe ni almacena los datos completos de tu tarjeta.",
           "Google Play y otras tiendas de aplicaciones, para la distribución de las Aplicaciones y, en su caso, la gestión de pagos. MobyApp no recibe ni almacena los datos de tu tarjeta.",
@@ -78,7 +84,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "6. Transferencias internacionales",
         paragraphs: [
-          "Algunos proveedores pueden tratar datos fuera del Espacio Económico Europeo. En esos casos nos aseguramos de que existan garantías adecuadas, como las Cláusulas Contractuales Tipo de la Comisión Europea o el Marco de Privacidad de Datos UE-EE. UU.",
+          "MobyApp es una sociedad estadounidense y algunos proveedores pueden tratar datos fuera del Espacio Económico Europeo, aunque los datos de los productos se alojan en la UE. En esos casos nos aseguramos de que existan garantías adecuadas, como las Cláusulas Contractuales Tipo de la Comisión Europea o el Marco de Privacidad de Datos UE-EE. UU.",
         ],
       },
       {
@@ -116,31 +122,47 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         ],
       },
       {
-        heading: "11. Tus derechos",
+        heading: "11. Productos Moby: qué datos tratan y quién es el responsable",
+        paragraphs: [
+          "En todos los productos, MobyApp es responsable de los datos de la cuenta del negocio cliente (nombre, email, empresa, web, plan, facturación y uso del panel), que trata para prestar el servicio (ejecución del contrato) y cumplir sus obligaciones legales. Los datos de los clientes finales de cada negocio se tratan así:",
+        ],
+        list: [
+          "Moby Feed: el widget muestra en la web del negocio sus propias publicaciones de Instagram y TikTok. De los visitantes de esa web solo se recibe, para contar vistas de forma anónima, la dirección de la página, el idioma y la zona horaria; no se instalan cookies ni se guarda la IP para esta finalidad. Si el visitante pulsa «Reproducir» en un vídeo de TikTok se carga el reproductor oficial de TikTok, que se rige por su propia política.",
+          "Moby Booking: el negocio es el responsable de los datos de sus clientes que reservan (nombre, email, teléfono, notas, cita y pago de la señal) y MobyApp actúa como encargado del tratamiento para gestionar la reserva y enviar confirmaciones y recordatorios.",
+          "Moby Reviews: el negocio es el responsable de las reseñas y de los datos de quien las escribe o recibe una petición de opinión (nombre, email, valoración, texto y foto opcional), y MobyApp actúa como encargado. Las reseñas importadas de Google se muestran con la atribución de Google y las fotos de sus autores se cargan desde los servidores de Google.",
+          "Moby Catalog: sincroniza los productos de la tienda con Google Merchant Center y Meta Commerce; no trata datos de clientes finales. MobyApp guarda cifrados los tokens de acceso de esas cuentas.",
+          "Moby Boost: el negocio es el responsable del email o la suscripción push de quien pide un aviso de stock o de precio (con la prueba de su consentimiento) y MobyApp actúa como encargado. Las recomendaciones se calculan con pedidos sin datos de clientes.",
+          "Moby Cart: el negocio es el responsable de los datos de los carritos abandonados (email o teléfono, productos, importes y prueba del consentimiento o de la base legal) y MobyApp actúa como encargado para enviar los recordatorios. Se borran a los 30 días salvo que el negocio fije otro plazo.",
+          "Moby Rewards: el negocio es el responsable de los datos de los socios de su programa de fidelización y MobyApp actúa como encargado; el detalle está en rewards.mobyapp.eu/privacidad.",
+          "Cuando MobyApp actúa como encargado, trata los datos solo siguiendo las instrucciones del negocio y según el Acuerdo de encargo del tratamiento (www.mobyapp.eu/encargo-tratamiento). Si eres cliente de uno de esos negocios, ejerce tus derechos ante él; si nos escribes a nosotros, le trasladaremos tu solicitud.",
+        ],
+      },
+      {
+        heading: "12. Tus derechos",
         paragraphs: [
           "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, así como retirar tu consentimiento, escribiendo a privacy@mobyapp.eu. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
         ],
       },
       {
-        heading: "12. Menores de edad",
+        heading: "13. Menores de edad",
         paragraphs: [
           "Nuestros servicios no están dirigidos a menores de 14 años y no recogemos conscientemente sus datos. Si detectamos que hemos recibido datos de un menor sin el consentimiento de sus padres o tutores, los eliminaremos.",
         ],
       },
       {
-        heading: "13. Cookies",
+        heading: "14. Cookies",
         paragraphs: [
-          "La web utiliza almacenamiento técnico necesario para recordar tu elección sobre cookies y, solo si lo aceptas, cookies de analítica de Google Analytics para entender cómo se usa el sitio. Puedes aceptar, rechazar o cambiar tu elección en cualquier momento desde el enlace \"Configurar cookies\" del pie de página. Tienes el detalle de cada cookie, su finalidad y duración en nuestra Política de cookies (www.mobyapp.eu/cookies).",
+          "La web utiliza almacenamiento técnico necesario para recordar tu elección sobre cookies y, solo si lo aceptas, cookies de analítica de Google Analytics para entender cómo se usa el sitio. Puedes aceptar, rechazar o cambiar tu elección en cualquier momento desde el enlace \"Configurar cookies\" del pie de página. Las webs y paneles de los productos Moby solo usan almacenamiento técnico (sesión del panel y preferencia de idioma) y no instalan cookies de analítica ni de terceros. Tienes el detalle de cada cookie y elemento de almacenamiento, su finalidad y duración, también de los widgets, en nuestra Política de cookies (www.mobyapp.eu/cookies).",
         ],
       },
       {
-        heading: "14. Cambios en esta política",
+        heading: "15. Cambios en esta política",
         paragraphs: [
           "Podemos actualizar esta política. Publicaremos la nueva versión en esta página con su fecha de actualización y, si los cambios son relevantes, te lo comunicaremos en la Aplicación o por correo electrónico.",
         ],
       },
       {
-        heading: "15. Contacto",
+        heading: "16. Contacto",
         paragraphs: ["Para cualquier consulta sobre privacidad: privacy@mobyapp.eu"],
       },
     ],
@@ -149,18 +171,18 @@ export const privacyPolicy: Record<Language, LegalContent> = {
     title: "Privacy Policy",
     subtitle: "How MobyApp collects, uses and protects your data on our website and in our mobile apps.",
     updatedLabel: "Last updated",
-    updated: "November 23, 2026",
+    updated: "November 26, 2026",
     sections: [
       {
         heading: "1. Data controller",
         paragraphs: [
-          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.eu or by phone on ${LLC.phone}; for any privacy or data protection matter, write to privacy@mobyapp.eu.`,
+          `The controller of your personal data is ${LLC_IDENTITY_EN} ("MobyApp", "we", "us"), which operates the MobyApp brand in Spain and Europe. You can contact us at any time at hello@mobyapp.eu or by phone on ${LLC.phone}; for any privacy or data protection matter, write to privacy@mobyapp.eu. Representative in the European Union (art. 27 GDPR): [PENDING: name and address of the EU representative].`,
         ],
       },
       {
         heading: "2. Scope",
         paragraphs: [
-          "This policy applies to the mobyapp.eu and mobyapp.us websites to the Bridge business management platform (bridge.mobyapp.eu), including its Moby Social feature, and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). By using the websites or the Apps you accept the practices described in this policy.",
+          "This policy applies to the mobyapp.eu and mobyapp.us websites to the Bridge business management platform (bridge.mobyapp.eu), including its Moby Social feature, to the websites, dashboards, widgets and WordPress plugins of the Moby Feed (feeds.mobyapp.eu), Moby Booking (booking.mobyapp.eu), Moby Reviews (reviews.mobyapp.eu), Moby Catalog (catalog.mobyapp.eu), Moby Boost (boost.mobyapp.eu), Moby Cart (cart.mobyapp.eu) and Moby Rewards (rewards.mobyapp.eu) products, and to all mobile applications published by MobyApp as a developer on Google Play and other app stores (the \"Apps\"). Section 11 explains what data each product processes and who the controller is. By using the websites or the Apps you accept the practices described in this policy.",
         ],
       },
       {
@@ -194,9 +216,13 @@ export const privacyPolicy: Record<Language, LegalContent> = {
           "We only share data with providers that help us deliver the service and act as data processors under contract, for example:",
         ],
         list: [
-          "Hosting, database and cloud storage providers.",
+          "Hosting and storage: Salesforce, Inc. (Heroku), application and database in the EU region (Ireland); Microsoft Ireland Operations Ltd. (Azure Blob Storage), files, in the EU; Vercel Inc., hosting of the websites, dashboards and widget scripts (processes IP addresses and technical logs).",
+          "Transactional email delivery (sign-ups, passwords, confirmations, reminders and notifications): [PENDING: name and location of the email provider].",
+          "Server error diagnostics: Functional Software, Inc. (Sentry), which receives the technical data of the error and, where relevant, the ID of the affected account.",
+          "Higgsfield AI, for AI image and video generation in Bridge (creative studio), only when the business uses it: it receives the instructions and images the business provides for that generation.",
+          "Telegram, only if the business turns on Telegram notifications in a product: it receives the text of the notification the business asks for.",
           "Analytics and crash reporting services (for example, Google Analytics or Google Firebase).",
-          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), for the artificial intelligence features in Bridge (assistant, text drafting and translation). It only receives the content needed for each request, which under its data processing agreement is not used to train its models.",
+          "OpenAI (OpenAI Ireland Ltd. / OpenAI, L.L.C.), for the artificial intelligence features in Bridge (assistant, text drafting and translation) and in the Moby products (suggested review replies, Moby Cart email copy, catalogue error explanations in Moby Catalog). It only receives the content needed for each request, which under its data processing agreement is not used to train its models.",
           "Browser and operating system push notification services (Google, Apple, Mozilla, Microsoft), which receive the encrypted notification to deliver it to your device.",
           "Stripe (Stripe Payments Europe, Ltd. and its affiliates), as payment processor for online purchases of the services: it receives the payment and billing data needed to charge subscriptions and run the customer portal. MobyApp never receives or stores your full card details.",
           "Google Play and other app stores, for distributing the Apps and, where applicable, handling payments. MobyApp never receives or stores your card details.",
@@ -208,7 +234,7 @@ export const privacyPolicy: Record<Language, LegalContent> = {
       {
         heading: "6. International transfers",
         paragraphs: [
-          "Some providers may process data outside the European Economic Area. In those cases we make sure appropriate safeguards are in place, such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
+          "MobyApp is a US company and some providers may process data outside the European Economic Area, although product data is hosted in the EU. In those cases we make sure appropriate safeguards are in place, such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework.",
         ],
       },
       {
@@ -246,31 +272,47 @@ export const privacyPolicy: Record<Language, LegalContent> = {
         ],
       },
       {
-        heading: "11. Your rights",
+        heading: "11. Moby products: what data they process and who the controller is",
+        paragraphs: [
+          "In every product, MobyApp is the controller of the business customer's account data (name, email, company, website, plan, billing and dashboard usage), which it processes to provide the service (performance of a contract) and meet its legal obligations. The data of each business's own customers is processed as follows:",
+        ],
+        list: [
+          "Moby Feed: the widget shows the business's own Instagram and TikTok posts on its website. From visitors to that website we only receive the page address, language and time zone, to count views anonymously; no cookies are set and the IP address is not stored for this purpose. If a visitor clicks Play on a TikTok video, TikTok's official player is loaded, which is subject to TikTok's own policy.",
+          "Moby Booking: the business is the controller of the data of customers who book (name, email, phone, notes, appointment and deposit payment) and MobyApp acts as its processor to manage the booking and send confirmations and reminders.",
+          "Moby Reviews: the business is the controller of the reviews and of the data of people who write them or receive a review request (name, email, rating, text and optional photo), and MobyApp acts as its processor. Reviews imported from Google are shown with Google's attribution and their authors' photos are loaded from Google's servers.",
+          "Moby Catalog: syncs the store's products with Google Merchant Center and Meta Commerce; it does not process end-customer data. MobyApp stores the access tokens for those accounts encrypted.",
+          "Moby Boost: the business is the controller of the email or push subscription of people who ask for a stock or price alert (with proof of their consent) and MobyApp acts as its processor. Recommendations are calculated from orders without customer data.",
+          "Moby Cart: the business is the controller of abandoned cart data (email or phone, products, amounts and proof of consent or legal basis) and MobyApp acts as its processor to send the reminders. It is deleted after 30 days unless the business sets another period.",
+          "Moby Rewards: the business is the controller of its loyalty programme members' data and MobyApp acts as its processor; details at rewards.mobyapp.eu/privacidad.",
+          "When MobyApp acts as a processor, it processes the data only on the business's instructions and under the Data processing agreement (www.mobyapp.eu/en/encargo-tratamiento). If you are a customer of one of those businesses, exercise your rights with the business; if you write to us, we will forward your request to it.",
+        ],
+      },
+      {
+        heading: "12. Your rights",
         paragraphs: [
           "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability, and withdraw your consent, by writing to privacy@mobyapp.eu. If you believe we have not handled your request properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
         ],
       },
       {
-        heading: "12. Children",
+        heading: "13. Children",
         paragraphs: [
           "Our services are not directed at children under 14 and we do not knowingly collect their data. If we learn that we have received data from a child without parental consent, we will delete it.",
         ],
       },
       {
-        heading: "13. Cookies",
+        heading: "14. Cookies",
         paragraphs: [
-          "The website uses necessary technical storage to remember your cookie choice and, only if you accept them, Google Analytics cookies to understand how the site is used. You can accept, reject or change your choice at any time using the \"Cookie settings\" link in the footer. Details of each cookie, its purpose and duration are in our Cookie policy (www.mobyapp.eu/en/cookies).",
+          "The website uses necessary technical storage to remember your cookie choice and, only if you accept them, Google Analytics cookies to understand how the site is used. You can accept, reject or change your choice at any time using the \"Cookie settings\" link in the footer. The Moby product websites and dashboards only use technical storage (dashboard session and language preference) and set no analytics or third-party cookies. Details of each cookie and storage item, its purpose and duration, including the widgets, are in our Cookie policy (www.mobyapp.eu/en/cookies).",
         ],
       },
       {
-        heading: "14. Changes to this policy",
+        heading: "15. Changes to this policy",
         paragraphs: [
           "We may update this policy. We will publish the new version on this page with its update date and, if the changes are significant, notify you in the App or by email.",
         ],
       },
       {
-        heading: "15. Contact",
+        heading: "16. Contact",
         paragraphs: ["For any privacy question: privacy@mobyapp.eu"],
       },
     ],

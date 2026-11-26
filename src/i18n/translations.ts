@@ -55,6 +55,8 @@ export const translations = {
       terms: "Términos",
       cookies: "Cookies",
       dataDeletion: "Eliminación de datos",
+      legalNotice: "Aviso legal",
+      dpa: "Encargo del tratamiento",
       cookieSettings: "Configurar cookies",
       copyright: "© {year} MobyApp. Todos los derechos reservados.",
       location: "España y Europa · 100% online",
@@ -330,7 +332,7 @@ export const translations = {
       ctaTitle: "Need something that isn't here?",
       ctaButton: "Tell us about your project",
     },
-    footer: { products: "Products", soon: "Soon", allProducts: "See all products", tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", tools: "Free tools", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", dataDeletion: "Data deletion", cookieSettings: "Cookie settings", copyright: "© {year} MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
+    footer: { products: "Products", soon: "Soon", allProducts: "See all products", tagline: "Technology systems that help real businesses grow.", services: "Services", sectors: "Sectors", tools: "Free tools", company: "Company", legal: "Legal", privacy: "Privacy", terms: "Terms", cookies: "Cookies", dataDeletion: "Data deletion", legalNotice: "Legal notice", dpa: "DPA", cookieSettings: "Cookie settings", copyright: "© {year} MobyApp. All rights reserved.", location: "Spain and Europe · 100% online" },
     home: {
       hero_h1: "We build technology systems that help real businesses grow.",
       hero_sub: "Digitalization, optimization, automation, development and 3D manufacturing integrated into a single ecosystem.",

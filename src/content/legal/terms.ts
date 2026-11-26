@@ -2,18 +2,20 @@ import type { LegalContent } from "@/components/legal/LegalDocument";
 import type { Language } from "@/i18n/translations";
 import { LLC, LLC_IDENTITY_EN, LLC_IDENTITY_ES } from "./privacy";
 
+// REVISIÓN LEGAL: texto preparado sin abogado; pendiente de revisión jurídica (sobre todo las secciones 7, 21, 26 y 27).
+
 export const termsOfService: Record<Language, LegalContent> = {
   es: {
     title: "Términos y Condiciones",
     subtitle: "Condiciones de uso del sitio web y de las aplicaciones de MobyApp, y condiciones de contratación de sus servicios.",
     updatedLabel: "Última actualización",
-    updated: "23 de noviembre de 2026",
+    updated: "26 de noviembre de 2026",
     sections: [
       {
         heading: "1. Objeto y aceptación",
         paragraphs: [
           "Estos Términos y Condiciones regulan el acceso y uso de los sitios web mobyapp.eu y mobyapp.us y de las aplicaciones móviles publicadas por MobyApp (las \"Aplicaciones\"). Al descargar, instalar o usar la web o las Aplicaciones aceptas estos términos. Si no estás de acuerdo, no las utilices.",
-          "También regulan la contratación de los servicios de MobyApp: la plataforma de gestión Bridge (bridge.mobyapp.eu), sus planes, módulos adicionales y paquetes, y los servicios gestionados y de alta asociados (los \"Servicios\"), ya se contraten online en www.mobyapp.eu/precios o mediante un partner o distribuidor autorizado. Las secciones 7 a 18 se aplican específicamente a esa contratación.",
+          "También regulan la contratación de los servicios de MobyApp: la plataforma de gestión Bridge (bridge.mobyapp.eu), sus planes, módulos adicionales y paquetes, los productos Moby Feed, Moby Booking, Moby Reviews, Moby Catalog, Moby Boost, Moby Cart y Moby Rewards, con sus webs, paneles, widgets y plugins de WordPress, y los servicios gestionados y de alta asociados (los \"Servicios\"), ya se contraten online en www.mobyapp.eu/precios o mediante un partner o distribuidor autorizado. Las secciones 7 a 18 se aplican específicamente a esa contratación, y la sección 26 a los productos Moby.",
         ],
       },
       {
@@ -158,7 +160,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "23. Privacidad",
         paragraphs: [
-          "El tratamiento de tus datos personales, incluidos los datos de contratación y facturación, se rige por nuestra Política de Privacidad, disponible en mobyapp.eu/privacidad. Moby App, LLC es el responsable del tratamiento.",
+          "El tratamiento de tus datos personales, incluidos los datos de contratación y facturación, se rige por nuestra Política de Privacidad, disponible en mobyapp.eu/privacidad. Moby App, LLC es el responsable del tratamiento de los datos de tu cuenta. Cuando, al usar Moby Booking, Reviews, Cart, Boost, Rewards o la mensajería de Moby Social, MobyApp trate datos de tus clientes por tu cuenta, lo hará como encargado del tratamiento según el Acuerdo de encargo del tratamiento (www.mobyapp.eu/encargo-tratamiento), que forma parte de estos términos y aceptas con ellos.",
         ],
       },
       {
@@ -174,7 +176,29 @@ export const termsOfService: Record<Language, LegalContent> = {
         ],
       },
       {
-        heading: "26. Contacto",
+        heading: "26. Productos Moby (Feed, Booking, Reviews, Catalog, Boost, Cart y Rewards)",
+        paragraphs: [
+          "Estas condiciones se aplican además de las anteriores cuando creas una cuenta en una de las webs de los productos Moby o instalas sus widgets o plugins:",
+        ],
+        list: [
+          "Plan Gratis: se activa al registrarte, sin tarjeta y sin plazo. Incluye los límites indicados en la página de precios de cada producto (por ejemplo, vistas, avisos o reservas al mes) y puede mostrar el sello «Moby». Podemos cambiar sus límites o retirarlo avisándote con al menos 30 días de antelación. No incluye compromiso de disponibilidad.",
+          "Planes de pago: se contratan desde el panel del producto o desde www.mobyapp.eu/precios y se rigen por las secciones 8 a 17 (pago con Stripe, renovación automática mensual o anual, cancelación al final del periodo y sin reembolso de periodos parciales salvo error nuestro o cuando lo exija la ley). Si cancelas un plan de pago vuelves al plan Gratis sin perder tus datos.",
+          "Precios «Muy pronto» o «Próximamente»: los planes y precios que una web muestra con esas etiquetas, o como no disponibles, son informativos. No constituyen una oferta vinculante ni se pueden contratar hasta que se activen; al activarse se aplicarán el precio y las condiciones que se muestren en ese momento.",
+          "Widgets y plugins: te concedemos una licencia limitada para instalar los scripts y plugins en las webs que controlas mientras tengas cuenta. Eres responsable de la web donde los instalas, de los contenidos que muestras (publicaciones, reseñas, productos) y de informar a tus visitantes de lo que hacen los widgets (la Política de cookies de MobyApp describe qué guarda cada uno).",
+          "Tus clientes: en Booking, Reviews, Cart, Boost y Rewards eres el responsable del tratamiento de los datos de tus clientes y debes contar con una base legal (por ejemplo, su consentimiento previo y sin casillas premarcadas para recordatorios de carrito, avisos de stock u ofertas, salvo lo previsto en el art. 21.2 LSSI) e informarles en tu política de privacidad. MobyApp actúa como tu encargado según el Acuerdo de encargo del tratamiento.",
+          "Reseñas: no puedes publicar reseñas falsas, comprar u ofrecer incentivos por reseñas positivas ni ocultar las negativas por su nota. Debes informar a tus visitantes de cómo se recogen y verifican (el widget lo hace por ti), conforme a la normativa de consumidores y competencia desleal.",
+          "Servicios de terceros: las funciones que dependen de Google, Meta, TikTok, WooCommerce, Stripe u otros quedan sujetas a sus condiciones y a que mantengan sus APIs; no respondemos de sus cambios, rechazos o suspensiones.",
+          "Los productos que se ofrecen en prueba o «beta» pueden cambiar o retirarse; te avisaremos con antelación razonable y podrás exportar tus datos.",
+        ],
+      },
+      {
+        heading: "27. Contenidos de terceros y avisos de contenido ilícito",
+        paragraphs: [
+          "Los contenidos que publicas o muestras con los Servicios (publicaciones, reseñas, fichas de producto, mensajes) son tuyos y de tu responsabilidad, y nos concedes una licencia limitada para alojarlos y mostrarlos solo para prestarte el servicio. Cualquier persona puede avisarnos de un contenido que considere ilícito escribiendo a hello@mobyapp.eu con su ubicación y el motivo. Lo revisaremos con diligencia y, si procede, lo retiraremos o limitaremos, informando de los motivos a quien lo publicó y a quien avisó, que podrán responder por el mismo canal (Reglamento (UE) 2022/2065 de servicios digitales). Podremos suspender las cuentas que publiquen contenidos manifiestamente ilícitos de forma reiterada, tras un aviso previo.",
+        ],
+      },
+      {
+        heading: "28. Contacto",
         paragraphs: ["Para cualquier consulta sobre estos términos o sobre tu suscripción: hello@mobyapp.eu"],
       },
     ],
@@ -183,13 +207,13 @@ export const termsOfService: Record<Language, LegalContent> = {
     title: "Terms and Conditions",
     subtitle: "Terms of use for the MobyApp website and apps, and terms of purchase for its services.",
     updatedLabel: "Last updated",
-    updated: "November 23, 2026",
+    updated: "November 26, 2026",
     sections: [
       {
         heading: "1. Purpose and acceptance",
         paragraphs: [
           "These Terms and Conditions govern access to and use of the mobyapp.eu and mobyapp.us websites and the mobile applications published by MobyApp (the \"Apps\"). By downloading, installing or using the website or the Apps you accept these terms. If you do not agree, do not use them.",
-          "They also govern the purchase of MobyApp's services: the Bridge management platform (bridge.mobyapp.eu), its plans, add-on modules and packages, and the related managed and setup services (the \"Services\"), whether purchased online at www.mobyapp.eu/en/precios or through an authorised partner or reseller. Sections 7 to 18 apply specifically to those purchases.",
+          "They also govern the purchase of MobyApp's services: the Bridge management platform (bridge.mobyapp.eu), its plans, add-on modules and packages, the Moby Feed, Moby Booking, Moby Reviews, Moby Catalog, Moby Boost, Moby Cart and Moby Rewards products, with their websites, dashboards, widgets and WordPress plugins, and the related managed and setup services (the \"Services\"), whether purchased online at www.mobyapp.eu/en/precios or through an authorised partner or reseller. Sections 7 to 18 apply specifically to those purchases, and section 26 to the Moby products.",
         ],
       },
       {
@@ -334,7 +358,7 @@ export const termsOfService: Record<Language, LegalContent> = {
       {
         heading: "23. Privacy",
         paragraphs: [
-          "The processing of your personal data, including purchase and billing data, is governed by our Privacy Policy, available at mobyapp.eu/privacidad. Moby App, LLC is the data controller.",
+          "The processing of your personal data, including purchase and billing data, is governed by our Privacy Policy, available at mobyapp.eu/privacidad. Moby App, LLC is the controller of your account data. Where, when you use Moby Booking, Reviews, Cart, Boost, Rewards or Moby Social messaging, MobyApp processes your customers' data on your behalf, it does so as a processor under the Data processing agreement (www.mobyapp.eu/en/encargo-tratamiento), which forms part of these terms and which you accept with them.",
         ],
       },
       {
@@ -350,7 +374,29 @@ export const termsOfService: Record<Language, LegalContent> = {
         ],
       },
       {
-        heading: "26. Contact",
+        heading: "26. Moby products (Feed, Booking, Reviews, Catalog, Boost, Cart and Rewards)",
+        paragraphs: [
+          "These conditions apply in addition to the above when you create an account on one of the Moby product websites or install their widgets or plugins:",
+        ],
+        list: [
+          "Free plan: activated when you sign up, with no card and no term. It includes the limits shown on each product's pricing page (for example, views, alerts or bookings per month) and may show the \"Moby\" credit. We may change its limits or withdraw it with at least 30 days' notice. It carries no availability commitment.",
+          "Paid plans: purchased from the product dashboard or at www.mobyapp.eu/en/precios and governed by sections 8 to 17 (payment via Stripe, automatic monthly or yearly renewal, cancellation at the end of the period and no refunds for partial periods except for our error or where the law requires it). If you cancel a paid plan you go back to the Free plan without losing your data.",
+          "\"Coming soon\" prices: plans and prices that a website shows with that label, or as not available, are for information only. They are not a binding offer and cannot be purchased until they are activated; when activated, the price and conditions shown at that time will apply.",
+          "Widgets and plugins: we grant you a limited licence to install the scripts and plugins on websites you control while you have an account. You are responsible for the website where you install them, for the content you display (posts, reviews, products) and for telling your visitors what the widgets do (MobyApp's Cookie policy describes what each one stores).",
+          "Your customers: in Booking, Reviews, Cart, Boost and Rewards you are the controller of your customers' data and must have a legal basis (for example, their prior consent, with no pre-ticked boxes, for cart reminders, stock alerts or offers, except as provided in article 21.2 of the Spanish LSSI) and inform them in your privacy policy. MobyApp acts as your processor under the Data processing agreement.",
+          "Reviews: you may not publish fake reviews, buy or offer incentives for positive reviews or hide negative ones because of their rating. You must tell your visitors how reviews are collected and verified (the widget does this for you), in line with consumer and unfair competition law.",
+          "Third-party services: features that depend on Google, Meta, TikTok, WooCommerce, Stripe or others are subject to their terms and to their APIs remaining available; we are not liable for their changes, rejections or suspensions.",
+          "Products offered on trial or as \"beta\" may change or be withdrawn; we will give you reasonable notice and you will be able to export your data.",
+        ],
+      },
+      {
+        heading: "27. Third-party content and notices of illegal content",
+        paragraphs: [
+          "The content you publish or display with the Services (posts, reviews, product listings, messages) is yours and your responsibility, and you grant us a limited licence to host and display it only to provide the service. Anyone can notify us of content they consider illegal by emailing hello@mobyapp.eu with its location and the reason. We will review it diligently and, where appropriate, remove or restrict it, telling the person who published it and the person who reported it why; both can reply through the same channel (Regulation (EU) 2022/2065, Digital Services Act). We may suspend accounts that repeatedly publish manifestly illegal content, after a prior warning.",
+        ],
+      },
+      {
+        heading: "28. Contact",
         paragraphs: ["For any question about these terms or your subscription: hello@mobyapp.eu"],
       },
     ],

@@ -24,7 +24,9 @@ export type PageKey =
   | "privacidad"
   | "terminos"
   | "cookies"
-  | "eliminacionDatos";
+  | "eliminacionDatos"
+  | "avisoLegal"
+  | "encargoTratamiento";
 
 export interface PageSeo {
   title: string;
@@ -56,6 +58,8 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   terminos: "/terminos",
   cookies: "/cookies",
   eliminacionDatos: "/eliminacion-de-datos",
+  avisoLegal: "/aviso-legal",
+  encargoTratamiento: "/encargo-tratamiento",
 };
 
 export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
@@ -341,6 +345,34 @@ export const SEO: Record<PageKey, Record<Language, PageSeo>> = {
       description:
         "How to delete the Facebook, Instagram and TikTok data Moby Social stores when you connect your accounts in Bridge: from Bridge, from the platform or by email.",
       name: "Data deletion",
+    },
+  },
+  avisoLegal: {
+    es: {
+      title: "Aviso legal | MobyApp",
+      description:
+        "Titular de las webs y productos de MobyApp (Moby App, LLC): datos de identificación, contacto, condiciones de uso, propiedad intelectual y avisos de contenido.",
+      name: "Aviso legal",
+    },
+    en: {
+      title: "Legal notice | MobyApp",
+      description:
+        "Owner of the MobyApp websites and products (Moby App, LLC): identification and contact details, terms of use, intellectual property and content notices.",
+      name: "Legal notice",
+    },
+  },
+  encargoTratamiento: {
+    es: {
+      title: "Acuerdo de encargo del tratamiento (DPA) | MobyApp",
+      description:
+        "Contrato del art. 28 RGPD para negocios que usan Moby Booking, Reviews, Cart, Boost o Rewards: instrucciones, seguridad, subencargados y transferencias.",
+      name: "Encargo del tratamiento",
+    },
+    en: {
+      title: "Data processing agreement (DPA) | MobyApp",
+      description:
+        "Article 28 GDPR agreement for businesses using Moby Booking, Reviews, Cart, Boost or Rewards: instructions, security, sub-processors and transfers.",
+      name: "DPA",
     },
   },
 };
