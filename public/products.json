@@ -169,6 +169,24 @@
         "en": "Win back abandoned carts in your WooCommerce store with consent-friendly reminders."
       },
       "cta": { "es": "Ver Moby Cart", "en": "See Moby Cart" }
+    },
+    {
+      "id": "moby-rewards",
+      "name": "Moby Rewards",
+      "status": "soon",
+      "category": "business",
+      "url": "https://rewards.mobyapp.eu/",
+      "logo": "https://www.mobyapp.eu/brand/products/moby-rewards.svg",
+      "logoPlaceholder": true,
+      "color": "#f59e0b",
+      "description": {
+        "es": "Puntos, niveles y premios para tus clientes en tu local, tu TPV, tu tienda WooCommerce, tus reservas y tus entradas. Sin app.",
+        "en": "Points, tiers and rewards for your customers in-store, at your POS, on WooCommerce, bookings and tickets. No app needed."
+      },
+      "cta": {
+        "es": "Ver Moby Rewards",
+        "en": "See Moby Rewards"
+      }
     }
   ]
 }
