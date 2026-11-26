@@ -5,9 +5,10 @@ import { MobyMark, MobyWordmark } from "./MobyLogo";
 import { CookieSettingsLink } from "@/components/consent/CookieSettingsLink";
 import { EMAIL, PHONE_DISPLAY, whatsappHref } from "@/lib/site";
 import { useI18n } from "@/i18n/useI18n";
+import { PRODUCTS, productHref } from "@/content/products";
 
 export function Footer() {
-  const { t, href } = useI18n();
+  const { t, href, language } = useI18n();
 
   const serviceLinks = [
     { href: "/digitalizacion", label: t("nav.digitalizacion") },
@@ -40,7 +41,7 @@ export function Footer() {
   return (
     <footer className="bg-[#030308] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href={href("/")} className="inline-flex items-center gap-3 mb-5" aria-label="MobyApp">
@@ -115,6 +116,40 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Productos (catálogo único: public/products.json) */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">{t("footer.products")}</h4>
+            <ul className="space-y-3">
+              {PRODUCTS.map((p) => (
+                <li key={p.id}>
+                  {p.status === "active" ? (
+                    <a
+                      href={productHref(p)}
+                      target="_blank"
+                      rel="noopener"
+                      title={p.description[language]}
+                      className="text-white/50 hover:text-white text-sm transition-colors"
+                    >
+                      {p.name}
+                    </a>
+                  ) : (
+                    <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-white/35 text-sm" title={p.description[language]}>
+                      {p.name}
+                      <span className="rounded-full border border-white/10 px-1.5 py-px text-[10px] uppercase tracking-wide text-white/40">
+                        {t("footer.soon")}
+                      </span>
+                    </span>
+                  )}
+                </li>
+              ))}
+              <li>
+                <Link href={href("/productos")} className="text-cyan-400/80 hover:text-cyan-300 text-sm transition-colors">
+                  {t("footer.allProducts")}
+                </Link>
+              </li>
             </ul>
           </div>
 
