@@ -177,6 +177,9 @@ export function Footer() {
             {t("footer.copyright").replace("{year}", String(new Date().getFullYear()))}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link href={href("/aviso-legal")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              {t("footer.legalNotice")}
+            </Link>
             <Link href={href("/privacidad")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.privacy")}
             </Link>
@@ -185,6 +188,9 @@ export function Footer() {
             </Link>
             <Link href={href("/cookies")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.cookies")}
+            </Link>
+            <Link href={href("/encargo-tratamiento")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              {t("footer.dpa")}
             </Link>
             <Link href={href("/eliminacion-de-datos")} className="text-white/30 hover:text-white/60 text-sm transition-colors">
               {t("footer.dataDeletion")}

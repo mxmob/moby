@@ -14,6 +14,17 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [{ protocol: "https", hostname: "mobyapp.eu" }, { protocol: "https", hostname: "www.mobyapp.eu" }],
   },
+  // Enlaces antiguos de los paneles de producto (/condiciones) y alias habituales de los textos legales
+  async redirects() {
+    return [
+      { source: "/condiciones", destination: "/terminos", permanent: true },
+      { source: "/en/condiciones", destination: "/en/terminos", permanent: true },
+      { source: "/legal", destination: "/aviso-legal", permanent: true },
+      { source: "/en/legal", destination: "/en/aviso-legal", permanent: true },
+      { source: "/dpa", destination: "/encargo-tratamiento", permanent: true },
+      { source: "/en/dpa", destination: "/en/encargo-tratamiento", permanent: true },
+    ];
+  },
   async headers() {
     return [
       { source: "/:path*", headers: SECURITY_HEADERS },
