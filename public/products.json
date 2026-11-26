@@ -158,7 +158,6 @@
       "category": "marketing",
       "url": "https://cart.mobyapp.eu/",
       "logo": "https://www.mobyapp.eu/brand/products/moby-cart.svg",
-      "logoPlaceholder": true,
       "color": "#22c55e",
       "description": {
         "es": "Recupera los carritos abandonados de tu tienda WooCommerce con recordatorios que respetan el consentimiento.",
